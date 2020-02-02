@@ -1,0 +1,34 @@
+{
+  "name": "website",
+  "private": true,
+  "scripts": {
+    "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
+    "dev": "concurrently -n parcel,tsc 'parcel ./src/index.html' 'tsc --noEmit --watch'",
+    "build": "tsc --noEmit && parcel build ./src/index.html",
+    "deploy": "yarn build && gh-pages -d dist -b master"
+  },
+  "dependencies": {
+    "gatsby": "^2.19.11",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.1",
+    "react-player": "^1.14.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.0",
+    "unstated-next": "^1.1.0"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^5.0.1",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-helmet": "^5.0.15",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/styled-components": "^4.4.2",
+    "concurrently": "^5.1.0",
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  }
+}
