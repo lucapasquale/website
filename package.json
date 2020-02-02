@@ -4,11 +4,9 @@
   "scripts": {
     "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
     "dev": "concurrently -n parcel,tsc 'parcel ./src/index.html' 'tsc --noEmit --watch'",
-    "build": "tsc --noEmit && parcel build ./src/index.html",
-    "deploy": "yarn build && gh-pages -d dist -b master"
+    "build": "tsc --noEmit && parcel build ./src/index.html"
   },
   "dependencies": {
-    "gatsby": "^2.19.11",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.1",
@@ -26,7 +24,6 @@
     "@types/react-router-dom": "^5.1.3",
     "@types/styled-components": "^4.4.2",
     "concurrently": "^5.1.0",
-    "gh-pages": "^2.2.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "typescript": "^3.7.4"
