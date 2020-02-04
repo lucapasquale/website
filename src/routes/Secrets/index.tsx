@@ -18,7 +18,7 @@ const Player = styled.div({
 
   '@media (max-width: 700px)': {
     display: 'none',
-  }
+  },
 })
 
 const PLAYLIST_LINK =
@@ -32,13 +32,10 @@ export const Secrets: FC = () => (
     </Helmet>
 
     <Layout>
-      <Hero
-        title="Secrets"
-        subTitle="How did you get here?"
-      />
+      <Hero title="Secrets" subTitle="How did you get here?" />
 
       <Section>
-        <a target="_blank" href={PLAYLIST_LINK}>
+        <a target="_blank" rel="noopener noreferrer" href={PLAYLIST_LINK}>
           My dumb playlist
         </a>
 

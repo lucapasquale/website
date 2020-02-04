@@ -13,9 +13,7 @@ export const StyledContext: FC = ({ children }) => {
     <>
       <GlobalStyle theme={theme} />
 
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </>
   )
 }

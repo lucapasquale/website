@@ -11,7 +11,7 @@ export type IconProps = {
   fill?: string
 }
 
-const Wrapper = styled.i<{ color?: string, fontSize: any }>(
+const Wrapper = styled.i<{ color?: string; fontSize: any }>(
   ({ color, fontSize }) => ({
     display: 'inline-block',
     fontStyle: 'normal',
@@ -23,7 +23,7 @@ const Wrapper = styled.i<{ color?: string, fontSize: any }>(
     verticalAlign: '-0.125em',
     textRendering: 'optimizeLegibility',
     WebkitFontSmoothing: 'antialiased',
-  })
+  }),
 )
 
 export const Icon: FC<IconProps> = ({ name, fill, size = '1em' }) => {

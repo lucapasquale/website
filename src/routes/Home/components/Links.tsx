@@ -12,7 +12,7 @@ const Section = styled.section({
   '@media (max-width: 700px)': {
     width: '100%',
     marginLeft: '0px',
-  }
+  },
 })
 
 const LinksWrapper = styled.nav({
@@ -24,7 +24,7 @@ const LinksWrapper = styled.nav({
   '@media (max-width: 700px)': {
     display: 'grid',
     gridTemplateColumns: '50% 50%',
-  }
+  },
 })
 
 const IconWrapper = styled.a({
@@ -49,7 +49,11 @@ export const Links: FC = () => {
       <h3>Contact</h3>
 
       <LinksWrapper>
-        <IconWrapper target="_blank" rel="noopener" href={config.LINKS.GITHUB}>
+        <IconWrapper
+          target="_blank"
+          rel="noopener noreferrer"
+          href={config.LINKS.GITHUB}
+        >
           <Icon name="Github" size="2rem" fill={colors.primary} />
 
           <LinkLabel>GITHUB</LinkLabel>
@@ -61,19 +65,26 @@ export const Links: FC = () => {
           <LinkLabel>EMAIL</LinkLabel>
         </IconWrapper>
 
-        <IconWrapper target="_blank" rel="noopener" href={config.LINKS.INSTAGRAM}>
+        <IconWrapper
+          target="_blank"
+          rel="noopener noreferrer"
+          href={config.LINKS.INSTAGRAM}
+        >
           <Icon name="Instagram" size="2rem" fill={colors.primary} />
 
           <LinkLabel>INSTAGRAM</LinkLabel>
         </IconWrapper>
 
-        <IconWrapper target="_blank" rel="noopener" href={config.LINKS.LINKEDIN}>
+        <IconWrapper
+          target="_blank"
+          rel="noopener noreferrer"
+          href={config.LINKS.LINKEDIN}
+        >
           <Icon name="Linkedin" size="2rem" fill={colors.primary} />
 
           <LinkLabel>LINKEDIN</LinkLabel>
         </IconWrapper>
       </LinksWrapper>
-
     </Section>
   )
 }

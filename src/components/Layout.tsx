@@ -17,7 +17,10 @@ export const Layout: FC = ({ children }) => (
   <>
     <Helmet>
       <html lang="en" />
-      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
 
     <AppHeader />

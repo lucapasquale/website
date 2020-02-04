@@ -1,5 +1,3 @@
-export type Colors = typeof lightColors
-
 export const lightColors = {
   primary: '#000',
   secondary: '#666',
@@ -19,3 +17,5 @@ export const darkColors = {
   background: '#282829',
   secondaryBackground: '#303a39',
 }
+
+export type Colors = typeof lightColors

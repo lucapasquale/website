@@ -8,14 +8,14 @@ const ProjectHeader = styled.div({
 })
 
 const URL = styled.h4(({ theme }) => ({
-  color: theme.colors.link
+  color: theme.colors.link,
 }))
 
 type Props = Pick<ProjectProps, 'title' | 'url'>
 
 export const Header: FC<Props> = ({ title, url }) => (
   <ProjectHeader>
-    <a target="_blank" href={url}>
+    <a target="_blank" rel="noopener noreferrer" href={url}>
       <h2>{title}</h2>
       <URL>{url}</URL>
     </a>

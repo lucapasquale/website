@@ -6,7 +6,6 @@ import { Layout } from '../../components/Layout'
 import { Hero } from '../../components/Hero'
 import { About } from './components/About'
 
-
 const Avatar = styled.img({
   width: '125px',
   height: '125px',
@@ -26,7 +25,9 @@ export const Home: FC = () => (
       <Hero
         title="Luca Pasquale"
         subTitle="Developer | Gamer | Engineer"
-        topContent={<Avatar src="https://avatars2.githubusercontent.com/u/15659967" />}
+        topContent={
+          <Avatar src="https://avatars2.githubusercontent.com/u/15659967" />
+        }
       />
 
       <About />

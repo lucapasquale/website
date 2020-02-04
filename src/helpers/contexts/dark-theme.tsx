@@ -5,7 +5,7 @@ import { darkColors, lightColors } from '../theme/colors'
 
 const useDarkTheme = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(
-    window.localStorage.getItem('is_dark_theme') === 'true'
+    window.localStorage.getItem('is_dark_theme') === 'true',
   )
 
   const changeTheme = () => {

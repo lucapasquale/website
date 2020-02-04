@@ -17,8 +17,8 @@ const Wrapper = styled.div({
 
 const Divider = styled.hr(({ theme }) => ({
   width: '100%',
-  marginTop: '32px',
-  marginBottom: '32px',
+  maxWidth: '500px',
+  margin: '32px 0px',
 
   borderBottomColor: theme.colors.primary,
   borderBottomWidth: '0.5px',
@@ -46,12 +46,12 @@ export const Projects: FC = () => (
           technologies={[
             {
               title: 'Front-end',
-              list: ['React', 'Apollo Client', 'Emotion', 'TypeScript']
+              list: ['React', 'Apollo Client', 'Emotion', 'TypeScript'],
             },
             {
               title: 'Back-end',
-              list: ['GraphQL', 'DynamoDB', 'Serverless', 'TypeScript']
-            }
+              list: ['GraphQL', 'DynamoDB', 'Serverless', 'TypeScript'],
+            },
           ]}
         />
 

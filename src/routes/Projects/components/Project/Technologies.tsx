@@ -5,11 +5,7 @@ import { Props as ProjectProps } from '.'
 
 const Wrapper = styled.div({
   display: 'flex',
-  justifyContent: 'space-around'
-})
-
-const List = styled.div({
-  marginRight: '64px'
+  justifyContent: 'space-evenly',
 })
 
 type Props = Pick<ProjectProps, 'technologies'>
@@ -17,13 +13,15 @@ type Props = Pick<ProjectProps, 'technologies'>
 export const Technologies: FC<Props> = ({ technologies }) => (
   <Wrapper>
     {technologies.map((tech, idx) => (
-      <List key={`${tech.title}-${idx}`}>
+      <div key={`${tech.title}-${idx}`}>
         <h3>{tech.title}</h3>
 
         <ul>
-          {tech.list.map((t) => (<li key={t}>{t}</li>))}
+          {tech.list.map(t => (
+            <li key={t}>{t}</li>
+          ))}
         </ul>
-      </List>
+      </div>
     ))}
   </Wrapper>
 )

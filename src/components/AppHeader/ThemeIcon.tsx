@@ -12,9 +12,7 @@ const Wrapper = styled.div({
 export const ThemeIcon: FC = () => {
   const { colors, isDarkTheme, changeTheme } = DarkThemeContext.useContainer()
 
-  const [icon, setIcon] = useState<IconName>(
-    isDarkTheme ? 'Sun' : 'Moon'
-  )
+  const [icon, setIcon] = useState<IconName>(isDarkTheme ? 'Sun' : 'Moon')
 
   const onIconClick = () => {
     const isDark = changeTheme()

@@ -13,17 +13,22 @@ const Wrapper = styled.header(({ theme }) => ({
 
 const SubTitle = styled.h2(({ theme }) => ({
   color: theme.colors.secondary,
+  textAlign: 'center',
 }))
 
 type Props = {
   title: string
   subTitle: string
-
   topContent?: ReactNode
   bottomContent?: ReactNode
 }
 
-export const Hero: FC<Props> = ({ title, subTitle, topContent, bottomContent }) => (
+export const Hero: FC<Props> = ({
+  title,
+  subTitle,
+  topContent,
+  bottomContent,
+}) => (
   <Wrapper>
     {topContent}
 

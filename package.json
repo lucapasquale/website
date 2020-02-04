@@ -2,6 +2,7 @@
   "name": "website",
   "private": true,
   "scripts": {
+    "lint": "prettier --write --check 'src/**/*.ts?(x)'",
     "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
     "dev": "concurrently -n parcel,tsc 'parcel ./src/index.html' 'tsc --noEmit --watch'",
     "build": "tsc --noEmit && parcel build ./src/index.html"
@@ -23,7 +24,14 @@
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
     "@types/styled-components": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
     "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
     "typescript": "^3.7.5"

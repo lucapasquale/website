@@ -39,8 +39,8 @@ const textStyles = {
   },
 }
 
-export type Theme = { colors: Colors } & typeof baseTheme
 export const baseTheme = {
   fontSizes,
   textStyles,
 }
+export type Theme = { colors: Colors } & typeof baseTheme

@@ -14,7 +14,7 @@ const ProjectWrapper = styled.section({
   '@media (max-width: 700px)': {
     flexDirection: 'column',
     alignItems: 'center',
-  }
+  },
 })
 
 const Image = styled.img({
@@ -22,8 +22,9 @@ const Image = styled.img({
   marginRight: '32px',
 
   '@media (max-width: 700px)': {
+    marginRight: 0,
     marginBottom: '16px',
-  }
+  },
 })
 
 export type Props = {
@@ -37,7 +38,13 @@ export type Props = {
   }>
 }
 
-export const Project: FC<Props> = ({ imageSrc, title, url, description, technologies }) => (
+export const Project: FC<Props> = ({
+  imageSrc,
+  title,
+  url,
+  description,
+  technologies,
+}) => (
   <ProjectWrapper>
     <Image src={imageSrc} />
 

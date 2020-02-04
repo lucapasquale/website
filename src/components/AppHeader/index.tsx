@@ -16,7 +16,8 @@ const Wrapper = styled.nav({
 
 const RightWrapper = styled.div({
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
+  userSelect: 'none',
 })
 
 export const AppHeader: FC = () => (

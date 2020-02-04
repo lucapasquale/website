@@ -15,8 +15,18 @@ export const Routes: FC = () => (
       <BrowserRouter>
         <Switch>
           <Route exact key="/" path="/" component={() => <Home />} />
-          <Route exact key="/projects" path="/projects" component={() => <Projects />} />
-          <Route exact key="/secrets" path="/secrets" component={() => <Secrets />} />
+          <Route
+            exact
+            key="/projects"
+            path="/projects"
+            component={() => <Projects />}
+          />
+          <Route
+            exact
+            key="/secrets"
+            path="/secrets"
+            component={() => <Secrets />}
+          />
         </Switch>
       </BrowserRouter>
     </StyledContext>
