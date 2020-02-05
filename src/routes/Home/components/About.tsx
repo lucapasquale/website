@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
@@ -28,22 +27,19 @@ export const About: FC = () => (
       <h3>About me</h3>
 
       <p>Hey, I'm Luca!</p>
-
       <p>
         I'm a developer born in Brazil, who loves gaming and creating things. I
-        started learning programming so i could create my own game, and after
+        started learning programming so I could create my own game, and after
         that, I never stopped learning and improving myself.
       </p>
-
       <p>
-        I worked in companies where I created event-based architecture using
-        RabbitMQ for messaging between micro-services, and also developed
+        I've worked on companies where I created an event-based architecture
+        using RabbitMQ for messaging between micro-services, and also developed
         GraphQL APIs to be consumed by our clients.
       </p>
-
       <p>
-        When needed, I also helped out on the front-end, developing e-commerces,
-        and administration panels with React and React Native.
+        When needed, I also helped out on the front-end, developing websites
+        with React and mobile apps on React Native.
       </p>
     </AboutSection>
 

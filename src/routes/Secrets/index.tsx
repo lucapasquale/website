@@ -27,8 +27,7 @@ const PLAYLIST_LINK =
 export const Secrets: FC = () => (
   <>
     <Helmet>
-      <title>Luca Pasquale - Secrets</title>
-      <link rel="canonical" href="https://lucapasquale.github.io/secrets" />
+      <link rel="canonical" href="https://lucapasquale.netlify.com/secrets" />
     </Helmet>
 
     <Layout>

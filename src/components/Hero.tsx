@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 const Wrapper = styled.header(({ theme }) => ({
@@ -29,12 +30,19 @@ export const Hero: FC<Props> = ({
   topContent,
   bottomContent,
 }) => (
-  <Wrapper>
-    {topContent}
+  <>
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={`${title} - ${subTitle}`} />
+    </Helmet>
 
-    <h1>{title}</h1>
-    <SubTitle>{subTitle}</SubTitle>
+    <Wrapper>
+      {topContent}
 
-    {bottomContent}
-  </Wrapper>
+      <h1>{title}</h1>
+      <SubTitle>{subTitle}</SubTitle>
+
+      {bottomContent}
+    </Wrapper>
+  </>
 )

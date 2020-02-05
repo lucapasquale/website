@@ -16,9 +16,7 @@ const Avatar = styled.img({
 export const Home: FC = () => (
   <>
     <Helmet>
-      <title>Luca Pasquale</title>
-      <link rel="canonical" href="https://lucapasquale.github.io/" />
-      <meta name="description" content="My portfolio page" />
+      <link rel="canonical" href="https://lucapasquale.netlify.com/" />
     </Helmet>
 
     <Layout>
@@ -26,7 +24,10 @@ export const Home: FC = () => (
         title="Luca Pasquale"
         subTitle="Developer | Gamer | Engineer"
         topContent={
-          <Avatar src="https://avatars2.githubusercontent.com/u/15659967" />
+          <Avatar
+            alt="avatar"
+            src="https://avatars2.githubusercontent.com/u/15659967"
+          />
         }
       />
 

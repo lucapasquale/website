@@ -46,7 +46,7 @@ export const Project: FC<Props> = ({
   technologies,
 }) => (
   <ProjectWrapper>
-    <Image src={imageSrc} />
+    <Image alt={`${title} project image`} src={imageSrc} />
 
     <div>
       <Header title={title} url={url} />

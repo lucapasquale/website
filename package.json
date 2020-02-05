@@ -5,7 +5,8 @@
     "lint": "prettier --write --check 'src/**/*.ts?(x)'",
     "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
     "dev": "concurrently -n parcel,tsc 'parcel ./src/index.html' 'tsc --noEmit --watch'",
-    "build": "tsc --noEmit && parcel build ./src/index.html"
+    "build": "tsc --noEmit && parcel build ./src/index.html",
+    "postbuild": "cp ./src/assets/robots.txt ./dist/robots.txt && cp ./src/assets/sitemap.xml ./dist/sitemap.xml"
   },
   "dependencies": {
     "react": "^16.4.2",

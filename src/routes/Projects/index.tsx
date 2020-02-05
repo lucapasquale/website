@@ -6,13 +6,17 @@ import { Hero } from '../../components/Hero'
 import { Layout } from '../../components/Layout'
 import { Project } from './components/Project'
 
+import { projects } from './data'
+
 const Wrapper = styled.div({
+  padding: '32px',
+})
+
+const ProjectWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-
-  padding: '32px',
 })
 
 const Divider = styled.hr(({ theme }) => ({
@@ -27,8 +31,7 @@ const Divider = styled.hr(({ theme }) => ({
 export const Projects: FC = () => (
   <>
     <Helmet>
-      <title>Luca Pasquale - Projects</title>
-      <link rel="canonical" href="https://lucapasquale.github.io/projects" />
+      <link rel="canonical" href="https://lucapasquale.netlify.com/projects" />
     </Helmet>
 
     <Layout>
@@ -38,24 +41,13 @@ export const Projects: FC = () => (
       />
 
       <Wrapper>
-        <Project
-          title="Linking Bio"
-          url="https://www.linkingbio.com"
-          imageSrc={require('../../assets/img/linking-bio.png')}
-          description="Share more than a single link in your social media. Create your own page, where you can customize and have as many links as you would like."
-          technologies={[
-            {
-              title: 'Front-end',
-              list: ['React', 'Apollo Client', 'Emotion', 'TypeScript'],
-            },
-            {
-              title: 'Back-end',
-              list: ['GraphQL', 'DynamoDB', 'Serverless', 'TypeScript'],
-            },
-          ]}
-        />
+        {projects.map((p, idx) => (
+          <ProjectWrapper key={p.title}>
+            <Project {...p} />
 
-        <Divider />
+            {idx < projects.length - 1 && <Divider />}
+          </ProjectWrapper>
+        ))}
       </Wrapper>
     </Layout>
   </>

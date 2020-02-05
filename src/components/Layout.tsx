@@ -27,6 +27,8 @@ export const Layout: FC = ({ children }) => (
 
     {children}
 
-    <SecretLink href="/secrets">Secrets</SecretLink>
+    <SecretLink aria-hidden href="/secrets">
+      Secrets
+    </SecretLink>
   </>
 )
