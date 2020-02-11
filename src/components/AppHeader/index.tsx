@@ -1,9 +1,19 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styled from 'styled-components'
 
-import { ThemeIcon } from './ThemeIcon'
+import { AppDrawer } from './AppDrawer'
+import { RightComponents } from './RightComponents'
+import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
 
-const Wrapper = styled.nav({
+const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
+  borderBottomWidth: '1px',
+  borderBottomStyle: 'solid',
+  borderBottomColor: isDarkTheme
+    ? 'rgba(255, 255, 255, 0.125)'
+    : 'rgba(0, 0, 0, 0.125)',
+}))
+
+const Wrapper = styled.div({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
@@ -11,27 +21,28 @@ const Wrapper = styled.nav({
 
   height: '24px',
   padding: '16px',
-  borderBottom: '1px solid rgba(0, 0, 0, 0.125)',
+  margin: 'auto',
+  maxWidth: '700px',
 })
 
-const RightWrapper = styled.div({
-  display: 'flex',
-  alignItems: 'center',
-  userSelect: 'none',
-})
+export const AppHeader: FC = () => {
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
-export const AppHeader: FC = () => (
-  <Wrapper>
-    <a href="/">
-      <h2>LUCA PASQUALE</h2>
-    </a>
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    <RightWrapper>
-      <ThemeIcon />
+  return (
+    <>
+      <Nav isDarkTheme={isDarkTheme}>
+        <Wrapper>
+          <a href="/">
+            <h2>LUCA PASQUALE</h2>
+          </a>
 
-      <a href="/projects">
-        <h4>PROJECTS</h4>
-      </a>
-    </RightWrapper>
-  </Wrapper>
-)
+          <RightComponents onOpen={() => setMenuOpen(true)} />
+        </Wrapper>
+      </Nav>
+
+      <AppDrawer isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
+  )
+}

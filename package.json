@@ -9,6 +9,7 @@
     "postbuild": "cp ./src/assets/robots.txt ./dist/robots.txt && cp ./src/assets/sitemap.xml ./dist/sitemap.xml"
   },
   "dependencies": {
+    "body-scroll-lock": "^2.6.4",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.1",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^5.1.0",
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
     "@types/react-router": "^5.1.4",

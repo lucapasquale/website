@@ -1,6 +1,8 @@
+export { Close } from './icons/Close'
 export { Email } from './icons/Email'
 export { Instagram } from './icons/Instagram'
 export { Github } from './icons/Github'
 export { Linkedin } from './icons/Linkedin'
+export { Menu } from './icons/Menu'
 export { Moon } from './icons/Moon'
 export { Sun } from './icons/Sun'

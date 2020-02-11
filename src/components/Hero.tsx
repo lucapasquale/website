@@ -2,15 +2,23 @@ import React, { FC, ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-const Wrapper = styled.header(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+import { DarkThemeContext } from '../helpers/contexts/dark-theme'
 
-  padding: '32px',
-  backgroundColor: theme.colors.secondaryBackground,
-  borderBottom: '1px solid rgba(0, 0, 0, 0.125)',
-}))
+const Wrapper = styled.header<{ isDarkTheme: boolean }>(
+  ({ theme, isDarkTheme }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+
+    padding: '32px',
+    backgroundColor: theme.colors.secondaryBackground,
+    borderBottomWidth: '1px',
+    borderBottomStyle: 'solid',
+    borderBottomColor: isDarkTheme
+      ? 'rgba(255, 255, 255, 0.125)'
+      : 'rgba(0, 0, 0, 0.125)',
+  }),
+)
 
 const SubTitle = styled.h2(({ theme }) => ({
   color: theme.colors.secondary,
@@ -29,20 +37,24 @@ export const Hero: FC<Props> = ({
   subTitle,
   topContent,
   bottomContent,
-}) => (
-  <>
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={`${title} - ${subTitle}`} />
-    </Helmet>
+}) => {
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
-    <Wrapper>
-      {topContent}
+  return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={`${title} - ${subTitle}`} />
+      </Helmet>
 
-      <h1>{title}</h1>
-      <SubTitle>{subTitle}</SubTitle>
+      <Wrapper isDarkTheme={isDarkTheme}>
+        {topContent}
 
-      {bottomContent}
-    </Wrapper>
-  </>
-)
+        <h1>{title}</h1>
+        <SubTitle>{subTitle}</SubTitle>
+
+        {bottomContent}
+      </Wrapper>
+    </>
+  )
+}
