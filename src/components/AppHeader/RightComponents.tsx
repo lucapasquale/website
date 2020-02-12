@@ -16,7 +16,7 @@ const DesktopLink = styled.a({
   },
 })
 
-const MenuWrapper = styled.div({
+const MobileMenu = styled.div({
   display: 'none',
 
   '@media (max-width: 700px)': {
@@ -37,8 +37,8 @@ export const RightComponents: FC<Props> = ({ onOpen }) => (
       <h4>PROJECTS</h4>
     </DesktopLink>
 
-    <MenuWrapper onClick={onOpen}>
+    <MobileMenu onClick={onOpen}>
       <Icon name="Menu" size={24} />
-    </MenuWrapper>
+    </MobileMenu>
   </Wrapper>
 )

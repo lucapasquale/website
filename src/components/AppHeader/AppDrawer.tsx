@@ -5,7 +5,11 @@ import { Drawer } from '../Drawer'
 import { DrawerHeader } from '../Drawer/Header'
 import { DrawerBody } from '../Drawer/Body'
 
-const Link = styled.a({
+const HeaderTitle = styled.h3({
+  padding: '8px',
+})
+
+const MenuItems = styled.h4({
   padding: '8px',
 })
 
@@ -17,17 +21,19 @@ type Props = {
 export const AppDrawer: FC<Props> = ({ isOpen, onClose }) => (
   <Drawer isOpen={isOpen} onClose={onClose}>
     <DrawerHeader onClose={onClose}>
-      <h3>Luca Pasquale</h3>
+      <a href="/">
+        <HeaderTitle>Luca Pasquale</HeaderTitle>
+      </a>
     </DrawerHeader>
 
     <DrawerBody>
-      <Link href="/projects">
-        <h4>HOME</h4>
-      </Link>
+      <a href="/projects">
+        <MenuItems>HOME</MenuItems>
+      </a>
 
-      <Link href="/projects">
-        <h4>PROJECTS</h4>
-      </Link>
+      <a href="/projects">
+        <MenuItems>PROJECTS</MenuItems>
+      </a>
     </DrawerBody>
   </Drawer>
 )

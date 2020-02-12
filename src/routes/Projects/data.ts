@@ -20,6 +20,19 @@ export const projects: ProjectProps[] = [
   },
 
   {
+    title: 'My portfolio webpage',
+    url: 'https://lucapasquale.netlify.com',
+    imageSrc: require('../../assets/img/website.png'),
+    description: `The page you are reading right now.`,
+    technologies: [
+      {
+        title: 'Technologies:',
+        list: ['React', 'Styled-Components', 'Parcel Bundler', 'TypeScript'],
+      },
+    ],
+  },
+
+  {
     title: 'Fit It',
     url: 'https://github.com/lucapasquale/FitIt',
     imageSrc: require('../../assets/img/fit-it.png'),
@@ -28,7 +41,7 @@ export const projects: ProjectProps[] = [
     technologies: [
       {
         title: 'Technologies:',
-        list: ['Unity Game Engine', 'C#', 'Android', 'iOS'],
+        list: ['Unity Game Engine', 'Android', 'iOS', 'C#'],
       },
     ],
   },

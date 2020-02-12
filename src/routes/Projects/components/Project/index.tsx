@@ -20,6 +20,7 @@ const ProjectWrapper = styled.section({
 const Image = styled.img({
   width: '275px',
   marginRight: '32px',
+  border: 'solid rgba(0, 0, 0, 0.15) 1px',
 
   '@media (max-width: 700px)': {
     marginRight: 0,

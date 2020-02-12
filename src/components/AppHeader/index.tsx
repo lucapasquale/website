@@ -5,7 +5,13 @@ import { AppDrawer } from './AppDrawer'
 import { RightComponents } from './RightComponents'
 import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
 
-const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
+const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme, theme }) => ({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  backgroundColor: theme.colors.background,
+
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
   borderBottomColor: isDarkTheme
@@ -25,6 +31,10 @@ const Wrapper = styled.div({
   maxWidth: '700px',
 })
 
+const EmptySpace = styled.div({
+  height: '57px',
+})
+
 export const AppHeader: FC = () => {
   const { isDarkTheme } = DarkThemeContext.useContainer()
 
@@ -41,6 +51,8 @@ export const AppHeader: FC = () => {
           <RightComponents onOpen={() => setMenuOpen(true)} />
         </Wrapper>
       </Nav>
+
+      <EmptySpace />
 
       <AppDrawer isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
