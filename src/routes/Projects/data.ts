@@ -21,9 +21,9 @@ export const projects: ProjectProps[] = [
 
   {
     title: 'My portfolio webpage',
-    url: 'https://lucapasquale.netlify.com',
+    url: 'https://github.com/lucapasquale/website',
     imageSrc: require('../../assets/img/website.png'),
-    description: `The page you are reading right now.`,
+    description: `You know, the one that has this text and is right in front of you.`,
     technologies: [
       {
         title: 'Technologies:',
