@@ -22,12 +22,12 @@ const Overlay = styled.div<{ isOpen: boolean; backgroundColor: string }>(
   }),
 )
 
-const Wrapper = styled.aside<{ isOpen: boolean }>(({ theme, isOpen }) => ({
+const Wrapper = styled.aside<{ isOpen: boolean }>(({ isOpen }) => ({
   height: '100%',
   width: '66%',
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: theme.colors.background,
+  backgroundColor: 'var(--color-background)',
 
   transition: 'all .15s ease',
   transform: `translate3d(${isOpen ? 0 : '-100%'}, 0, 0)`,
@@ -39,7 +39,8 @@ type DrawerProps = {
 }
 
 export const Drawer: FC<DrawerProps> = ({ children, isOpen, onClose }) => {
-  const { isDarkTheme } = DarkThemeContext.useContainer()
+  const { theme } = DarkThemeContext.useContainer()
+
   const [portalContainer, setPortalContainer] = useState<HTMLDivElement>()
 
   useEffect(() => {
@@ -70,9 +71,8 @@ export const Drawer: FC<DrawerProps> = ({ children, isOpen, onClose }) => {
     return null
   }
 
-  const backgroundColor = isDarkTheme
-    ? 'rgba(255, 255, 255, 0.3)'
-    : 'rgba(0, 0, 0, 0.3)'
+  const backgroundColor =
+    theme === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'
 
   return createPortal(
     <Overlay
