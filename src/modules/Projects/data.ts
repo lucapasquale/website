@@ -2,6 +2,19 @@ import { Props as ProjectProps } from './Project'
 
 export const projects: ProjectProps[] = [
   {
+    title: 'Land to Leap',
+    imageSrc: '/img/land-to-leap.png',
+    description: `Climb to the top in this arcade game, try different skins
+      and compete with your friends for the highest score!`,
+    technologies: [
+      {
+        title: 'Technologies:',
+        list: ['Unity Game Engine', 'Android', 'iOS', 'C#'],
+      },
+    ],
+  },
+
+  {
     title: 'Linking Bio',
     url: 'https://www.linkingbio.com',
     imageSrc: '/img/linking-bio.png',
@@ -27,7 +40,7 @@ export const projects: ProjectProps[] = [
     technologies: [
       {
         title: 'Technologies:',
-        list: ['React', 'Styled-Components', 'Parcel Bundler', 'TypeScript'],
+        list: ['React', 'Next.js', 'Styled-Components', 'TypeScript'],
       },
     ],
   },

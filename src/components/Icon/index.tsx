@@ -3,10 +3,8 @@ import styled from 'styled-components'
 
 import * as icons from './icons'
 
-export type IconName = keyof typeof icons
-
-export type IconProps = {
-  name: IconName
+type IconProps = {
+  name: keyof typeof icons
   size?: number | string
   fill?: string
 }
