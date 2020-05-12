@@ -17,7 +17,7 @@ const Avatar = styled.img({
 const Home: FC = () => (
   <>
     <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.com/" />
+      <link rel="canonical" href="https://lucapasquale.netlify.app/" />
     </Head>
 
     <Layout>

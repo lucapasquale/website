@@ -11,7 +11,9 @@ const Wrapper = styled.div({
   userSelect: 'none',
 })
 
-const DesktopLink = styled.h4({
+const DesktopLink = styled.a({
+  cursor: 'pointer',
+
   '@media (max-width: 700px)': {
     display: 'none',
   },
@@ -35,9 +37,9 @@ export const RightComponents: FC<Props> = ({ onOpen }) => (
     <ThemeIcon />
 
     <Link href="/projects">
-      <a>
-        <DesktopLink>PROJECTS</DesktopLink>
-      </a>
+      <DesktopLink>
+        <h4>PROJECTS</h4>
+      </DesktopLink>
     </Link>
 
     <MobileMenu onClick={onOpen}>

@@ -27,7 +27,7 @@ const PLAYLIST_LINK =
 const Secrets: FC = () => (
   <>
     <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.com/secrets" />
+      <link rel="canonical" href="https://lucapasquale.netlify.app/secrets" />
     </Head>
 
     <Layout>

@@ -31,7 +31,7 @@ const Divider = styled.hr({
 const Projects: FC = () => (
   <>
     <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.com/projects" />
+      <link rel="canonical" href="https://lucapasquale.netlify.app/projects" />
     </Head>
 
     <Layout>
