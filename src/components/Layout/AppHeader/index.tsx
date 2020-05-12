@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { AppDrawer } from './AppDrawer'
 import { RightComponents } from './RightComponents'
-import { DarkThemeContext } from '../../../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
 
 const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   position: 'fixed',

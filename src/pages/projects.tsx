@@ -2,11 +2,11 @@ import React, { FC } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { Hero } from '../../components/common/Hero'
-import { Layout } from '../../components/common/Layout'
+import { Hero } from '../components/Hero'
+import { Layout } from '../components/Layout'
 
-import { Project } from '../../components/Projects/Project'
-import { projects } from '../../components/Projects/data'
+import { Project } from '../modules/Projects/Project'
+import { projects } from '../modules/Projects/data'
 
 const Wrapper = styled.div({
   padding: '32px',

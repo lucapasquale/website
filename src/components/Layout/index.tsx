@@ -8,6 +8,7 @@ const SecretLink = styled.a({
   position: 'fixed',
   right: '0px',
   bottom: '0px',
+  cursor: 'pointer',
   color: 'var(--color-primary)',
 })
 

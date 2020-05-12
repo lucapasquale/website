@@ -3,8 +3,8 @@ import Head from 'next/head'
 import ReactPlayer from 'react-player'
 import styled from 'styled-components'
 
-import { Hero } from '../../components/common/Hero'
-import { Layout } from '../../components/common/Layout'
+import { Hero } from '../components/Hero'
+import { Layout } from '../components/Layout'
 
 const Section = styled.section({
   display: 'flex',

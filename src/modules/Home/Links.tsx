@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
 import config from '../../config'
 
-import { Icon } from '../common/Icon'
+import { Icon } from '../../components/Icon'
 
 const Section = styled.section({
   maxWidth: '450px',
