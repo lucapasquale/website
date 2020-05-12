@@ -17,7 +17,7 @@ export const Technologies: FC<Props> = ({ technologies }) => (
         <h3>{tech.title}</h3>
 
         <ul>
-          {tech.list.map(t => (
+          {tech.list.map((t) => (
             <li key={t}>{t}</li>
           ))}
         </ul>
