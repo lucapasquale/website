@@ -1,9 +1,12 @@
 node_modules/
 
-public/
 .cache/
 dist/
 .env
 
 # Local Netlify folder
 .netlify
+
+# Next.js
+.next
+out

@@ -1,26 +1,60 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { createContainer } from 'unstated-next'
 
-import { darkColors, lightColors } from '../theme/colors'
+import * as colors from '../theme/colors'
+
+type Themes = keyof typeof colors
 
 const useDarkTheme = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(
-    window.localStorage.getItem('is_dark_theme') === 'true',
-  )
+  const [theme, _setTheme] = useState<Themes | undefined>(undefined)
 
-  const changeTheme = () => {
-    const newValue = !isDarkTheme
+  const setTheme = (newTheme: Themes) => {
+    const root = window.document.documentElement
+    _setTheme(newTheme)
 
-    setIsDarkTheme(newValue)
-    window.localStorage.setItem('is_dark_theme', newValue ? 'true' : 'false')
+    localStorage.setItem('color-mode', newTheme)
 
-    return newValue
+    root.style.setProperty(
+      '--color-primary',
+      newTheme === 'light' ? colors.light.primary : colors.dark.primary,
+    )
+
+    root.style.setProperty(
+      '--color-secondary',
+      newTheme === 'light' ? colors.light.secondary : colors.dark.secondary,
+    )
+
+    root.style.setProperty(
+      '--color-link',
+      newTheme === 'light' ? colors.light.link : colors.dark.link,
+    )
+
+    root.style.setProperty(
+      '--color-background',
+      newTheme === 'light' ? colors.light.background : colors.dark.background,
+    )
+
+    root.style.setProperty(
+      '--color-secondary-background',
+      newTheme === 'light'
+        ? colors.light.secondaryBackground
+        : colors.dark.secondaryBackground,
+    )
   }
 
+  useEffect(() => {
+    const root = window.document.documentElement
+    const initialColorValue = root.style.getPropertyValue(
+      '--initial-color-mode',
+    )
+
+    setTheme(initialColorValue as Themes)
+  }, [])
+
   return {
-    isDarkTheme,
-    changeTheme,
-    colors: isDarkTheme ? darkColors : lightColors,
+    theme,
+    setTheme,
+    colors: theme === 'dark' ? colors.dark : colors.light,
   }
 }
 
