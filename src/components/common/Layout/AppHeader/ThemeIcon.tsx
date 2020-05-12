@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import { Icon } from '../../Icon'
-import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '../../../../helpers/contexts/dark-theme'
 
 const Wrapper = styled.div({
   marginRight: '16px',

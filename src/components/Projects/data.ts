@@ -1,4 +1,4 @@
-import { Props as ProjectProps } from './components/Project'
+import { Props as ProjectProps } from './Project'
 
 export const projects: ProjectProps[] = [
   {

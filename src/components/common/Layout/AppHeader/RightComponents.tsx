@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 import { Icon } from '../../Icon'
 import { ThemeIcon } from './ThemeIcon'
-import Link from 'next/link'
 
 const Wrapper = styled.div({
   display: 'flex',

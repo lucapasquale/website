@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import { Icon } from '../Icon'
-import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
 
 export const Wrapper = styled.header<{ isDarkTheme: boolean }>(
   ({ isDarkTheme }) => ({

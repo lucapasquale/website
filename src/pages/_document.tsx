@@ -40,7 +40,19 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          {/* Google Search Console */}
+          <meta
+            name="google-site-verification"
+            content="S9Tb3uPx85xHSDHa-ph2ha-_mpg5lnVTEe8Bu1in4bM"
+          />
+
+          {/* Google Fonts */}
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+          />
+        </Head>
         <body>
           <InjectVariables />
 
