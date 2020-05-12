@@ -11,7 +11,6 @@
     "jsx": "preserve",
     "sourceMap": true,
     "pretty": true,
-    "incremental": true,
     "skipLibCheck": true,
     "strict": true,
     "allowUnreachableCode": false,

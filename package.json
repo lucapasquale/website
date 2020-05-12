@@ -5,8 +5,7 @@
     "lint": "prettier --write --check 'src/**/*.ts?(x)'",
     "build-icons": "svgr --template ./src/components/common/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/common/Icon/icons ./src/assets/svgs",
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export"
   },
   "dependencies": {
     "body-scroll-lock": "^3.0.2",
@@ -37,6 +36,6 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "prettier": "^2.0.5",
-    "typescript": "^3.8.3"
+    "typescript": "^3.7.5"
   }
 }
