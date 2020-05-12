@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { Drawer } from '../../Drawer'
-import { DrawerHeader } from '../../Drawer/Header'
-import { DrawerBody } from '../../Drawer/Body'
+import { Drawer } from '@components/Drawer'
+import { DrawerHeader } from '@components/Drawer/Header'
+import { DrawerBody } from '@components/Drawer/Body'
 
 const HeaderTitle = styled.h3({
   padding: '8px',

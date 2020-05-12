@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 import { AppHeader } from './AppHeader'
-import Link from 'next/link'
 
 const SecretLink = styled.a({
   position: 'fixed',

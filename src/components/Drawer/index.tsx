@@ -1,9 +1,9 @@
 import React, { FC, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import styled from 'styled-components'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import styled from 'styled-components'
 
-import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/contexts/dark-theme'
 
 const Overlay = styled.div<{ isOpen: boolean; backgroundColor: string }>(
   ({ isOpen, backgroundColor }) => ({

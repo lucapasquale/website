@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { Layout } from '../components/Layout'
-import { Hero } from '../components/Hero'
+import { Layout } from '@components/Layout'
+import { Hero } from '@components/Hero'
 
-import { About } from '../modules/Home/About'
+import { About } from '@modules/Home/About'
 
 const Avatar = styled.img({
   width: '125px',
