@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/contexts/dark-theme'
 
 const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   display: 'flex',

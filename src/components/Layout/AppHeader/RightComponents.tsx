@@ -2,7 +2,8 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { Icon } from '../../Icon'
+import { Icon } from '@components/Icon'
+
 import { ThemeIcon } from './ThemeIcon'
 
 const Wrapper = styled.div({

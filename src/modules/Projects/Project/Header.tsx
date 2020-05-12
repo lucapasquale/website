@@ -17,7 +17,7 @@ export const Header: FC<Props> = ({ title, url }) => (
   <ProjectHeader>
     <a target="_blank" rel="noopener noreferrer" href={url}>
       <h2>{title}</h2>
-      <URL>{url}</URL>
+      {url && <URL>{url}</URL>}
     </a>
   </ProjectHeader>
 )

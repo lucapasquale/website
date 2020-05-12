@@ -1,4 +1,5 @@
 export default {
+  URL: 'https://www.lucapasquale.netlify.app',
   CONTACT: {
     EMAIL: 'lucapasquale.094@gmail.com',
   },

@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import { InjectVariables } from '../helpers/theme/inject-variables'
+import { InjectVariables } from '@helpers/theme/inject-variables'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

@@ -30,7 +30,7 @@ const Image = styled.img({
 
 export type Props = {
   title: string
-  url: string
+  url?: string
   imageSrc: any
   description: string
   technologies: Array<{
