@@ -1,8 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import styled from 'styled-components'
 
 import { AppHeader } from './AppHeader'
+import config from '../../config'
 
 const SecretLink = styled.a({
   position: 'fixed',
@@ -12,14 +14,28 @@ const SecretLink = styled.a({
   color: 'var(--color-primary)',
 })
 
-export const Layout: FC = ({ children }) => (
-  <>
-    <AppHeader />
+export const Layout: FC = ({ children }) => {
+  const [pathname, setPathname] = useState<string | undefined>()
 
-    {children}
+  useEffect(() => {
+    setPathname(location.pathname)
+  }, [])
 
-    <Link href="/secrets">
-      <SecretLink>Secrets</SecretLink>
-    </Link>
-  </>
-)
+  return (
+    <>
+      {pathname && (
+        <Head>
+          <link rel="canonical" href={config.URL + pathname} />
+        </Head>
+      )}
+
+      <AppHeader />
+
+      {children}
+
+      <Link href="/secrets">
+        <SecretLink>Secrets</SecretLink>
+      </Link>
+    </>
+  )
+}

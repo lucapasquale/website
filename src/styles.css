@@ -1,7 +1,4 @@
-html, body, #___gatsby {
-  height: 100%;
-}
-div[role="group"][tabindex] {
+html, body {
   height: 100%;
 }
 

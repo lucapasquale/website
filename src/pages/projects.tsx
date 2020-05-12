@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Head from 'next/head'
 import styled from 'styled-components'
 
 import { Hero } from '@components/Hero'
@@ -29,28 +28,19 @@ const Divider = styled.hr({
 })
 
 const Projects: FC = () => (
-  <>
-    <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.app/projects" />
-    </Head>
+  <Layout>
+    <Hero title="Projects" subTitle="Some things I've created over the years" />
 
-    <Layout>
-      <Hero
-        title="Projects"
-        subTitle="Some things I've created over the years"
-      />
+    <Wrapper>
+      {projects.map((p, idx) => (
+        <ProjectWrapper key={p.title}>
+          <Project {...p} />
 
-      <Wrapper>
-        {projects.map((p, idx) => (
-          <ProjectWrapper key={p.title}>
-            <Project {...p} />
-
-            {idx < projects.length - 1 && <Divider />}
-          </ProjectWrapper>
-        ))}
-      </Wrapper>
-    </Layout>
-  </>
+          {idx < projects.length - 1 && <Divider />}
+        </ProjectWrapper>
+      ))}
+    </Wrapper>
+  </Layout>
 )
 
 export default Projects

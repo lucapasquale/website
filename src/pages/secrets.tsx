@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Head from 'next/head'
 import ReactPlayer from 'react-player'
 import styled from 'styled-components'
 
@@ -25,25 +24,19 @@ const PLAYLIST_LINK =
   'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
 const Secrets: FC = () => (
-  <>
-    <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.app/secrets" />
-    </Head>
+  <Layout>
+    <Hero title="Secrets" subTitle="How did you get here?" />
 
-    <Layout>
-      <Hero title="Secrets" subTitle="How did you get here?" />
+    <Section>
+      <a target="_blank" rel="noopener noreferrer" href={PLAYLIST_LINK}>
+        My dumb playlist
+      </a>
 
-      <Section>
-        <a target="_blank" rel="noopener noreferrer" href={PLAYLIST_LINK}>
-          My dumb playlist
-        </a>
-
-        <Player>
-          <ReactPlayer controls url={PLAYLIST_LINK} />
-        </Player>
-      </Section>
-    </Layout>
-  </>
+      <Player>
+        <ReactPlayer controls url={PLAYLIST_LINK} />
+      </Player>
+    </Section>
+  </Layout>
 )
 
 export default Secrets

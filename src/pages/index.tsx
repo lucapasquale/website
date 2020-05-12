@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Head from 'next/head'
 import styled from 'styled-components'
 
 import { Layout } from '@components/Layout'
@@ -15,26 +14,20 @@ const Avatar = styled.img({
 })
 
 const Home: FC = () => (
-  <>
-    <Head>
-      <link rel="canonical" href="https://lucapasquale.netlify.app/" />
-    </Head>
+  <Layout>
+    <Hero
+      title="Luca Pasquale"
+      subTitle="Developer | Gamer | Engineer"
+      topContent={
+        <Avatar
+          alt="avatar"
+          src="https://avatars2.githubusercontent.com/u/15659967"
+        />
+      }
+    />
 
-    <Layout>
-      <Hero
-        title="Luca Pasquale"
-        subTitle="Developer | Gamer | Engineer"
-        topContent={
-          <Avatar
-            alt="avatar"
-            src="https://avatars2.githubusercontent.com/u/15659967"
-          />
-        }
-      />
-
-      <About />
-    </Layout>
-  </>
+    <About />
+  </Layout>
 )
 
 export default Home
