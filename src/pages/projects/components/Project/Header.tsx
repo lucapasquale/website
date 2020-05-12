@@ -7,9 +7,9 @@ const ProjectHeader = styled.div({
   marginBottom: '32px',
 })
 
-const URL = styled.h4(({ theme }) => ({
-  color: theme.colors.link,
-}))
+const URL = styled.h4({
+  color: 'var(--color-link)',
+})
 
 type Props = Pick<ProjectProps, 'title' | 'url'>
 

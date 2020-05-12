@@ -1,16 +1,17 @@
 import React, { FC, useState } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 import { AppDrawer } from './AppDrawer'
 import { RightComponents } from './RightComponents'
-import { DarkThemeContext } from '../../helpers/contexts/dark-theme'
+import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
 
-const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme, theme }) => ({
+const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100%',
-  backgroundColor: theme.colors.background,
+  backgroundColor: 'var(--color-background)',
 
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
@@ -36,17 +37,19 @@ const EmptySpace = styled.div({
 })
 
 export const AppHeader: FC = () => {
-  const { isDarkTheme } = DarkThemeContext.useContainer()
+  const { theme } = DarkThemeContext.useContainer()
 
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
-      <Nav isDarkTheme={isDarkTheme}>
+      <Nav isDarkTheme={theme === 'dark'}>
         <Wrapper>
-          <a href="/">
-            <h2>LUCA PASQUALE</h2>
-          </a>
+          <Link href="/">
+            <a>
+              <h2>LUCA PASQUALE</h2>
+            </a>
+          </Link>
 
           <RightComponents onOpen={() => setMenuOpen(true)} />
         </Wrapper>

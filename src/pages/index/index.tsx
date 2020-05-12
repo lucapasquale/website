@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import styled from 'styled-components'
 
 import { Layout } from '../../components/Layout'
 import { Hero } from '../../components/Hero'
+
 import { About } from './components/About'
 
 const Avatar = styled.img({
@@ -13,11 +14,11 @@ const Avatar = styled.img({
   marginBottom: '16px',
 })
 
-export const Home: FC = () => (
+const Home: FC = () => (
   <>
-    <Helmet>
+    <Head>
       <link rel="canonical" href="https://lucapasquale.netlify.com/" />
-    </Helmet>
+    </Head>
 
     <Layout>
       <Hero
@@ -35,3 +36,5 @@ export const Home: FC = () => (
     </Layout>
   </>
 )
+
+export default Home

@@ -4,7 +4,7 @@ export const projects: ProjectProps[] = [
   {
     title: 'Linking Bio',
     url: 'https://www.linkingbio.com',
-    imageSrc: require('../../assets/img/linking-bio.png'),
+    imageSrc: '/img/linking-bio.png',
     description: `Share more than a single link in your social media.
       Create your own page, where you can customize and have as many links as you would like.`,
     technologies: [
@@ -22,7 +22,7 @@ export const projects: ProjectProps[] = [
   {
     title: 'My portfolio webpage',
     url: 'https://github.com/lucapasquale/website',
-    imageSrc: require('../../assets/img/website.png'),
+    imageSrc: '/img/website.png',
     description: `You know, the one that has this text and is right in front of you.`,
     technologies: [
       {
@@ -35,7 +35,7 @@ export const projects: ProjectProps[] = [
   {
     title: 'Fit It',
     url: 'https://github.com/lucapasquale/FitIt',
-    imageSrc: require('../../assets/img/fit-it.png'),
+    imageSrc: '/img/fit-it.png',
     description: `Solve hundreds of different puzzles in this great mobile game.
       Game was published on Android Play Store, where it had over a thousand downloads.`,
     technologies: [

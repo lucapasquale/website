@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { Icon } from '../Icon'
+import { Icon } from '../../Icon'
 import { ThemeIcon } from './ThemeIcon'
+import Link from 'next/link'
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -10,7 +11,7 @@ const Wrapper = styled.div({
   userSelect: 'none',
 })
 
-const DesktopLink = styled.a({
+const DesktopLink = styled.h4({
   '@media (max-width: 700px)': {
     display: 'none',
   },
@@ -33,9 +34,11 @@ export const RightComponents: FC<Props> = ({ onOpen }) => (
   <Wrapper>
     <ThemeIcon />
 
-    <DesktopLink href="/projects">
-      <h4>PROJECTS</h4>
-    </DesktopLink>
+    <Link href="/projects">
+      <a>
+        <DesktopLink>PROJECTS</DesktopLink>
+      </a>
+    </Link>
 
     <MobileMenu onClick={onOpen}>
       <Icon name="Menu" size={24} />

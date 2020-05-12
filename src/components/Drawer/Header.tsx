@@ -32,10 +32,10 @@ type Props = {
 }
 
 export const DrawerHeader: FC<Props> = ({ children, onClose }) => {
-  const { isDarkTheme } = DarkThemeContext.useContainer()
+  const { theme } = DarkThemeContext.useContainer()
 
   return (
-    <Wrapper isDarkTheme={isDarkTheme}>
+    <Wrapper isDarkTheme={theme === 'dark'}>
       {children}
 
       <ButtonClose onClick={onClose}>

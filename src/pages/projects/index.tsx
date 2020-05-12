@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import styled from 'styled-components'
 
 import { Hero } from '../../components/Hero'
 import { Layout } from '../../components/Layout'
-import { Project } from './components/Project'
 
+import { Project } from './components/Project'
 import { projects } from './data'
 
 const Wrapper = styled.div({
@@ -19,20 +19,20 @@ const ProjectWrapper = styled.div({
   alignItems: 'center',
 })
 
-const Divider = styled.hr(({ theme }) => ({
+const Divider = styled.hr({
   width: '100%',
   maxWidth: '500px',
   margin: '32px 0px',
 
-  borderBottomColor: theme.colors.primary,
+  borderBottomColor: 'var(--color-primary)',
   borderBottomWidth: '0.5px',
-}))
+})
 
-export const Projects: FC = () => (
+const Projects: FC = () => (
   <>
-    <Helmet>
+    <Head>
       <link rel="canonical" href="https://lucapasquale.netlify.com/projects" />
-    </Helmet>
+    </Head>
 
     <Layout>
       <Hero
@@ -52,3 +52,5 @@ export const Projects: FC = () => (
     </Layout>
   </>
 )
+
+export default Projects

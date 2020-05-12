@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import config from '../../../config'
-import { Icon } from '../../../components/Icon'
 import { DarkThemeContext } from '../../../helpers/contexts/dark-theme'
+import { Icon } from '../../../components/Icon'
+import config from '../../../config'
 
 const Section = styled.section({
   maxWidth: '450px',

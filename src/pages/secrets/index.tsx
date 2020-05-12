@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import ReactPlayer from 'react-player'
 import styled from 'styled-components'
 
@@ -24,11 +24,11 @@ const Player = styled.div({
 const PLAYLIST_LINK =
   'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
-export const Secrets: FC = () => (
+const Secrets: FC = () => (
   <>
-    <Helmet>
+    <Head>
       <link rel="canonical" href="https://lucapasquale.netlify.com/secrets" />
-    </Helmet>
+    </Head>
 
     <Layout>
       <Hero title="Secrets" subTitle="How did you get here?" />
@@ -45,3 +45,5 @@ export const Secrets: FC = () => (
     </Layout>
   </>
 )
+
+export default Secrets
