@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 import { Icon } from '../Icon'
 
@@ -31,10 +31,10 @@ type Props = {
 }
 
 export const DrawerHeader: FC<Props> = ({ children, onClose }) => {
-  const { theme } = DarkThemeContext.useContainer()
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
   return (
-    <Wrapper isDarkTheme={theme === 'dark'}>
+    <Wrapper isDarkTheme={isDarkTheme}>
       {children}
 
       <ButtonClose onClick={onClose}>

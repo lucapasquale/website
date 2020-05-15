@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   display: 'flex',
@@ -36,7 +36,7 @@ export const Hero: FC<Props> = ({
   topContent,
   bottomContent,
 }) => {
-  const { theme } = DarkThemeContext.useContainer()
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
   return (
     <>
@@ -45,7 +45,7 @@ export const Hero: FC<Props> = ({
         <meta name="description" content={`${title} - ${subTitle}`} />
       </Head>
 
-      <Wrapper isDarkTheme={theme === 'dark'}>
+      <Wrapper isDarkTheme={isDarkTheme}>
         {topContent}
 
         <h1>{title}</h1>

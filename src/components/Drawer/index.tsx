@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 const Overlay = styled.div<{ isOpen: boolean; backgroundColor: string }>(
   ({ isOpen, backgroundColor }) => ({
@@ -39,7 +39,7 @@ type DrawerProps = {
 }
 
 export const Drawer: FC<DrawerProps> = ({ children, isOpen, onClose }) => {
-  const { theme } = DarkThemeContext.useContainer()
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
   const [portalContainer, setPortalContainer] = useState<HTMLDivElement>()
 
@@ -71,8 +71,9 @@ export const Drawer: FC<DrawerProps> = ({ children, isOpen, onClose }) => {
     return null
   }
 
-  const backgroundColor =
-    theme === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'
+  const backgroundColor = isDarkTheme
+    ? 'rgba(255, 255, 255, 0.3)'
+    : 'rgba(0, 0, 0, 0.3)'
 
   return createPortal(
     <Overlay

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 import { Icon } from '@components/Icon'
 
 const Wrapper = styled.div({
@@ -10,7 +10,12 @@ const Wrapper = styled.div({
 })
 
 export const ThemeIcon: FC = () => {
-  const { theme, setTheme, colors } = DarkThemeContext.useContainer()
+  const {
+    theme,
+    setTheme,
+    colors,
+    isDarkTheme,
+  } = DarkThemeContext.useContainer()
 
   if (!theme) {
     return null
@@ -21,7 +26,7 @@ export const ThemeIcon: FC = () => {
     setTheme(nextTheme)
   }
 
-  const iconName = theme === 'dark' ? 'Sun' : 'Moon'
+  const iconName = isDarkTheme ? 'Sun' : 'Moon'
 
   return (
     <Wrapper onClick={onIconClick}>

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import config from '@src/config'
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 import { Icon } from '@components/Icon'
 

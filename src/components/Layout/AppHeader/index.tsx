@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { DarkThemeContext } from '@helpers/contexts/dark-theme'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 import { AppDrawer } from './AppDrawer'
 import { RightComponents } from './RightComponents'
@@ -38,13 +38,13 @@ const EmptySpace = styled.div({
 })
 
 export const AppHeader: FC = () => {
-  const { theme } = DarkThemeContext.useContainer()
+  const { isDarkTheme } = DarkThemeContext.useContainer()
 
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
-      <Nav isDarkTheme={theme === 'dark'}>
+      <Nav isDarkTheme={isDarkTheme}>
         <Wrapper>
           <Link href="/">
             <a>

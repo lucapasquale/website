@@ -3,9 +3,10 @@ import styled from 'styled-components'
 
 import { Hero } from '@components/Hero'
 import { Layout } from '@components/Layout'
+import { DarkThemeContext } from '@helpers/theme/context'
 
 import { Project } from '@modules/Projects/Project'
-import { projects } from '@modules/Projects/data'
+import { getProjects } from '@modules/Projects/data'
 
 const Wrapper = styled.div({
   padding: '32px',
@@ -27,20 +28,28 @@ const Divider = styled.hr({
   borderBottomWidth: '0.5px',
 })
 
-const Projects: FC = () => (
-  <Layout>
-    <Hero title="Projects" subTitle="Some things I've created over the years" />
+const Projects: FC = () => {
+  const { isDarkTheme } = DarkThemeContext.useContainer()
+  const projects = getProjects(isDarkTheme)
 
-    <Wrapper>
-      {projects.map((p, idx) => (
-        <ProjectWrapper key={p.title}>
-          <Project {...p} />
+  return (
+    <Layout>
+      <Hero
+        title="Projects"
+        subTitle="Some things I've created over the years"
+      />
 
-          {idx < projects.length - 1 && <Divider />}
-        </ProjectWrapper>
-      ))}
-    </Wrapper>
-  </Layout>
-)
+      <Wrapper>
+        {projects.map((p, idx) => (
+          <ProjectWrapper key={p.title}>
+            <Project {...p} />
+
+            {idx < projects.length - 1 && <Divider />}
+          </ProjectWrapper>
+        ))}
+      </Wrapper>
+    </Layout>
+  )
+}
 
 export default Projects
