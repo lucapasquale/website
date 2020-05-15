@@ -45,7 +45,7 @@ class MyDocument extends Document {
           {/* Google Search Console */}
           <meta
             name="google-site-verification"
-            content="S9Tb3uPx85xHSDHa-ph2ha-_mpg5lnVTEe8Bu1in4bM"
+            content="Vhkm1Tp7bUAPqikP3uI-ZiSQvf1quxgaUl3ego7qDIo"
           />
 
           {/* Google Fonts */}
