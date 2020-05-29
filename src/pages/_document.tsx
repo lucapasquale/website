@@ -48,10 +48,24 @@ class MyDocument extends Document {
             content="Vhkm1Tp7bUAPqikP3uI-ZiSQvf1quxgaUl3ego7qDIo"
           />
 
-          {/* Google Fonts */}
+          {/* Fonts */}
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            as="font"
+            rel="preload"
+            href="/fonts/roboto-v20-latin-700.woff2"
+            crossOrigin=""
+          />
+          <link
+            as="font"
+            rel="preload"
+            href="/fonts/roboto-v20-latin-900.woff2"
+            crossOrigin=""
+          />
+          <link
+            as="font"
+            rel="preload"
+            href="/fonts/roboto-v20-latin-regular.woff2"
+            crossOrigin=""
           />
         </Head>
         <body>
