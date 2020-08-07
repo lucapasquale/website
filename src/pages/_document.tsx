@@ -5,13 +5,16 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
+  DocumentInitialProps,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 import { InjectVariables } from '@helpers/theme/inject-variables'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(
+    ctx: DocumentContext,
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -38,7 +41,7 @@ class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="en">
         <Head>
@@ -68,6 +71,7 @@ class MyDocument extends Document {
             crossOrigin=""
           />
         </Head>
+
         <body>
           <InjectVariables />
 
