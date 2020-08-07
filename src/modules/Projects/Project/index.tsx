@@ -18,7 +18,8 @@ const ProjectWrapper = styled.section({
 })
 
 const Image = styled.img({
-  width: '275px',
+  minWidth: '275px',
+  maxWidth: '275px',
   marginRight: '32px',
   border: 'solid rgba(0, 0, 0, 0.15) 1px',
 

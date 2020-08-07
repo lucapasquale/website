@@ -3,9 +3,11 @@ import { Props as ProjectProps } from './Project'
 export function getProjects(isDarkTheme: boolean): ProjectProps[] {
   return [
     {
-      title: 'Land to Leap',
-      imageSrc: '/img/land-to-leap.png',
-      description: `Climb to the top in this arcade game, try different skins
+      title: 'Up We Go',
+      url:
+        'https://play.google.com/store/apps/details?id=com.NarrowAlley.UpWeGo',
+      imageSrc: '/img/up-we-go.png',
+      description: `Climb to the top in this arcade game, try different characters
         and compete with your friends for the highest score!`,
       technologies: [
         {
@@ -24,11 +26,11 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       technologies: [
         {
           title: 'Front-end:',
-          list: ['React', 'Apollo Client', 'Emotion', 'TypeScript'],
+          list: ['React', 'Apollo Client', 'Styled', 'TypeScript'],
         },
         {
           title: 'Back-end:',
-          list: ['GraphQL', 'DynamoDB', 'Serverless', 'TypeScript'],
+          list: ['GraphQL', 'PostgreSQL', 'Serverless', 'TypeScript'],
         },
       ],
     },
