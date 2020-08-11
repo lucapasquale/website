@@ -5,7 +5,6 @@ import { DarkThemeContext } from '@helpers/theme/context'
 import { Icon } from '@components/Icon'
 
 const Wrapper = styled.div({
-  marginRight: '16px',
   cursor: 'pointer',
 })
 

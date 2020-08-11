@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Links } from './Links'
 
-const Wrapper = styled.main({
+const Wrapper = styled.div({
   margin: 'auto',
   padding: '16px',
 

@@ -43,7 +43,7 @@ export const AppHeader: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <>
+    <header>
       <Nav isDarkTheme={isDarkTheme}>
         <Wrapper>
           <Link href="/">
@@ -59,6 +59,6 @@ export const AppHeader: FC = () => {
       <EmptySpace />
 
       <AppDrawer isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-    </>
+    </header>
   )
 }
