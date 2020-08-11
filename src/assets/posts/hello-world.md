@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: My first blog post!
-createdAt: 2020-08-11
+createdAt: 2020-08-11T12:00:00.000Z
 ---
 
 ## My first blog post

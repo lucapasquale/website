@@ -27,6 +27,7 @@ const MobileMenu = styled.div({
   '@media (max-width: 700px)': {
     display: 'flex',
     cursor: 'pointer',
+    marginLeft: '16px',
   },
 })
 

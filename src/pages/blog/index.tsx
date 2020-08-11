@@ -1,19 +1,25 @@
 import fs from 'fs'
 import React, { FC } from 'react'
 import { GetStaticProps } from 'next'
+import styled from 'styled-components'
 
 import { Layout } from '@components/Layout'
-import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
-import { Hero } from '../../components/Hero'
-import Link from 'next/link'
+import { Hero } from '@components/Hero'
 
-export type Post = {
-  title: string
-  description: string
-  createdAt: Date
-  slug: string
-  content: string
-}
+import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
+import { PostLink } from '@modules/Blog/PostLink'
+import { Post } from '@modules/Blog/types'
+
+const Wrapper = styled.article({
+  maxWidth: '700px',
+  margin: 'auto',
+  padding: '32px',
+  paddingTop: '64px',
+
+  '@media (max-width: 700px)': {
+    padding: '16px',
+  },
+})
 
 type Props = {
   posts: Post[]
@@ -21,13 +27,13 @@ type Props = {
 
 const Page: FC<Props> = ({ posts }) => (
   <Layout>
-    <Hero title="Posts" subTitle="" />
+    <Hero title="Blog" subTitle="My latests posts" />
 
-    {posts.map((post) => (
-      <Link key={post.slug} href="/blog/[slug]" as={`/blog/${post.slug}`}>
-        <a>{post.title}</a>
-      </Link>
-    ))}
+    <Wrapper>
+      {posts.map((post) => (
+        <PostLink key={post.slug} post={post} />
+      ))}
+    </Wrapper>
   </Layout>
 )
 

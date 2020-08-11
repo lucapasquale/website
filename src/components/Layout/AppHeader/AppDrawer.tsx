@@ -36,6 +36,12 @@ export const AppDrawer: FC<Props> = ({ isOpen, onClose }) => (
         </a>
       </Link>
 
+      <Link href="/blog">
+        <a>
+          <MenuItems>BLOG</MenuItems>
+        </a>
+      </Link>
+
       <Link href="/projects">
         <a>
           <MenuItems>PROJECTS</MenuItems>

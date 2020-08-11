@@ -9,7 +9,7 @@ import { Hero } from '@components/Hero'
 
 import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
 import { renderers } from '@modules/Blog/renderers'
-import { Post } from '.'
+import { Post } from '@modules/Blog/types'
 
 const Wrapper = styled.article({
   maxWidth: '700px',

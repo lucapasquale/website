@@ -1,6 +1,6 @@
 import matter from 'gray-matter'
 
-import { Post } from '../../pages/blog'
+import { Post } from './types'
 
 export function parsePostMarkdown(fileName: string, markdown: string): Post {
   const { data, content } = matter(markdown)
