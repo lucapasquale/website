@@ -14,6 +14,7 @@ const Wrapper = styled.div({
 
 const DesktopLink = styled.a({
   cursor: 'pointer',
+  marginLeft: '16px',
 
   '@media (max-width: 700px)': {
     display: 'none',
@@ -26,6 +27,7 @@ const MobileMenu = styled.div({
   '@media (max-width: 700px)': {
     display: 'flex',
     cursor: 'pointer',
+    marginLeft: '16px',
   },
 })
 
@@ -36,6 +38,12 @@ type Props = {
 export const RightComponents: FC<Props> = ({ onOpen }) => (
   <Wrapper>
     <ThemeIcon />
+
+    <Link href="/blog">
+      <DesktopLink>
+        <h4>BLOG</h4>
+      </DesktopLink>
+    </Link>
 
     <Link href="/projects">
       <DesktopLink>

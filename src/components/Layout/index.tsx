@@ -31,11 +31,13 @@ export const Layout: FC = ({ children }) => {
 
       <AppHeader />
 
-      {children}
+      <main>{children}</main>
 
-      <Link href="/secrets">
-        <SecretLink>Secrets</SecretLink>
-      </Link>
+      <footer>
+        <Link href="/secrets">
+          <SecretLink>Secrets</SecretLink>
+        </Link>
+      </footer>
     </>
   )
 }
