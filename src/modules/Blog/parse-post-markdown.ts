@@ -5,7 +5,7 @@ import { Post } from '../../pages/blog'
 export function parsePostMarkdown(fileName: string, markdown: string): Post {
   const { data, content } = matter(markdown)
 
-  const formattedDate = data.createdAt.toLocaleDateString('en-US', {
+  const formattedDate = data.createdAt.toLocaleDateString('pt-BR', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

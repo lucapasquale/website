@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next'
 import { Layout } from '@components/Layout'
 import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
 import { Hero } from '../../components/Hero'
+import Link from 'next/link'
 
 export type Post = {
   title: string
@@ -23,9 +24,9 @@ const Page: FC<Props> = ({ posts }) => (
     <Hero title="Posts" subTitle="" />
 
     {posts.map((post) => (
-      <a key={post.slug} href={`/blog/${post.slug}`}>
-        {post.title}
-      </a>
+      <Link key={post.slug} href="/blog/[slug]" as={`/blog/${post.slug}`}>
+        <a>{post.title}</a>
+      </Link>
     ))}
   </Layout>
 )

@@ -8,8 +8,7 @@ import { Layout } from '@components/Layout'
 import { Hero } from '@components/Hero'
 
 import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
-import { Code } from '@modules/Blog/Code'
-import { InlineCode } from '@modules/Blog/InlineCode'
+import { renderers } from '@modules/Blog/renderers'
 import { Post } from '.'
 
 const Wrapper = styled.article({
@@ -36,10 +35,7 @@ const Page: FC<Props> = ({ post }) => {
       <Hero title={post.title} subTitle={post.createdAt.toString()} />
 
       <Wrapper>
-        <ReactMarkdown
-          source={post.content}
-          renderers={{ inlineCode: InlineCode, code: Code }}
-        />
+        <ReactMarkdown source={post.content} renderers={renderers} />
       </Wrapper>
     </Layout>
   )
