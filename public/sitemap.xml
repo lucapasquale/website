@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://lucapasquale.netlify.app/</loc>
-      <lastmod>2020-05-12</lastmod>
+      <loc>https://lucapasquale.dev/</loc>
+      <lastmod>2020-08-11</lastmod>
       <changefreq>monthly</changefreq>
    </url>
+
    <url>
-      <loc>https://lucapasquale.netlify.app/projects</loc>
-      <lastmod>2020-05-12</lastmod>
-      <changefreq>monthly</changefreq>
+      <loc>https://lucapasquale.dev/blog</loc>
+      <lastmod>2020-08-11</lastmod>
+      <changefreq>weekly</changefreq>
    </url>
    <url>
-      <loc>https://lucapasquale.netlify.app/secrets</loc>
-      <lastmod>2020-05-12</lastmod>
+      <loc>https://lucapasquale.dev/blog/hello-world</loc>
+      <lastmod>2020-08-11</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://lucapasquale.dev/projects</loc>
+      <lastmod>2020-08-11</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+
+   <url>
+      <loc>https://lucapasquale.dev/secrets</loc>
+      <lastmod>2020-08-11</lastmod>
       <changefreq>monthly</changefreq>
    </url>
 </urlset>
