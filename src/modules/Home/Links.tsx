@@ -2,8 +2,6 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import config from '@src/config'
-import { DarkThemeContext } from '@helpers/theme/context'
-
 import { Icon } from '@components/Icon'
 
 const Section = styled.section({
@@ -35,57 +33,60 @@ const IconWrapper = styled.a({
 
   margin: '8px',
   marginBottom: '16px',
+  color: 'var(--color-primary)',
+
+  ':hover': {
+    color: 'var(--color-link)',
+  },
 })
 
-const LinkLabel = styled.h3({
+const LinkLabel = styled.div({
   margin: 0,
   marginLeft: '8px',
+  fontSize: '18px',
+  fontWeight: 700,
 })
 
-export const Links: FC = () => {
-  const { colors } = DarkThemeContext.useContainer()
+export const Links: FC = () => (
+  <Section>
+    <h3>Contact</h3>
 
-  return (
-    <Section>
-      <h3>Contact</h3>
+    <LinksWrapper>
+      <IconWrapper
+        target="_blank"
+        rel="noopener noreferrer"
+        href={config.LINKS.GITHUB}
+      >
+        <Icon name="Github" size="2rem" />
 
-      <LinksWrapper>
-        <IconWrapper
-          target="_blank"
-          rel="noopener noreferrer"
-          href={config.LINKS.GITHUB}
-        >
-          <Icon name="Github" size="2rem" fill={colors.primary} />
+        <LinkLabel>GITHUB</LinkLabel>
+      </IconWrapper>
 
-          <LinkLabel>GITHUB</LinkLabel>
-        </IconWrapper>
+      <IconWrapper target="_blank" href={`mailto:${config.CONTACT.EMAIL}`}>
+        <Icon name="Email" size="2rem" />
 
-        <IconWrapper target="_blank" href={`mailto:${config.CONTACT.EMAIL}`}>
-          <Icon name="Email" size="2rem" fill={colors.primary} />
+        <LinkLabel>EMAIL</LinkLabel>
+      </IconWrapper>
 
-          <LinkLabel>EMAIL</LinkLabel>
-        </IconWrapper>
+      <IconWrapper
+        target="_blank"
+        rel="noopener noreferrer"
+        href={config.LINKS.INSTAGRAM}
+      >
+        <Icon name="Instagram" size="2rem" />
 
-        <IconWrapper
-          target="_blank"
-          rel="noopener noreferrer"
-          href={config.LINKS.INSTAGRAM}
-        >
-          <Icon name="Instagram" size="2rem" fill={colors.primary} />
+        <LinkLabel>INSTAGRAM</LinkLabel>
+      </IconWrapper>
 
-          <LinkLabel>INSTAGRAM</LinkLabel>
-        </IconWrapper>
+      <IconWrapper
+        target="_blank"
+        rel="noopener noreferrer"
+        href={config.LINKS.LINKEDIN}
+      >
+        <Icon name="Linkedin" size="2rem" />
 
-        <IconWrapper
-          target="_blank"
-          rel="noopener noreferrer"
-          href={config.LINKS.LINKEDIN}
-        >
-          <Icon name="Linkedin" size="2rem" fill={colors.primary} />
-
-          <LinkLabel>LINKEDIN</LinkLabel>
-        </IconWrapper>
-      </LinksWrapper>
-    </Section>
-  )
-}
+        <LinkLabel>LINKEDIN</LinkLabel>
+      </IconWrapper>
+    </LinksWrapper>
+  </Section>
+)

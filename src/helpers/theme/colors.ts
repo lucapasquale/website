@@ -3,6 +3,7 @@ export const light = {
   secondary: '#666',
 
   link: '#067ea9',
+  linkBackground: '#067ea977',
 
   background: '#fff',
   secondaryBackground: '#dfedf7',
@@ -13,6 +14,7 @@ export const dark = {
   secondary: '#a0a0a0',
 
   link: '#5fa4bd',
+  linkBackground: '#5fa4bd77',
 
   background: '#282829',
   secondaryBackground: '#303a39',

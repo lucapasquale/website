@@ -11,7 +11,7 @@ const HeaderTitle = styled.h3({
 })
 
 const MenuItems = styled.h4({
-  padding: '8px',
+  padding: '16px 8px',
 })
 
 type Props = {

@@ -27,14 +27,20 @@ const Wrapper = styled.div({
   justifyContent: 'space-between',
   alignItems: 'center',
 
-  height: '24px',
-  padding: '16px',
   margin: 'auto',
   maxWidth: '700px',
 })
 
 const EmptySpace = styled.div({
-  height: '57px',
+  height: '60px',
+})
+
+const HomeLink = styled.h2({
+  padding: '12px 0px',
+
+  ':hover': {
+    color: 'var(--color-link)',
+  },
 })
 
 export const AppHeader: FC = () => {
@@ -48,7 +54,7 @@ export const AppHeader: FC = () => {
         <Wrapper>
           <Link href="/">
             <a>
-              <h2>LUCA PASQUALE</h2>
+              <HomeLink>LUCA PASQUALE</HomeLink>
             </a>
           </Link>
 
