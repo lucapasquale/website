@@ -5,7 +5,8 @@
     "lint": "prettier --write --check 'src/**/*.ts?(x)'",
     "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
     "dev": "next",
-    "build": "next build && next export"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "body-scroll-lock": "^3.0.3",
