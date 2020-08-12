@@ -28,6 +28,7 @@ const Wrapper = styled.div({
   alignItems: 'center',
 
   margin: 'auto',
+  padding: '0px 8px',
   maxWidth: '700px',
 })
 

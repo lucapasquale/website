@@ -4,16 +4,14 @@ import Link from 'next/link'
 import { Post } from './types'
 import styled from 'styled-components'
 
-const Wrapper = styled.article({})
-
-const Title = styled.h3({
+const Title = styled.h2({
   marginTop: '32px',
-  marginBottom: '8px',
   color: 'var(--color-link)',
 })
 
 const Description = styled.p({
   marginBottom: '64px',
+  fontSize: '14px',
 })
 
 type Props = {
@@ -21,7 +19,7 @@ type Props = {
 }
 
 export const PostLink: FC<Props> = ({ post }) => (
-  <Wrapper>
+  <article>
     <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
       <a>
         <Title>{post.title}</Title>
@@ -30,5 +28,5 @@ export const PostLink: FC<Props> = ({ post }) => (
 
     <small>{post.createdAt.toString()}</small>
     <Description>{post.description}</Description>
-  </Wrapper>
+  </article>
 )

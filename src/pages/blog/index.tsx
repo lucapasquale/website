@@ -10,7 +10,7 @@ import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
 import { PostLink } from '@modules/Blog/PostLink'
 import { Post } from '@modules/Blog/types'
 
-const Wrapper = styled.article({
+const Wrapper = styled.div({
   maxWidth: '700px',
   margin: 'auto',
   padding: '32px',
