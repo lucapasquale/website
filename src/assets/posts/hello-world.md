@@ -4,8 +4,6 @@ description: My first blog post!
 createdAt: 2020-08-11T12:00:00.000Z
 ---
 
-## My first blog post
-
 I can write in **bold**, _italic_ and ~~strikethrough~~
 
 Here is a link to [the list of posts](/blog), and an [external link](https://www.google.com)
