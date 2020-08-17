@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-
-import { Post } from './types'
 import styled from 'styled-components'
+
+import { colors } from '@helpers/theme/colors'
+import { Post } from './types'
 
 const Title = styled.h2({
   marginTop: '32px',
-  color: 'var(--color-link)',
+  color: `var(${colors.link.cssVariable})`,
 })
 
 const Description = styled.p({

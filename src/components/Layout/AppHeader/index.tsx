@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import { DarkThemeContext } from '@helpers/theme/context'
+import { colors } from '@helpers/theme/colors'
 
 import { AppDrawer } from './AppDrawer'
 import { RightComponents } from './RightComponents'
@@ -12,7 +13,7 @@ const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   top: 0,
   left: 0,
   width: '100%',
-  backgroundColor: 'var(--color-background)',
+  backgroundColor: `var(${colors.background.cssVariable})`,
 
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
@@ -40,7 +41,7 @@ const HomeLink = styled.h2({
   padding: '12px 0px',
 
   ':hover': {
-    color: 'var(--color-link)',
+    color: `var(${colors.link.cssVariable})`,
   },
 })
 

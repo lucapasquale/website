@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react'
 import { createContainer } from 'unstated-next'
 
-import * as colors from './colors'
-
-type Themes = keyof typeof colors
+import { Theme, colors } from './colors'
 
 const useDarkTheme = () => {
-  const [theme, _setTheme] = useState<Themes | undefined>(undefined)
+  const [theme, _setTheme] = useState<Theme | undefined>(undefined)
 
-  const setTheme = (newTheme: Themes) => {
+  const setTheme = (newTheme: Theme) => {
     _setTheme(newTheme)
     setCssVariables(newTheme)
 
@@ -21,48 +19,22 @@ const useDarkTheme = () => {
       '--initial-color-mode',
     )
 
-    setTheme(initialColorValue as Themes)
+    setTheme(initialColorValue as Theme)
   }, [])
-
-  const isDarkTheme = theme === 'dark'
 
   return {
     theme,
     setTheme,
-    isDarkTheme,
-    colors: isDarkTheme ? colors.dark : colors.light,
+    isDarkTheme: theme === 'dark',
   }
 }
 
 export const DarkThemeContext = createContainer(useDarkTheme)
 
-function setCssVariables(newTheme: Themes) {
+function setCssVariables(theme: Theme) {
   const root = window.document.documentElement
 
-  root.style.setProperty(
-    '--color-primary',
-    newTheme === 'light' ? colors.light.primary : colors.dark.primary,
-  )
-
-  root.style.setProperty(
-    '--color-secondary',
-    newTheme === 'light' ? colors.light.secondary : colors.dark.secondary,
-  )
-
-  root.style.setProperty(
-    '--color-link',
-    newTheme === 'light' ? colors.light.link : colors.dark.link,
-  )
-
-  root.style.setProperty(
-    '--color-background',
-    newTheme === 'light' ? colors.light.background : colors.dark.background,
-  )
-
-  root.style.setProperty(
-    '--color-secondary-background',
-    newTheme === 'light'
-      ? colors.light.secondaryBackground
-      : colors.dark.secondaryBackground,
-  )
+  Object.values(colors).forEach((color) => {
+    root.style.setProperty(color.cssVariable, color[theme])
+  })
 }
