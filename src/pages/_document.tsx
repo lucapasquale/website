@@ -45,12 +45,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Google Search Console */}
-          <meta
-            name="google-site-verification"
-            content="Vhkm1Tp7bUAPqikP3uI-ZiSQvf1quxgaUl3ego7qDIo"
-          />
-
           {/* Fonts */}
           <link
             as="font"

@@ -10,7 +10,7 @@ const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   alignItems: 'center',
 
   padding: '32px',
-  backgroundColor: 'var(--color-secondary-background)',
+  backgroundColor: 'var(--color-background-secondary)',
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
   borderBottomColor: isDarkTheme
