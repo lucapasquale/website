@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const fs = require('fs')
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
       <loc>https://lucapasquale.dev/</loc>
@@ -11,19 +14,7 @@
       <lastmod>2020-08-17</lastmod>
       <changefreq>weekly</changefreq>
   </url>
-  
-    <url>
-      <loc>https://lucapasquale.dev/blog/hello-world</loc>
-      <lastmod>2020-08-17</lastmod>
-      <changefreq>monthly</changefreq>
-    </url>
-  
-    <url>
-      <loc>https://lucapasquale.dev/blog/test</loc>
-      <lastmod>2020-08-17</lastmod>
-      <changefreq>monthly</changefreq>
-    </url>
-  
+  ${getPostsSitemap().join('')}
 
   <url>
       <loc>https://lucapasquale.dev/projects</loc>
@@ -37,3 +28,21 @@
       <changefreq>monthly</changefreq>
   </url>
 </urlset>
+`
+
+fs.writeFileSync('public/sitemap.xml', sitemap)
+
+function getPostsSitemap() {
+  const files = fs.readdirSync('src/assets/posts')
+  const paths = files.map((fileName) => 'blog/' + fileName.replace('.md', ''))
+
+  return paths.map(
+    (path) => `
+    <url>
+      <loc>https://lucapasquale.dev/${path}</loc>
+      <lastmod>2020-08-17</lastmod>
+      <changefreq>monthly</changefreq>
+    </url>
+  `,
+  )
+}
