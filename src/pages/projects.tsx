@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Hero } from '@components/Hero'
 import { Layout } from '@components/Layout'
 import { DarkThemeContext } from '@helpers/theme/context'
+import { colors } from '@helpers/theme/colors'
 
 import { Project } from '@modules/Projects/Project'
 import { getProjects } from '@modules/Projects/data'
@@ -24,7 +25,7 @@ const Divider = styled.hr({
   maxWidth: '500px',
   margin: '32px 0px',
 
-  borderBottomColor: 'var(--color-primary)',
+  borderBottomColor: `var(${colors.primary.cssVariable})`,
   borderBottomWidth: '0.5px',
 })
 

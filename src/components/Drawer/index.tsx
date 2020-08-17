@@ -4,6 +4,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import styled from 'styled-components'
 
 import { DarkThemeContext } from '@helpers/theme/context'
+import { colors } from '@helpers/theme/colors'
 
 const Overlay = styled.div<{ isOpen: boolean; backgroundColor: string }>(
   ({ isOpen, backgroundColor }) => ({
@@ -27,7 +28,7 @@ const Wrapper = styled.aside<{ isOpen: boolean }>(({ isOpen }) => ({
   width: '66%',
   display: 'flex',
   flexDirection: 'column',
-  backgroundColor: 'var(--color-background)',
+  backgroundColor: `var(${colors.background.cssVariable})`,
 
   transition: 'all .15s ease',
   transform: `translate3d(${isOpen ? 0 : '-100%'}, 0, 0)`,

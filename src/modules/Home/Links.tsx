@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import config from '@src/config'
 import { Icon } from '@components/Icon'
+import { colors } from '@helpers/theme/colors'
 
 const Section = styled.section({
   maxWidth: '450px',
@@ -33,10 +34,10 @@ const IconWrapper = styled.a({
 
   margin: '8px',
   marginBottom: '16px',
-  color: 'var(--color-primary)',
+  color: `var(${colors.primary.cssVariable})`,
 
   ':hover': {
-    color: 'var(--color-link)',
+    color: `var(${colors.link.cssVariable})`,
   },
 })
 

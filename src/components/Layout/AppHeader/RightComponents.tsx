@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import { Icon } from '@components/Icon'
+import { colors } from '@helpers/theme/colors'
 
 import { ThemeIcon } from './ThemeIcon'
 
@@ -18,7 +19,7 @@ const DesktopLink = styled.h4({
   padding: '22px 0px',
 
   ':hover': {
-    color: 'var(--color-link)',
+    color: `var(${colors.link.cssVariable})`,
   },
 
   '@media (max-width: 700px)': {

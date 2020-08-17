@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 import { DarkThemeContext } from '@helpers/theme/context'
+import { colors } from '@helpers/theme/colors'
 
 const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   display: 'flex',
@@ -10,7 +11,7 @@ const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   alignItems: 'center',
 
   padding: '32px',
-  backgroundColor: 'var(--color-background-secondary)',
+  backgroundColor: `var(${colors.backgroundSecondary.cssVariable})`,
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
   borderBottomColor: isDarkTheme
@@ -19,7 +20,7 @@ const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
 }))
 
 const SubTitle = styled.h2({
-  color: 'var(--color-secondary)',
+  color: `var(${colors.secondary.cssVariable})`,
   textAlign: 'center',
 })
 
