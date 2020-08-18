@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: My first blog post!
-createdAt: 2020-08-11T12:00:00.000Z
+createdAt: "2020-08-11T12:00:00.000Z"
 ---
 
 ### Basic Markdown

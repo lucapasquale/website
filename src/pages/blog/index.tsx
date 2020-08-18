@@ -46,6 +46,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return parsePostMarkdown(fileName, markdown)
   })
 
+  console.log(posts)
+  posts.sort((a, b) => {
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  })
+
   return { props: { posts } }
 }
 
