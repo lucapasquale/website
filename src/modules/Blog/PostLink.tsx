@@ -27,7 +27,7 @@ export const PostLink: FC<Props> = ({ post }) => (
       </a>
     </Link>
 
-    <small>{post.createdAt.toString()}</small>
+    <small>{new Date(post.createdAt).toLocaleDateString('en-US')}</small>
     <Description>{post.description}</Description>
   </article>
 )

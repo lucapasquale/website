@@ -47,7 +47,7 @@ export const Post: FC<Props> = ({ post }) => (
         </LinkWrapper>
       </Link>
 
-      <h4>{post.createdAt.toString()}</h4>
+      <h4>{new Date(post.createdAt).toLocaleDateString()}</h4>
     </InfoRow>
 
     <ReactMarkdown source={post.content} renderers={renderers} />
