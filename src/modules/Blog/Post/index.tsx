@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import { Icon } from '@components/Icon'
 
 import { renderers } from './renderers'
-import { Post as PostType } from './types'
+import { Post as PostType } from '../types'
 
 const Wrapper = styled.article({
   maxWidth: '700px',

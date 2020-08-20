@@ -7,7 +7,7 @@ import { Hero } from '@components/Hero'
 
 import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
 import { Post as PostType } from '@modules/Blog/types'
-import { Post } from '@modules/Blog/Post'
+import { Post } from '@src/modules/Blog/Post'
 
 type Props = {
   post: PostType | null

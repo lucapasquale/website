@@ -40,16 +40,17 @@ const Page: FC<Props> = ({ posts }) => (
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const files = fs.readdirSync('src/assets/posts')
 
-  const posts = files.map((fileName) => {
-    const markdown = fs.readFileSync(`src/assets/posts/${fileName}`).toString()
+  const posts = files
+    .map((fileName) => {
+      const markdown = fs
+        .readFileSync(`src/assets/posts/${fileName}`)
+        .toString()
 
-    return parsePostMarkdown(fileName, markdown)
-  })
-
-  console.log(posts)
-  posts.sort((a, b) => {
-    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  })
+      return parsePostMarkdown(fileName, markdown)
+    })
+    .sort((a, b) => {
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    })
 
   return { props: { posts } }
 }
