@@ -6,7 +6,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       title: 'Up We Go',
       url:
         'https://play.google.com/store/apps/details?id=com.NarrowAlley.UpWeGo',
-      imageSrc: '/img/up-we-go.png',
+      imageSrc: '/images/projects/up-we-go.webp',
       description: `Climb to the top in this arcade game, try different characters
         and compete with your friends for the highest score!`,
       technologies: [
@@ -20,7 +20,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
     {
       title: 'Linking Bio',
       url: 'https://www.linkingbio.com',
-      imageSrc: '/img/linking-bio.png',
+      imageSrc: '/images/projects/linking-bio.webp',
       description: `Share more than a single link in your social media.
         Create your own page, where you can customize and have as many links as you would like.`,
       technologies: [
@@ -39,8 +39,8 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       title: 'My portfolio webpage',
       url: 'https://github.com/lucapasquale/website',
       imageSrc: isDarkTheme
-        ? '/img/website-light.png'
-        : '/img/website-dark.png',
+        ? '/images/projects/website-light.webp'
+        : '/images/projects/website-dark.webp',
       description: `You know, the one that has this text and is right in front of you.`,
       technologies: [
         {
@@ -53,7 +53,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
     {
       title: 'Fit It',
       url: 'https://github.com/lucapasquale/FitIt',
-      imageSrc: '/img/fit-it.png',
+      imageSrc: '/images/projects/fit-it.webp',
       description: `Solve hundreds of different puzzles in this great mobile game.
         Game was published on Android Play Store, where it had over a thousand downloads.`,
       technologies: [
