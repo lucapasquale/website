@@ -39,9 +39,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return { props: { post: null } }
   }
 
-  const markdown = fs
-    .readFileSync(`src/assets/posts/${params.slug}.md`)
-    .toString()
+  const markdown = fs.readFileSync(`src/assets/posts/${params.slug}.md`).toString()
 
   const post = parsePostMarkdown(params.slug, markdown)
 

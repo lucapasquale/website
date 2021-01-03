@@ -35,10 +35,7 @@ const Projects: FC = () => {
 
   return (
     <Layout>
-      <Hero
-        title="Projects"
-        subTitle="Some things I've created over the years"
-      />
+      <Hero title="Projects" subTitle="Some things I've created over the years" />
 
       <Wrapper>
         {projects.map((p, idx) => (

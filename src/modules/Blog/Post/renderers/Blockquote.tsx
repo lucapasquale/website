@@ -12,6 +12,4 @@ type Props = {
   value: any
 }
 
-export const Blockquote: FC<Props> = ({ children }) => (
-  <Wrapper>{children}</Wrapper>
-)
+export const Blockquote: FC<Props> = ({ children }) => <Wrapper>{children}</Wrapper>

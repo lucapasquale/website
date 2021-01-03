@@ -20,7 +20,7 @@ const Overlay = styled.div<{ isOpen: boolean; backgroundColor: string }>(
     transition: 'background-color .25s ease',
     transform: `translate3d(${isOpen ? 0 : '-100%'}, 0, 0)`,
     backgroundColor: isOpen ? backgroundColor : 'transparent',
-  }),
+  })
 )
 
 const Wrapper = styled.aside<{ isOpen: boolean }>(({ isOpen }) => ({
@@ -72,20 +72,14 @@ export const Drawer: FC<DrawerProps> = ({ children, isOpen, onClose }) => {
     return null
   }
 
-  const backgroundColor = isDarkTheme
-    ? 'rgba(255, 255, 255, 0.3)'
-    : 'rgba(0, 0, 0, 0.3)'
+  const backgroundColor = isDarkTheme ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.3)'
 
   return createPortal(
-    <Overlay
-      isOpen={isOpen}
-      backgroundColor={backgroundColor}
-      onClick={onClose}
-    >
+    <Overlay isOpen={isOpen} backgroundColor={backgroundColor} onClick={onClose}>
       <Wrapper isOpen={isOpen} onClick={(e) => e.stopPropagation()}>
         {children}
       </Wrapper>
     </Overlay>,
-    portalContainer,
+    portalContainer
   )
 }

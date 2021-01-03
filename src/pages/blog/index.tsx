@@ -42,9 +42,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const posts = files
     .map((fileName) => {
-      const markdown = fs
-        .readFileSync(`src/assets/posts/${fileName}`)
-        .toString()
+      const markdown = fs.readFileSync(`src/assets/posts/${fileName}`).toString()
 
       return parsePostMarkdown(fileName, markdown)
     })

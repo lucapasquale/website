@@ -20,8 +20,7 @@ const Player = styled.div({
   },
 })
 
-const PLAYLIST_LINK =
-  'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
+const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
 const Secrets: FC = () => (
   <Layout>

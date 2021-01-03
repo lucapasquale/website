@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Image from 'next/image'
 import styled from 'styled-components'
 
 import { Technologies } from './Technologies'
@@ -18,8 +17,9 @@ const ProjectWrapper = styled.section({
   },
 })
 
-const ImageWrapper = styled.div({
-  zIndex: -1,
+const Image = styled.img({
+  minWidth: '275px',
+  maxWidth: '275px',
   marginRight: '32px',
   border: 'solid rgba(0, 0, 0, 0.15) 1px',
 
@@ -30,29 +30,16 @@ const ImageWrapper = styled.div({
 })
 
 export type Props = {
-  url?: string
   title: string
+  url: string
+  imageSrc: string
   description: string
-  image: { src: string; width: number; height: number }
   technologies: Array<{ title: string; list: string[] }>
 }
 
-export const Project: FC<Props> = ({
-  url,
-  image,
-  title,
-  description,
-  technologies,
-}) => (
+export const Project: FC<Props> = ({ url, imageSrc, title, description, technologies }) => (
   <ProjectWrapper>
-    <ImageWrapper>
-      <Image
-        src={image.src}
-        alt={`${title} project image`}
-        width={image.width}
-        height={image.height}
-      />
-    </ImageWrapper>
+    <Image alt={`${title} project image`} src={imageSrc} />
 
     <div>
       <Header title={title} url={url} />

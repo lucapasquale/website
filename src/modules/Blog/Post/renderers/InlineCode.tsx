@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { colors } from '@helpers/theme/colors'
 
 const Code = styled.code({
-  padding: '2px 2px 1px',
-  borderRadius: '2px',
+  padding: '2px 4px 1px',
+  borderRadius: '4px',
   backgroundColor: `var(${colors.backgroundSecondary.cssVariable})`,
 })
 

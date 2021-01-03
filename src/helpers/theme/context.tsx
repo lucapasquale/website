@@ -15,9 +15,7 @@ const useDarkTheme = () => {
 
   useEffect(() => {
     const root = window.document.documentElement
-    const initialColorValue = root.style.getPropertyValue(
-      '--initial-color-mode',
-    )
+    const initialColorValue = root.style.getPropertyValue('--initial-color-mode')
 
     setTheme(initialColorValue as Theme)
   }, [])

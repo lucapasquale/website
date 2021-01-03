@@ -6,7 +6,7 @@ createdAt: "2020-08-11T12:00:00.000Z"
 
 ### Basic Markdown
 
-I can write in **bold**, _italic_ and ~~strikethrough~~
+I can write in **bold** or _italic_
 
 Here is a link to [the list of posts](/blog), and an [external link](https://www.google.com)
 

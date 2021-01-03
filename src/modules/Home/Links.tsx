@@ -53,11 +53,7 @@ export const Links: FC = () => (
     <h3>Contact</h3>
 
     <LinksWrapper>
-      <IconWrapper
-        target="_blank"
-        rel="noopener noreferrer"
-        href={config.LINKS.GITHUB}
-      >
+      <IconWrapper target="_blank" rel="noopener noreferrer" href={config.LINKS.GITHUB}>
         <Icon name="Github" size="2rem" />
 
         <LinkLabel>GITHUB</LinkLabel>
@@ -69,21 +65,13 @@ export const Links: FC = () => (
         <LinkLabel>EMAIL</LinkLabel>
       </IconWrapper>
 
-      <IconWrapper
-        target="_blank"
-        rel="noopener noreferrer"
-        href={config.LINKS.LINKEDIN}
-      >
+      <IconWrapper target="_blank" rel="noopener noreferrer" href={config.LINKS.LINKEDIN}>
         <Icon name="Linkedin" size="2rem" />
 
         <LinkLabel>LINKEDIN</LinkLabel>
       </IconWrapper>
 
-      <IconWrapper
-        target="_blank"
-        rel="noopener noreferrer"
-        href={config.LINKS.INSTAGRAM}
-      >
+      <IconWrapper target="_blank" rel="noopener noreferrer" href={config.LINKS.INSTAGRAM}>
         <Icon name="Instagram" size="2rem" />
 
         <LinkLabel>INSTAGRAM</LinkLabel>

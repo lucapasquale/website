@@ -37,7 +37,7 @@ export const InjectVariables: FC = () => {
         root.style.setProperty(
           '${color.cssVariable}',
           colorMode === 'light' ? '${color.light}' : '${color.dark}'
-        )`,
+        )`
       )}
 
       root.style.setProperty('--initial-color-mode', colorMode);

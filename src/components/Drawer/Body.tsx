@@ -6,6 +6,4 @@ const Wrapper = styled.nav({
   padding: '16px',
 })
 
-export const DrawerBody: FC = ({ children }) => (
-  <Wrapper id="drawerBody">{children}</Wrapper>
-)
+export const DrawerBody: FC = ({ children }) => <Wrapper id="drawerBody">{children}</Wrapper>

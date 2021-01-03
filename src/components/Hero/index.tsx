@@ -14,9 +14,7 @@ const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   backgroundColor: `var(${colors.backgroundSecondary.cssVariable})`,
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
-  borderBottomColor: isDarkTheme
-    ? 'rgba(255, 255, 255, 0.125)'
-    : 'rgba(0, 0, 0, 0.125)',
+  borderBottomColor: isDarkTheme ? 'rgba(255, 255, 255, 0.125)' : 'rgba(0, 0, 0, 0.125)',
 }))
 
 const SubTitle = styled.h2({
@@ -31,12 +29,7 @@ type Props = {
   bottomContent?: ReactNode
 }
 
-export const Hero: FC<Props> = ({
-  title,
-  subTitle,
-  topContent,
-  bottomContent,
-}) => {
+export const Hero: FC<Props> = ({ title, subTitle, topContent, bottomContent }) => {
   const { isDarkTheme } = DarkThemeContext.useContainer()
 
   return (
