@@ -15,6 +15,10 @@ const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
   borderBottomWidth: '1px',
   borderBottomStyle: 'solid',
   borderBottomColor: isDarkTheme ? 'rgba(255, 255, 255, 0.125)' : 'rgba(0, 0, 0, 0.125)',
+
+  '@media (max-width: 700px)': {
+    padding: '24px',
+  },
 }))
 
 const SubTitle = styled.h2({

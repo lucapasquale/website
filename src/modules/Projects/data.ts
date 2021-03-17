@@ -3,8 +3,21 @@ import { Props as ProjectProps } from './Project'
 export function getProjects(isDarkTheme: boolean): ProjectProps[] {
   return [
     {
+      title: 'Botchini',
+      url: 'https://github.com/lucapasquale/botchini/',
+      imageSrc: '/images/projects/botchini.webp',
+      description: `Discord bot to notify when a Twitch streamer starts streaming`,
+      technologies: [
+        {
+          title: 'Technologies:',
+          list: ['Elixir', 'PostgreSQL'],
+        },
+      ],
+    },
+
+    {
       title: 'Up We Go',
-      url: 'https://play.google.com/store/apps/details?id=com.NarrowAlley.UpWeGo',
+      url: 'https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo',
       imageSrc: '/images/projects/up-we-go.webp',
       description: `Climb to the top in this arcade game, try different characters
         and compete with your friends for the highest score!`,

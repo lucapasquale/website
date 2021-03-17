@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
@@ -28,18 +29,21 @@ export const About: FC = () => (
 
       <p>Hey, I'm Luca!</p>
       <p>
-        I'm a developer born in Brazil, who loves gaming and creating things. I started learning
-        programming so I could create my own game, and after that, I never stopped learning and
-        improving myself.
+        I'm a software engineer born in Brazil, who loves gaming and creating things. I started
+        learning programming so I could create my own game, and after that, I never stopped learning
+        and improving myself.
       </p>
       <p>
-        I've worked on companies where I created an event-based architecture using RabbitMQ for
-        messaging between micro-services, and also developed GraphQL APIs to be consumed by our
-        clients.
+        I've worked mainly on creating APIs and services in GraphQL, either directly for websites,
+        or in a micro-service architecture. Nowadays I tend to use TypeScript for developing, but
+        I've also used C# and I'm currently learning Elixir.
       </p>
       <p>
-        When needed, I also helped out on the front-end, developing websites with React and mobile
-        apps on React Native.
+        For the frontend, I've created websites, ecommerces and admin dashboards with React, and
+        also developed an app using React Native.
+      </p>
+      <p>
+        You can check more about that on my <Link href="/projects">projects page</Link>.
       </p>
     </AboutSection>
 
