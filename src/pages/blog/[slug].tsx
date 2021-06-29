@@ -5,12 +5,11 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { Layout } from '@components/Layout'
 import { Hero } from '@components/Hero'
 
-import { parsePostMarkdown } from '@modules/Blog/parse-post-markdown'
-import { Post as PostType } from '@modules/Blog/types'
-import { Post } from '@src/modules/Blog/Post'
+import { Post } from '@modules/Blog/Post'
+import { parsePostMarkdown, PostData } from '@modules/Blog/parse-post-markdown'
 
 type Props = {
-  post: PostType | null
+  post: PostData | null
 }
 
 const Page: FC<Props> = ({ post }) => {
@@ -20,16 +19,18 @@ const Page: FC<Props> = ({ post }) => {
 
   return (
     <Layout>
-      <Hero title={post.title} subTitle={post.description} />
+      <Hero title={post.metadata.title} subTitle={post.metadata.description} />
 
       <Post post={post} />
     </Layout>
   )
 }
 
+export default Page
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync('src/assets/posts')
-  const paths = files.map((fileName) => '/blog/' + fileName.replace('.md', ''))
+  const paths = files.map((fileName) => '/blog/' + fileName.replace('.mdx', ''))
 
   return { paths, fallback: false }
 }
@@ -39,11 +40,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return { props: { post: null } }
   }
 
-  const markdown = fs.readFileSync(`src/assets/posts/${params.slug}.md`).toString()
-
-  const post = parsePostMarkdown(params.slug, markdown)
+  const post = await parsePostMarkdown(params.slug)
 
   return { props: { post } }
 }
-
-export default Page

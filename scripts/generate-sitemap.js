@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs')
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +33,7 @@ fs.writeFileSync('public/sitemap.xml', sitemap)
 
 function getPostsSitemap() {
   const files = fs.readdirSync('src/assets/posts')
-  const paths = files.map((fileName) => 'blog/' + fileName.replace('.md', ''))
+  const paths = files.map((fileName) => 'blog/' + fileName.replace('.mdx', ''))
 
   return paths.map(
     (path) => `
@@ -43,6 +42,6 @@ function getPostsSitemap() {
       <lastmod>2020-08-17</lastmod>
       <changefreq>monthly</changefreq>
     </url>
-  `,
+  `
   )
 }

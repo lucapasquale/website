@@ -1,15 +1,45 @@
-import matter from 'gray-matter'
+import fs from 'fs'
+import path from 'path'
+import { bundleMDX } from 'mdx-bundler'
 
-import { Post } from './types'
+export type PostData = {
+  content: string
+  metadata: {
+    slug: string
+    title: string
+    description: string
+    createdAt: string
+  }
+}
 
-export function parsePostMarkdown(fileName: string, markdown: string): Post {
-  const { data, content } = matter(markdown)
+if (process.platform === 'win32') {
+  process.env.ESBUILD_BINARY_PATH = path.join(
+    process.cwd(),
+    'node_modules',
+    'esbuild',
+    'esbuild.exe'
+  )
+} else {
+  process.env.ESBUILD_BINARY_PATH = path.join(
+    process.cwd(),
+    'node_modules',
+    'esbuild',
+    'bin',
+    'esbuild'
+  )
+}
+
+export async function parsePostMarkdown(fileName: string): Promise<PostData> {
+  const markdown = fs.readFileSync(`src/assets/posts/${fileName}.mdx`).toString()
+  const { code, frontmatter } = await bundleMDX(markdown)
 
   return {
-    content,
-    slug: fileName.replace('.md', ''),
-    title: data.title,
-    description: data.description,
-    createdAt: data.createdAt,
+    content: code,
+    metadata: {
+      slug: fileName.replace('.mdx', ''),
+      title: frontmatter.title,
+      description: frontmatter.description,
+      createdAt: frontmatter.createdAt,
+    },
   }
 }

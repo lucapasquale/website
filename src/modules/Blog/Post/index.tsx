@@ -1,12 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, useMemo } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import ReactMarkdown from 'react-markdown'
+import { getMDXComponent } from 'mdx-bundler/client'
 
 import { Icon } from '@components/Icon'
-
-import { renderers } from './renderers'
-import { Post as PostType } from '../types'
+import { PostData } from '../parse-post-markdown'
+import { Code } from './renderers/Code'
 
 const Wrapper = styled.article({
   maxWidth: '700px',
@@ -34,22 +33,26 @@ const LinkWrapper = styled.a({
 })
 
 type Props = {
-  post: PostType
+  post: PostData
 }
 
-export const Post: FC<Props> = ({ post }) => (
-  <Wrapper>
-    <InfoRow>
-      <Link passHref href="/blog">
-        <LinkWrapper>
-          <Icon name="ChevronLeft" size={24} />
-          <h3>Back to posts</h3>
-        </LinkWrapper>
-      </Link>
+export const Post: FC<Props> = ({ post }) => {
+  const MarkdownComponent = useMemo(() => getMDXComponent(post.content), [post])
 
-      <h4>{new Date(post.createdAt).toLocaleDateString()}</h4>
-    </InfoRow>
+  return (
+    <Wrapper>
+      <InfoRow>
+        <Link passHref href="/blog">
+          <LinkWrapper>
+            <Icon name="ChevronLeft" size={24} />
+            <h3>Back to posts</h3>
+          </LinkWrapper>
+        </Link>
 
-    <ReactMarkdown source={post.content} renderers={renderers} />
-  </Wrapper>
-)
+        <h4>{new Date(post.metadata.createdAt).toLocaleDateString()}</h4>
+      </InfoRow>
+
+      <MarkdownComponent components={{ Code }} />
+    </Wrapper>
+  )
+}

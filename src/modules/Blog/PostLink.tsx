@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import { colors } from '@helpers/theme/colors'
-import { Post } from './types'
+import { PostData } from './parse-post-markdown'
 
 const Title = styled.h2({
   marginTop: '32px',
@@ -16,18 +16,18 @@ const Description = styled.p({
 })
 
 type Props = {
-  post: Post
+  post: PostData
 }
 
 export const PostLink: FC<Props> = ({ post }) => (
   <article>
-    <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+    <Link href="/blog/[slug]" as={`/blog/${post.metadata.slug}`}>
       <a>
-        <Title>{post.title}</Title>
+        <Title>{post.metadata.title}</Title>
       </a>
     </Link>
 
-    <small>{new Date(post.createdAt).toLocaleDateString('en-US')}</small>
-    <Description>{post.description}</Description>
+    <small>{new Date(post.metadata.createdAt).toLocaleDateString('en-US')}</small>
+    <Description>{post.metadata.description}</Description>
   </article>
 )
