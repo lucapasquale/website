@@ -7,19 +7,6 @@
   </url>
 
   <url>
-      <loc>https://lucapasquale.dev/blog</loc>
-      <lastmod>2020-08-17</lastmod>
-      <changefreq>weekly</changefreq>
-  </url>
-  
-    <url>
-      <loc>https://lucapasquale.dev/blog/hello-world</loc>
-      <lastmod>2020-08-17</lastmod>
-      <changefreq>monthly</changefreq>
-    </url>
-  
-
-  <url>
       <loc>https://lucapasquale.dev/projects</loc>
       <lastmod>2020-08-17</lastmod>
       <changefreq>monthly</changefreq>

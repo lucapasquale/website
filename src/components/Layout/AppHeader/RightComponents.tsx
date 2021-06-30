@@ -45,12 +45,6 @@ export const RightComponents: FC<Props> = ({ onOpen }) => (
   <Wrapper>
     <ThemeIcon />
 
-    <Link href="/blog">
-      <a>
-        <DesktopLink>BLOG</DesktopLink>
-      </a>
-    </Link>
-
     <Link href="/projects">
       <a>
         <DesktopLink>PROJECTS</DesktopLink>
