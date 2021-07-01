@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { Icon } from '@components/Icon'
 import { colors } from '@helpers/theme/colors'
 
 import { ThemeIcon } from './ThemeIcon'
@@ -21,27 +20,11 @@ const DesktopLink = styled.h4({
   ':hover': {
     color: `var(${colors.link.cssVariable})`,
   },
-
-  '@media (max-width: 700px)': {
-    display: 'none',
-  },
 })
 
-const MobileMenu = styled.div({
-  display: 'none',
+type Props = {}
 
-  '@media (max-width: 700px)': {
-    display: 'flex',
-    cursor: 'pointer',
-    marginLeft: '16px',
-  },
-})
-
-type Props = {
-  onOpen: () => void
-}
-
-export const RightComponents: FC<Props> = ({ onOpen }) => (
+export const RightComponents: FC<Props> = () => (
   <Wrapper>
     <ThemeIcon />
 
@@ -50,9 +33,5 @@ export const RightComponents: FC<Props> = ({ onOpen }) => (
         <DesktopLink>PROJECTS</DesktopLink>
       </a>
     </Link>
-
-    <MobileMenu onClick={onOpen}>
-      <Icon name="Menu" size={24} />
-    </MobileMenu>
   </Wrapper>
 )

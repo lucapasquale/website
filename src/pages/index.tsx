@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Layout } from '@components/Layout'
 import { Hero } from '@components/Hero'
@@ -8,9 +9,7 @@ import { colors } from '@helpers/theme/colors'
 
 import { About } from '@modules/Home/About'
 
-const Avatar = styled.img({
-  width: '125px',
-  height: '125px',
+const Avatar = styled(Image)({
   borderRadius: '50%',
   marginBottom: '16px',
 })
@@ -28,7 +27,14 @@ const Home: FC = () => (
     <Hero
       title="Luca Pasquale"
       subTitle="Developer | Gamer | Engineer"
-      topContent={<Avatar alt="avatar" src="/images/avatar.webp" />}
+      topContent={
+        <Avatar
+          width={125}
+          height={125}
+          alt="avatar"
+          src={require('../../public/images/avatar.webp')}
+        />
+      }
     />
 
     <About />

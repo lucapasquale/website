@@ -17,7 +17,7 @@ const ProjectWrapper = styled.section({
   },
 })
 
-const Image = styled.img({
+const ImageWrapper = styled.div({
   minWidth: '275px',
   maxWidth: '275px',
   marginRight: '32px',
@@ -32,14 +32,14 @@ const Image = styled.img({
 export type Props = {
   title: string
   url: string
-  imageSrc: string
+  image: React.ReactElement
   description: string
   technologies: Array<{ title: string; list: string[] }>
 }
 
-export const Project: FC<Props> = ({ url, imageSrc, title, description, technologies }) => (
+export const Project: FC<Props> = ({ url, image, title, description, technologies }) => (
   <ProjectWrapper>
-    <Image alt={`${title} project image`} src={imageSrc} />
+    <ImageWrapper>{image}</ImageWrapper>
 
     <div>
       <Header title={title} url={url} />

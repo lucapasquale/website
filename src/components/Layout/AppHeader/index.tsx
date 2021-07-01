@@ -1,14 +1,14 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
 import { DarkThemeContext } from '@helpers/theme/context'
 import { colors } from '@helpers/theme/colors'
 
-import { AppDrawer } from './AppDrawer'
-import { RightComponents } from './RightComponents'
+import { ThemeIcon } from './ThemeIcon'
 
 const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
+  zIndex: 10,
   position: 'fixed',
   top: 0,
   left: 0,
@@ -43,10 +43,24 @@ const HomeLink = styled.h2({
   },
 })
 
+const RightComponents = styled.div({
+  display: 'flex',
+  alignItems: 'center',
+  userSelect: 'none',
+})
+
+const DesktopLink = styled.h4({
+  cursor: 'pointer',
+  marginLeft: '16px',
+  padding: '22px 0px',
+
+  ':hover': {
+    color: `var(${colors.link.cssVariable})`,
+  },
+})
+
 export const AppHeader: FC = () => {
   const { isDarkTheme } = DarkThemeContext.useContainer()
-
-  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <header>
@@ -58,13 +72,19 @@ export const AppHeader: FC = () => {
             </a>
           </Link>
 
-          <RightComponents onOpen={() => setMenuOpen(true)} />
+          <RightComponents>
+            <ThemeIcon />
+
+            <Link href="/projects">
+              <a>
+                <DesktopLink>PROJECTS</DesktopLink>
+              </a>
+            </Link>
+          </RightComponents>
         </Wrapper>
       </Nav>
 
       <EmptySpace />
-
-      <AppDrawer isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </header>
   )
 }
