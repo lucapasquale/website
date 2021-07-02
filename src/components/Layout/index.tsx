@@ -19,7 +19,9 @@ export const Layout: FC = ({ children }) => {
         </Head>
       )}
 
-      <AppHeader />
+      <header className="mb-20">
+        <AppHeader />
+      </header>
 
       <main>{children}</main>
     </>

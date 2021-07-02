@@ -1,90 +1,22 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
-import styled from 'styled-components'
-
-import { DarkThemeContext } from '@helpers/theme/context'
-import { colors } from '@helpers/theme/colors'
-
-import { ThemeIcon } from './ThemeIcon'
-
-const Nav = styled.nav<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
-  zIndex: 10,
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  backgroundColor: `var(${colors.background.cssVariable})`,
-
-  borderBottomWidth: '1px',
-  borderBottomStyle: 'solid',
-  borderBottomColor: isDarkTheme ? 'rgba(255, 255, 255, 0.125)' : 'rgba(0, 0, 0, 0.125)',
-}))
-
-const Wrapper = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-
-  margin: 'auto',
-  padding: '0px 8px',
-  maxWidth: '700px',
-})
-
-const EmptySpace = styled.div({
-  height: '60px',
-})
-
-const HomeLink = styled.h2({
-  padding: '12px 0px',
-
-  ':hover': {
-    color: `var(${colors.link.cssVariable})`,
-  },
-})
-
-const RightComponents = styled.div({
-  display: 'flex',
-  alignItems: 'center',
-  userSelect: 'none',
-})
-
-const DesktopLink = styled.h4({
-  cursor: 'pointer',
-  marginLeft: '16px',
-  padding: '22px 0px',
-
-  ':hover': {
-    color: `var(${colors.link.cssVariable})`,
-  },
-})
 
 export const AppHeader: FC = () => {
-  const { isDarkTheme } = DarkThemeContext.useContainer()
-
   return (
-    <header>
-      <Nav isDarkTheme={isDarkTheme}>
-        <Wrapper>
-          <Link href="/">
-            <a>
-              <HomeLink>LUCA PASQUALE</HomeLink>
-            </a>
-          </Link>
+    <nav className="fixed top-0 z-30 w-full max-w-2xl bg-gray-900 border-b border-gray-700 flex justify-between items-center px-4 py-5">
+      <Link href="/">
+        <a>
+          <h2 className="">LUCA PASQUALE</h2>
+        </a>
+      </Link>
 
-          <RightComponents>
-            <ThemeIcon />
-
-            <Link href="/projects">
-              <a>
-                <DesktopLink>PROJECTS</DesktopLink>
-              </a>
-            </Link>
-          </RightComponents>
-        </Wrapper>
-      </Nav>
-
-      <EmptySpace />
-    </header>
+      <div className="flex items-center">
+        <Link href="/projects">
+          <a>
+            <h4 className="">PROJECTS</h4>
+          </a>
+        </Link>
+      </div>
+    </nav>
   )
 }

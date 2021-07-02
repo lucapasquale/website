@@ -53,7 +53,7 @@ class MyDocument extends Document {
           />
         </Head>
 
-        <body>
+        <body className="text-gray-400 bg-gray-900">
           <InjectVariables />
 
           <Main />
