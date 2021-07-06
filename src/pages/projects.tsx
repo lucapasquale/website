@@ -40,7 +40,7 @@ const Projects: FC = () => {
       <Wrapper>
         {projects.map((p, idx) => (
           <ProjectWrapper key={p.title}>
-            <Project {...p} />
+            <Project project={p} />
 
             {idx < projects.length - 1 && <Divider />}
           </ProjectWrapper>

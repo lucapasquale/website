@@ -1,30 +1,21 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
-import { colors } from '@helpers/theme/colors'
-import { Props as ProjectProps } from '.'
+import { Project } from '../data'
 
-const ProjectHeader = styled.div({
-  marginBottom: '32px',
-})
-
-const Title = styled.h2({
-  ':hover': {
-    color: `var(${colors.link.cssVariable})`,
-  },
-})
-
-const URL = styled.h4({
-  color: `var(${colors.link.cssVariable})`,
-})
-
-type Props = Pick<ProjectProps, 'title' | 'url'>
+type Props = Pick<Project, 'title' | 'url'>
 
 export const Header: FC<Props> = ({ title, url }) => (
-  <ProjectHeader>
-    <a target="_blank" rel="noopener noreferrer" href={url}>
-      <Title>{title}</Title>
-      {url && <URL>{url}</URL>}
+  <div className="mb-8">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-blue-400"
+      href={url}
+    >
+      <h2 className="text-2xl">{title}</h2>
+
+      <FaExternalLinkAlt />
     </a>
-  </ProjectHeader>
+  </div>
 )

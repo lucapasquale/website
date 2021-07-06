@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { Technologies } from './Technologies'
 import { Header } from './Header'
+import { Project as ProjectType } from '../data'
 
 const ProjectWrapper = styled.section({
   display: 'flex',
@@ -30,23 +31,21 @@ const ImageWrapper = styled.div({
 })
 
 export type Props = {
-  title: string
-  url: string
-  image: React.ReactElement
-  description: string
-  technologies: Array<{ title: string; list: string[] }>
+  project: ProjectType
 }
 
-export const Project: FC<Props> = ({ url, image, title, description, technologies }) => (
-  <ProjectWrapper>
-    <ImageWrapper>{image}</ImageWrapper>
+export const Project: FC<Props> = ({ project }) => {
+  return (
+    <ProjectWrapper>
+      <ImageWrapper>{project.image}</ImageWrapper>
 
-    <div>
-      <Header title={title} url={url} />
+      <div>
+        <Header title={project.title} url={project.url} />
 
-      <p>{description}</p>
+        <p>{project.description}</p>
 
-      <Technologies technologies={technologies} />
-    </div>
-  </ProjectWrapper>
-)
+        <Technologies technologies={project.technologies} />
+      </div>
+    </ProjectWrapper>
+  )
+}

@@ -1,7 +1,34 @@
 import Image from 'next/image'
-import { Props as ProjectProps } from './Project'
 
-export function getProjects(isDarkTheme: boolean): ProjectProps[] {
+export enum Technology {
+  // Languages
+  CSharp = 'c#',
+  Elixir = 'elixir',
+  Typescript = 'typescript',
+
+  // Databases
+  PostgresQL = 'postgresql',
+
+  // Libraries
+  Unity = 'unity',
+  NestJS = 'nestjs',
+  NextJS = 'next.js',
+  Apollo = 'Apollo',
+  React = 'react',
+
+  // Tools
+  GraphQL = 'graphql',
+}
+
+export type Project = {
+  title: string
+  description: string
+  url: string
+  image: React.ReactElement
+  technologies: Technology[]
+}
+
+export function getProjects(isDarkTheme: boolean): Project[] {
   return [
     {
       title: 'Botchini',
@@ -14,12 +41,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
         />
       ),
       description: `Discord bot to notify when a Twitch streamer starts streaming`,
-      technologies: [
-        {
-          title: 'Technologies:',
-          list: ['Elixir', 'PostgreSQL'],
-        },
-      ],
+      technologies: [Technology.Elixir, Technology.PostgresQL],
     },
 
     {
@@ -34,12 +56,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       ),
       description: `Climb to the top in this arcade game, try different characters
         and compete with your friends for the highest score!`,
-      technologies: [
-        {
-          title: 'Technologies:',
-          list: ['Unity Game Engine', 'Android', 'iOS', 'C#'],
-        },
-      ],
+      technologies: [Technology.Unity, Technology.CSharp],
     },
 
     {
@@ -55,19 +72,17 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       description: `Share more than a single link in your social media.
         Create your own page, where you can customize and have as many links as you would like.`,
       technologies: [
-        {
-          title: 'Back-end:',
-          list: ['GraphQL', 'NestJS', 'PostgreSQL', 'TypeScript'],
-        },
-        {
-          title: 'Front-end:',
-          list: ['Next.js', 'Apollo Client', 'Material-UI', 'TypeScript'],
-        },
+        Technology.GraphQL,
+        Technology.NestJS,
+        Technology.PostgresQL,
+        Technology.Typescript,
+        Technology.React,
+        Technology.NextJS,
       ],
     },
 
     {
-      title: 'My portfolio webpage',
+      title: 'Portfolio',
       url: 'https://github.com/lucapasquale/website',
       image: isDarkTheme ? (
         <Image
@@ -83,12 +98,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
         />
       ),
       description: `You know, the one that has this text and is right in front of you.`,
-      technologies: [
-        {
-          title: 'Technologies:',
-          list: ['React', 'Next.js', 'Styled-Components', 'TypeScript'],
-        },
-      ],
+      technologies: [Technology.React, Technology.NextJS, Technology.Typescript],
     },
 
     {
@@ -103,12 +113,7 @@ export function getProjects(isDarkTheme: boolean): ProjectProps[] {
       ),
       description: `Solve hundreds of different puzzles in this great mobile game.
         Game was published on Android Play Store, where it had over a thousand downloads.`,
-      technologies: [
-        {
-          title: 'Technologies:',
-          list: ['Unity Game Engine', 'Android', 'iOS', 'C#'],
-        },
-      ],
+      technologies: [Technology.Unity, Technology.CSharp],
     },
   ]
 }
