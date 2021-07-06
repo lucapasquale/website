@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react'
 import Head from 'next/head'
 
 import config from '@src/config'
-import { AppHeader } from './AppHeader'
+import { Header } from './Header'
 
 export const Layout: FC = ({ children }) => {
   const [pathname, setPathname] = useState<string | undefined>()
@@ -19,9 +19,7 @@ export const Layout: FC = ({ children }) => {
         </Head>
       )}
 
-      <header className="mb-20">
-        <AppHeader />
-      </header>
+      <Header />
 
       <main>{children}</main>
     </>
