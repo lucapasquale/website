@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { Technologies } from './Technologies'
 import { Header } from './Header'
+import { TechnologyTag } from './TechnologyTag'
 import { Project as ProjectType } from '../data'
 
 const ProjectWrapper = styled.section({
@@ -44,7 +44,11 @@ export const Project: FC<Props> = ({ project }) => {
 
         <p>{project.description}</p>
 
-        <Technologies technologies={project.technologies} />
+        <ul className="flex gap-2 mt-4">
+          {project.technologies.map((technology, index) => (
+            <TechnologyTag key={index} technology={technology} />
+          ))}
+        </ul>
       </div>
     </ProjectWrapper>
   )

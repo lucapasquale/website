@@ -1,25 +1,22 @@
 import React, { FC } from 'react'
 
-import { Project, Technology } from '../data'
+import { Technology } from '../data'
 
-type Props = Pick<Project, 'technologies'>
+type Props = {
+  technology: Technology
+}
 
-export const Technologies: FC<Props> = ({ technologies }) => (
-  <ul className="flex gap-2 mt-4">
-    {technologies.map((technology, index) => {
-      const techClasses = getTechnologyClasses(technology)
+export const TechnologyTag: FC<Props> = ({ technology }) => {
+  const techClasses = getTechnologyClasses(technology)
 
-      return (
-        <li
-          key={index}
-          className={`inline-block py-0.5 px-2 rounded-sm text-sm uppercase font-bold text-gray-200 ${techClasses}`}
-        >
-          {technology}
-        </li>
-      )
-    })}
-  </ul>
-)
+  return (
+    <li
+      className={`inline-block py-0.5 px-2 rounded-sm text-sm uppercase font-bold text-gray-200 ${techClasses}`}
+    >
+      {technology}
+    </li>
+  )
+}
 
 function getTechnologyClasses(technology: Technology) {
   switch (technology) {
