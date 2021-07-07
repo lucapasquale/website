@@ -24,15 +24,17 @@ export type Project = {
   title: string
   description: string
   url: string
+  githubUrl?: string
   image: React.ReactElement
   technologies: Technology[]
 }
 
-export function getProjects(isDarkTheme: boolean): Project[] {
+export function getProjects(): Project[] {
   return [
     {
       title: 'Botchini',
       url: 'https://github.com/lucapasquale/botchini/',
+      githubUrl: 'https://github.com/lucapasquale/botchini/',
       image: (
         <Image
           placeholder="blur"
@@ -72,8 +74,8 @@ export function getProjects(isDarkTheme: boolean): Project[] {
       description: `Share more than a single link in your social media.
         Create your own page, where you can customize and have as many links as you would like.`,
       technologies: [
-        Technology.GraphQL,
         Technology.NestJS,
+        Technology.GraphQL,
         Technology.PostgresQL,
         Technology.Typescript,
         Technology.React,
@@ -83,27 +85,23 @@ export function getProjects(isDarkTheme: boolean): Project[] {
 
     {
       title: 'Portfolio',
-      url: 'https://github.com/lucapasquale/website',
-      image: isDarkTheme ? (
+      url: 'https://lucapasquale.dev',
+      githubUrl: 'https://github.com/lucapasquale/website',
+      image: (
         <Image
           placeholder="blur"
           alt="Website project image"
           src={require('../../../public/images/projects/website-light.webp')}
         />
-      ) : (
-        <Image
-          placeholder="blur"
-          alt="Website project image"
-          src={require('../../../public/images/projects/website-dark.webp')}
-        />
       ),
       description: `You know, the one that has this text and is right in front of you.`,
-      technologies: [Technology.React, Technology.NextJS, Technology.Typescript],
+      technologies: [Technology.Typescript, Technology.React, Technology.NextJS],
     },
 
     {
       title: 'Fit It',
       url: 'https://github.com/lucapasquale/FitIt',
+      githubUrl: 'https://github.com/lucapasquale/FitIt',
       image: (
         <Image
           placeholder="blur"

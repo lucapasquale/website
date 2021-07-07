@@ -22,6 +22,8 @@ export const Layout: FC = ({ children }) => {
       <Header />
 
       <main>{children}</main>
+
+      <footer className="h-20"></footer>
     </>
   )
 }

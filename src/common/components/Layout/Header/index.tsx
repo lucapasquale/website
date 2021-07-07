@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const Header: FC = () => {
   return (
     <header className="h-[60px]">
-      <div className="fixed z-30 h-[60px] w-full bg-gray-900 border-b border-gray-700 flex justify-between py-5">
+      <div className="fixed z-30 h-[60px] w-full bg-gray-900 border-b border-gray-700 flex justify-between px-2 py-5 sm:px-0">
         <nav className="mx-auto w-full max-w-screen-md flex justify-between items-center">
           <Link passHref href="/">
             <a>
