@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
-import { Project } from '../data'
+import { Project } from '../logic/getProjects'
 
 type Props = {
   project: Project

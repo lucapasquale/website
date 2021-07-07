@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Technology } from '../data'
+import { Technology } from '../logic/getProjects'
 
 type Props = {
   technology: Technology
