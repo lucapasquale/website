@@ -1,41 +1,13 @@
 import React, { FC, ReactNode } from 'react'
 import Head from 'next/head'
-import styled from 'styled-components'
-
-import { DarkThemeContext } from '@helpers/theme/context'
-import { colors } from '@helpers/theme/colors'
-
-const Wrapper = styled.header<{ isDarkTheme: boolean }>(({ isDarkTheme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-
-  padding: '32px',
-  backgroundColor: `var(${colors.backgroundSecondary.cssVariable})`,
-  borderBottomWidth: '1px',
-  borderBottomStyle: 'solid',
-  borderBottomColor: isDarkTheme ? 'rgba(255, 255, 255, 0.125)' : 'rgba(0, 0, 0, 0.125)',
-
-  '@media (max-width: 700px)': {
-    padding: '24px',
-  },
-}))
-
-const SubTitle = styled.h2({
-  color: `var(${colors.secondary.cssVariable})`,
-  textAlign: 'center',
-})
 
 type Props = {
   title: string
   subTitle: string
-  topContent?: ReactNode
-  bottomContent?: ReactNode
+  rightComponent?: ReactNode
 }
 
-export const Hero: FC<Props> = ({ title, subTitle, topContent, bottomContent }) => {
-  const { isDarkTheme } = DarkThemeContext.useContainer()
-
+export const Hero: FC<Props> = ({ title, subTitle, rightComponent }) => {
   return (
     <>
       <Head>
@@ -43,14 +15,14 @@ export const Hero: FC<Props> = ({ title, subTitle, topContent, bottomContent }) 
         <meta name="description" content={`${title} - ${subTitle}`} />
       </Head>
 
-      <Wrapper isDarkTheme={isDarkTheme}>
-        {topContent}
+      <header className="max-w-screen-md mx-auto flex items-center gap-2 my-8 px-4 sm:my-12 sm:px-0 sm:gap-4 sm:flex-row-reverse sm:justify-end">
+        <div>
+          <h1 className="text-6xl text-gray-200 pb-4">{title}</h1>
+          <h2>{subTitle}</h2>
+        </div>
 
-        <h1>{title}</h1>
-        <SubTitle>{subTitle}</SubTitle>
-
-        {bottomContent}
-      </Wrapper>
+        {rightComponent}
+      </header>
     </>
   )
 }

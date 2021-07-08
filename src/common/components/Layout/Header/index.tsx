@@ -8,13 +8,13 @@ export const Header: FC = () => {
         <nav className="mx-auto w-full max-w-screen-md flex justify-between items-center">
           <Link passHref href="/">
             <a>
-              <h2 className="hover:text-gray-200">LUCA PASQUALE</h2>
+              <h2 className="text-gray-400 hover:text-gray-200">LUCA PASQUALE</h2>
             </a>
           </Link>
 
           <Link passHref href="/projects">
             <a>
-              <h4 className="hover:text-gray-200">PROJECTS</h4>
+              <h4 className="text-gray-400 hover:text-gray-200">PROJECTS</h4>
             </a>
           </Link>
         </nav>
