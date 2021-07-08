@@ -1,30 +1,36 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
-import { colors } from '@helpers/theme/colors'
-import { Props as ProjectProps } from '.'
+import { Project } from '../logic/getProjects'
 
-const ProjectHeader = styled.div({
-  marginBottom: '32px',
-})
+type Props = {
+  project: Project
+}
 
-const Title = styled.h2({
-  ':hover': {
-    color: `var(${colors.link.cssVariable})`,
-  },
-})
+export const Header: FC<Props> = ({ project }) => (
+  <div className="mb-8">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-baseline gap-2 text-blue-400 hover:text-blue-300"
+      href={project.url}
+    >
+      <h2 className="text-2xl">{project.title}</h2>
 
-const URL = styled.h4({
-  color: `var(${colors.link.cssVariable})`,
-})
-
-type Props = Pick<ProjectProps, 'title' | 'url'>
-
-export const Header: FC<Props> = ({ title, url }) => (
-  <ProjectHeader>
-    <a target="_blank" rel="noopener noreferrer" href={url}>
-      <Title>{title}</Title>
-      {url && <URL>{url}</URL>}
+      <FaExternalLinkAlt />
     </a>
-  </ProjectHeader>
+
+    {project.githubUrl && (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 text-gray-400 hover:text-gray-200"
+        href={project.githubUrl}
+      >
+        <FaGithub />
+
+        <h4 className="text-md">GitHub</h4>
+      </a>
+    )}
+  </div>
 )

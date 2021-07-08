@@ -1,52 +1,29 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
 
-import { Technologies } from './Technologies'
 import { Header } from './Header'
+import { TechnologyTag } from './TechnologyTag'
+import { Project as ProjectType } from '../logic/getProjects'
 
-const ProjectWrapper = styled.section({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-
-  maxWidth: '700px',
-
-  '@media (max-width: 700px)': {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-})
-
-const ImageWrapper = styled.div({
-  minWidth: '275px',
-  maxWidth: '275px',
-  marginRight: '32px',
-  border: 'solid rgba(0, 0, 0, 0.15) 1px',
-
-  '@media (max-width: 700px)': {
-    marginRight: 0,
-    marginBottom: '16px',
-  },
-})
-
-export type Props = {
-  title: string
-  url: string
-  image: React.ReactElement
-  description: string
-  technologies: Array<{ title: string; list: string[] }>
+type Props = {
+  project: ProjectType
 }
 
-export const Project: FC<Props> = ({ url, image, title, description, technologies }) => (
-  <ProjectWrapper>
-    <ImageWrapper>{image}</ImageWrapper>
+export const Project: FC<Props> = ({ project }) => {
+  return (
+    <section className="my-8 flex w-full flex-col items-center sm:flex-row sm:items-stretch">
+      <div className="min-w-[275px] max-w-[275px]">{project.image}</div>
 
-    <div>
-      <Header title={title} url={url} />
+      <div className="mt-4 ml-0 sm:ml-8">
+        <Header project={project} />
 
-      <p>{description}</p>
+        <p>{project.description}</p>
 
-      <Technologies technologies={technologies} />
-    </div>
-  </ProjectWrapper>
-)
+        <ul className="flex flex-row flex-wrap gap-2 mt-4">
+          {project.technologies.map((technology, index) => (
+            <TechnologyTag key={index} technology={technology} />
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}

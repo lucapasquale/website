@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "lint": "prettier --write --check 'src/**/*.ts?(x)'",
-    "build-icons": "svgr --template ./src/components/Icon/template.js --icon --replace-attr-values \"#696969=currentColor\" --ext=tsx --out-dir ./src/components/Icon/icons ./src/assets/svgs",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -12,20 +11,22 @@
     "next": "^11.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
-    "styled-components": "^5.3.0",
     "unstated-next": "^1.1.0"
   },
   "devDependencies": {
-    "@svgr/cli": "^5.5.0",
     "@types/node": "^15.12.5",
     "@types/react-dom": "^17.0.8",
     "@types/styled-components": "^5.1.10",
     "@typescript-eslint/parser": "^4.28.1",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.29.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.3.5",
     "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.4",
     "typescript": "^4.3.4"
   }
 }

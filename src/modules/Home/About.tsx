@@ -1,31 +1,14 @@
 import Link from 'next/link'
 import React, { FC } from 'react'
-import styled from 'styled-components'
+import { FaGithub, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa'
 
-import { Links } from './Links'
-
-const Wrapper = styled.div({
-  margin: 'auto',
-  padding: '16px',
-
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-
-  '@media (max-width: 700px)': {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-})
-
-const AboutSection = styled.section({
-  maxWidth: '450px',
-})
+import config from '../../config'
+import { SocialLink } from './SocialLink'
 
 export const About: FC = () => (
-  <Wrapper>
-    <AboutSection>
-      <h3>About me</h3>
+  <article className="max-w-screen-md mx-auto px-4 flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-baseline">
+    <section className="max-w-md">
+      <h3 className="text-2xl text-gray-300">About me</h3>
 
       <p>Hey, I'm Luca!</p>
       <p>
@@ -45,8 +28,17 @@ export const About: FC = () => (
       <p>
         You can check more about that on my <Link href="/projects">projects page</Link>.
       </p>
-    </AboutSection>
+    </section>
 
-    <Links />
-  </Wrapper>
+    <section className="max-w-md">
+      <h3 className="text-2xl text-gray-300">Contact</h3>
+
+      <div className="mt-4 px-2 gap-3 grid grid-cols-2 sm:flex sm:flex-col">
+        <SocialLink label="GITHUB" url={config.LINKS.GITHUB} icon={<FaGithub />} />
+        <SocialLink label="EMAIL" url={`mailto:${config.CONTACT.EMAIL}`} icon={<FaEnvelope />} />
+        <SocialLink label="LINKEDIN" url={config.LINKS.LINKEDIN} icon={<FaLinkedin />} />
+        <SocialLink label="INSTAGRAM" url={config.LINKS.INSTAGRAM} icon={<FaInstagram />} />
+      </div>
+    </section>
+  </article>
 )
