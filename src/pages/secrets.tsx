@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import ReactPlayer from 'react-player'
 
-import { Hero } from '@components/Hero'
-import { Layout } from '@components/Layout'
+import { Hero } from '@common/components/Hero'
+import { Layout } from '@common/components/Layout'
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 

@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Hero } from '@components/Hero'
-import { Layout } from '@components/Layout'
+import { Hero } from '@common/components/Hero'
+import { Layout } from '@common/components/Layout'
 
 import { About } from '@modules/Home/About'
 

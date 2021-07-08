@@ -86,11 +86,13 @@ export function getProjects(): Project[] {
       url: 'https://lucapasquale.dev',
       githubUrl: 'https://github.com/lucapasquale/website',
       image: (
-        <Image
-          placeholder="blur"
-          alt="Website project image"
-          src={require('../../../../public/images/projects/website-light.webp')}
-        />
+        <div className="border text-white border-white">
+          <Image
+            placeholder="blur"
+            alt="Website project image"
+            src={require('../../../../public/images/projects/website.png')}
+          />
+        </div>
       ),
       description: `You know, the one that has this text and is right in front of you.`,
       technologies: [Technology.Typescript, Technology.React, Technology.NextJS],
