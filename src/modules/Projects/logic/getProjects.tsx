@@ -87,13 +87,11 @@ const ALL_PROJECTS: Project[] = [
     url: 'https://lucapasquale.dev',
     githubUrl: 'https://github.com/lucapasquale/website',
     image: (
-      <div className="border text-white border-white">
-        <Image
-          placeholder="blur"
-          alt="Website project image"
-          src={require('../../../../public/images/projects/website.png')}
-        />
-      </div>
+      <Image
+        placeholder="blur"
+        alt="Website project image"
+        src={require('../../../../public/images/projects/website.png')}
+      />
     ),
     description: `You know, the one that has this text and is right in front of you.`,
     technologies: [Technology.Typescript, Technology.React, Technology.NextJS, Technology.Tailwind],
