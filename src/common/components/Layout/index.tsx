@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import config from '@src/config'
 import { Header } from './Header'
+import { Footer } from './Footer'
 
 export const Layout: FC = ({ children }) => {
   const [pathname, setPathname] = useState<string | undefined>()
@@ -21,9 +22,9 @@ export const Layout: FC = ({ children }) => {
 
       <Header />
 
-      <main>{children}</main>
+      <main className="container max-w-4xl mx-auto px-4 my-16">{children}</main>
 
-      <footer className="h-20"></footer>
+      <Footer />
     </>
   )
 }
