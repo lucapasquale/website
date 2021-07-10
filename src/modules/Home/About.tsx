@@ -1,44 +1,50 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import React, { FC } from 'react'
-import { FaGithub, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa'
-
-import config from '../../config'
-import { SocialLink } from './SocialLink'
 
 export const About: FC = () => (
-  <article className="max-w-screen-md mx-auto px-4 flex flex-col items-center justify-between gap-4 sm:flex-row sm:items-baseline">
-    <section className="max-w-md">
-      <h3 className="text-2xl text-gray-300">About me</h3>
+  <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
+    <section className="container">
+      <h1 className="text-2xl sm:text-4xl font-bold text-gray-200 ">Hey, I'm Luca!</h1>
 
-      <p>Hey, I'm Luca!</p>
-      <p>
-        I'm a software engineer born in Brazil, who loves gaming and creating things. I started
-        learning programming so I could create my own game, and after that, I never stopped learning
-        and improving myself.
-      </p>
-      <p>
-        I've worked mainly on creating APIs and services in GraphQL, either directly for websites,
-        or in a micro-service architecture. Nowadays I tend to use TypeScript for developing, but
-        I've also used C# and I'm currently learning Elixir.
-      </p>
-      <p>
-        For the frontend, I've created websites, ecommerces and admin dashboards with React, and
-        also developed an app using React Native.
-      </p>
-      <p>
-        You can check more about that on my <Link href="/projects">projects page</Link>.
-      </p>
+      <div className="mt-4 text-base sm:text-lg">
+        <p className="my-3">
+          I'm a software engineer from Brazil, who loves gaming and creating things. I work as a
+          FullStack Engineer at{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.sinaitechnologies.com/"
+            className="font-bold"
+          >
+            Sinai Technologies
+          </a>{' '}
+          &mdash; where I help decarbonize the planet with GraphQL and Typescript.
+        </p>
+
+        <p className="my-3">
+          Besides that, I've also been learning Elixir, and developing some mobile games! You can
+          check my latest one:{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo"
+            className="font-bold"
+          >
+            Up We Go
+          </a>
+          .
+        </p>
+      </div>
     </section>
 
-    <section className="max-w-md">
-      <h3 className="text-2xl text-gray-300">Contact</h3>
-
-      <div className="mt-4 px-2 gap-3 grid grid-cols-2 sm:flex sm:flex-col">
-        <SocialLink label="GITHUB" url={config.LINKS.GITHUB} icon={<FaGithub />} />
-        <SocialLink label="EMAIL" url={`mailto:${config.CONTACT.EMAIL}`} icon={<FaEnvelope />} />
-        <SocialLink label="LINKEDIN" url={config.LINKS.LINKEDIN} icon={<FaLinkedin />} />
-        <SocialLink label="INSTAGRAM" url={config.LINKS.INSTAGRAM} icon={<FaInstagram />} />
-      </div>
+    <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4">
+      <Image
+        width={200}
+        height={200}
+        alt="avatar"
+        className="rounded-full"
+        src={require('../../../public/images/avatar.webp')}
+      />
     </section>
   </article>
 )

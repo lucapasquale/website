@@ -6,18 +6,20 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Fonts */}
-          <link as="font" rel="preload" href="/fonts/roboto-v20-latin-700.woff2" crossOrigin="" />
-          <link as="font" rel="preload" href="/fonts/roboto-v20-latin-900.woff2" crossOrigin="" />
           <link
-            as="font"
-            rel="preload"
-            href="/fonts/roboto-v20-latin-regular.woff2"
-            crossOrigin=""
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>"
+          />
+
+          {/* Fonts */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
           />
         </Head>
 
-        <body className="text-gray-400 bg-gray-900">
+        <body className="text-gray-300 bg-gray-900">
           <Main />
           <NextScript />
         </body>

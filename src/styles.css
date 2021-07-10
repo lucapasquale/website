@@ -4,10 +4,6 @@
 
 @layer base {
   a {
-    @apply text-blue-400 hover:text-blue-300;
-  }
-
-  p {
-    @apply my-3;
+    @apply transition-colors hover:text-blue-400 focus:text-blue-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400 focus-visible:ring-opacity-60 focus-visible:outline-none focus:outline-none rounded;
   }
 }
