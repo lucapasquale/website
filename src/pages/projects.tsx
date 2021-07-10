@@ -4,7 +4,7 @@ import { Hero } from '@common/components/Hero'
 import { Layout } from '@common/components/Layout'
 
 import { Project } from '@modules/Projects/Project'
-import { getProjects } from '@src/modules/Projects/logic/getProjects'
+import { getProjects } from '@modules/Projects/logic/getProjects'
 
 const Projects: FC = () => {
   const projects = getProjects()
@@ -13,13 +13,9 @@ const Projects: FC = () => {
     <Layout>
       <Hero title="Projects" subTitle="Some things I've created over the years" />
 
-      <div className="max-w-screen-sm mx-auto flex flex-col items-center px-4">
+      <div className="mt-6 flex flex-col items-center justify-between">
         {projects.map((project, idx) => (
-          <div key={idx}>
-            <Project project={project} />
-
-            {idx < projects.length - 1 && <hr className="max-w-md mx-auto" />}
-          </div>
+          <Project key={idx} project={project} />
         ))}
       </div>
     </Layout>

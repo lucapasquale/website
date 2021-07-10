@@ -2,11 +2,11 @@ import Image from 'next/image'
 import React, { FC } from 'react'
 
 export const About: FC = () => (
-  <article className="flex flex-col md:flex-row items-center justify-between space-x-5">
+  <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
     <section className="container">
-      <h1 className="text-2xl md:text-4xl font-bold text-gray-200 ">Hey, I'm Luca!</h1>
+      <h1 className="text-2xl sm:text-4xl font-bold text-gray-200 ">Hey, I'm Luca!</h1>
 
-      <div className="mt-4 text-base md:text-lg">
+      <div className="mt-4 text-base sm:text-lg">
         <p className="my-3">
           I'm a software engineer from Brazil, who loves gaming and creating things. I work as a
           FullStack Engineer at{' '}
@@ -37,7 +37,7 @@ export const About: FC = () => (
       </div>
     </section>
 
-    <section className="flex-shrink-0 md:ml-4">
+    <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4">
       <Image
         width={200}
         height={200}

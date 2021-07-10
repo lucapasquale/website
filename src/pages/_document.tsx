@@ -7,13 +7,10 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Fonts */}
-          <link as="font" rel="preload" href="/fonts/roboto-v20-latin-700.woff2" crossOrigin="" />
-          <link as="font" rel="preload" href="/fonts/roboto-v20-latin-900.woff2" crossOrigin="" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            as="font"
-            rel="preload"
-            href="/fonts/roboto-v20-latin-regular.woff2"
-            crossOrigin=""
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
           />
         </Head>
 

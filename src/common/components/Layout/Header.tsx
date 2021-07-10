@@ -13,7 +13,7 @@ export const Header: FC = () => (
 
         <Link passHref href="/projects">
           <a>
-            <h4 className="">PROJECTS</h4>
+            <h4>PROJECTS</h4>
           </a>
         </Link>
       </nav>

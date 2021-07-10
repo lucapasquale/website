@@ -1,38 +1,43 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+
+import config from '@src/config'
 
 export const Footer: FC = () => (
-  <footer className="pb-36">
+  <footer className="pb-24">
     <div className="container max-w-4xl mx-auto px-4">
-      <hr className="" />
+      <hr />
 
-      <div className="my-8 flex flex-col sm:flex-row justify-between items-center space-y-4">
+      <div className="my-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <h4>Built with Next.js and Tailwind</h4>
 
-        <nav className="space-x-6">
+        <nav className="flex text-gray-300 transition-colors space-x-6">
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/delbaoliveira"
-            className="transition-colors text-gray-300"
+            href={config.LINKS.GITHUB}
+            className="flex items-center gap-1"
           >
-            Github
+            <FaGithub /> Github
           </a>
+
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/delbaoliveira/"
-            className="transition-colors text-gray-300"
+            href={config.LINKS.LINKEDIN}
+            className="flex items-center gap-1"
           >
-            Linkedin
+            <FaLinkedin /> Linkedin
           </a>
+
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/delba.oliveira/"
-            className="transition-colors text-gray-300"
+            href={config.LINKS.INSTAGRAM}
+            className="flex items-center gap-1"
           >
-            Instagram
+            <FaInstagram /> Instagram
           </a>
         </nav>
       </div>
