@@ -16,7 +16,7 @@ export const Hero: FC<Props> = ({ title, subTitle }) => {
 
       <header>
         <h1 className="text-4xl font-bold text-gray-200 pb-4">{title}</h1>
-        <h4>{subTitle}</h4>
+        <h2>{subTitle}</h2>
       </header>
     </>
   )

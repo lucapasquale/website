@@ -4,7 +4,9 @@ import React, { FC } from 'react'
 export const About: FC = () => (
   <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
     <section className="container">
-      <h1 className="text-2xl sm:text-4xl font-bold text-gray-200 ">Hey, I'm Luca!</h1>
+      <header>
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-200 ">Hey, I'm Luca!</h1>
+      </header>
 
       <div className="mt-4 text-base sm:text-lg">
         <p className="my-3">

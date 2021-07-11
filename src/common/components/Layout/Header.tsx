@@ -7,13 +7,13 @@ export const Header: FC = () => (
       <nav className="flex justify-between items-center">
         <Link passHref href="/">
           <a>
-            <h2 className="tracking-wider">LUCA PASQUALE</h2>
+            <h1 className="tracking-wider">LUCA PASQUALE</h1>
           </a>
         </Link>
 
         <Link passHref href="/projects">
           <a>
-            <h4>PROJECTS</h4>
+            <h2>PROJECTS</h2>
           </a>
         </Link>
       </nav>

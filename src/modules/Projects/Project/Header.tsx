@@ -15,7 +15,7 @@ export const Header: FC<Props> = ({ project }) => (
       className="flex items-baseline gap-2"
       href={project.url}
     >
-      <h2 className="text-2xl">{project.title}</h2>
+      <h3 className="text-2xl">{project.title}</h3>
 
       <FaExternalLinkAlt />
     </a>

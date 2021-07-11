@@ -10,7 +10,7 @@ export const Footer: FC = () => (
       <hr />
 
       <div className="my-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-        <h4>Built with Next.js and Tailwind</h4>
+        <h2>Built with Next.js and Tailwind</h2>
 
         <nav className="flex text-gray-300 transition-colors space-x-6">
           <a
