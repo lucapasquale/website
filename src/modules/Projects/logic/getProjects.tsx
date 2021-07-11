@@ -35,6 +35,7 @@ const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/lucapasquale/botchini/',
     image: (
       <Image
+        priority
         placeholder="blur"
         alt="botchini project image"
         src={require('../../../../public/images/projects/botchini.webp')}
@@ -49,6 +50,7 @@ const ALL_PROJECTS: Project[] = [
     url: 'https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo',
     image: (
       <Image
+        priority
         placeholder="blur"
         alt="Up We Go project image"
         src={require('../../../../public/images/projects/up-we-go.webp')}
