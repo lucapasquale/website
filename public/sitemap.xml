@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
       <loc>https://lucapasquale.dev/</loc>
-      <lastmod>2020-08-17</lastmod>
+      <lastmod>2021-07-11</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 
   <url>
       <loc>https://lucapasquale.dev/projects</loc>
-      <lastmod>2020-08-17</lastmod>
+      <lastmod>2021-07-11</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 
   <url>
       <loc>https://lucapasquale.dev/secrets</loc>
-      <lastmod>2020-08-17</lastmod>
+      <lastmod>2021-07-11</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 </urlset>
