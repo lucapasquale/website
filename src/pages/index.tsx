@@ -1,12 +1,7 @@
 import React, { FC } from 'react'
 
-import { Layout } from '@common/components/Layout'
 import { About } from '@modules/Home/About'
 
-const Home: FC = () => (
-  <Layout>
-    <About />
-  </Layout>
-)
+const Home: FC = () => <About />
 
 export default Home

@@ -1,4 +1,4 @@
-export default {
+export const config = {
   URL: 'https://lucapasquale.dev',
   LINKS: {
     GITHUB: 'https://www.github.com/lucapasquale',
