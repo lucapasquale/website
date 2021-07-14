@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "scripts": {
-    "lint": "prettier --write --check 'src/**/*.ts?(x)'",
+    "lint": "next lint",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -12,15 +12,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-player": "^2.9.0",
-    "unstated-next": "^1.1.0"
+    "react-player": "^2.9.0"
   },
   "devDependencies": {
-    "@types/node": "^16.3.0",
+    "@types/node": "^16.3.2",
     "@types/react-dom": "^17.0.9",
-    "@types/styled-components": "^5.1.11",
-    "@typescript-eslint/parser": "^4.28.2",
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.1",
     "eslint": "^7.30.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
