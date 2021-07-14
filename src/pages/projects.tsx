@@ -5,7 +5,7 @@ import { Hero } from '@common/components/Hero'
 import { Project } from '@modules/Projects/Project'
 import { getProjects } from '@modules/Projects/logic/getProjects'
 
-const Projects: FC = () => {
+const Page: FC = () => {
   const projects = getProjects()
 
   return (
@@ -21,4 +21,4 @@ const Projects: FC = () => {
   )
 }
 
-export default Projects
+export default Page

@@ -6,7 +6,7 @@ import { Hero } from '@common/components/Hero'
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
-const Secrets: FC = () => (
+const Page: FC = () => (
   <>
     <Hero title="Secrets" subTitle="How did you get here?" />
 
@@ -22,4 +22,4 @@ const Secrets: FC = () => (
   </>
 )
 
-export default Secrets
+export default Page
