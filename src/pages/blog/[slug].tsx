@@ -4,8 +4,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { Hero } from '@common/components/Hero'
 
 import { Post, PostType } from '@modules/Blog/Post'
-import { formatDate } from '@src/modules/Blog/logic/parse-date'
-import { getPostPaths, loadPost } from '@modules/Blog/logic/posts'
+import { formatDate } from '@modules/Blog/logic/parse-date'
+import { getPostsSlugs, loadPost } from '@modules/Blog/logic/posts'
 
 type Props = {
   post: PostType | null
@@ -30,7 +30,10 @@ const Page: FC<Props> = ({ post }) => {
 export default Page
 
 export const getStaticPaths: GetStaticPaths = () => {
-  return { paths: getPostPaths(), fallback: false }
+  const slugs = getPostsSlugs()
+  const paths = slugs.map((slug) => '/blog/' + slug)
+
+  return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {

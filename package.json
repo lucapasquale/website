@@ -1,5 +1,6 @@
 {
   "name": "website",
+  "license": "MIT",
   "scripts": {
     "lint": "next lint",
     "dev": "next",
