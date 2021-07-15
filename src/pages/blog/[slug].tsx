@@ -3,54 +3,48 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { bundleMDX } from 'mdx-bundler'
 import { getMDXComponent } from 'mdx-bundler/client'
 
-type Post = {
-  code: string
-  frontmatter: Record<string, any>
-}
+import { Post, getPostPaths, getPostSource } from '@modules/Blog/logic/posts'
 
 type Props = {
-  post: Post
-}
-
-export const getStaticPaths: GetStaticPaths = () => {
-  return {
-    paths: [{ params: { slug: 'teste' } }],
-    // Return 404 page if path is not returned by getStaticPaths
-    fallback: false,
-  }
-}
-
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  const slug = context.params?.slug as string
-  const mdxSource = `
----
-title: Example Post
-description: This is some description
----
-
-# Wahoo
-
-Here's a **neat** demo:
-
-    ${slug}
-  `.trim()
-
-  const post = await bundleMDX(mdxSource)
-
-  return { props: { post } }
+  post: Post | null
 }
 
 const Page: FC<Props> = ({ post }) => {
-  const Component = useMemo(() => getMDXComponent(post.code), [post])
+  const MdxComponent = useMemo(() => {
+    if (!post) {
+      return () => null
+    }
+
+    return getMDXComponent(post.code)
+  }, [post])
+
+  if (!post) {
+    return <div>Not found</div>
+  }
 
   return (
     <div>
       <h1>{post.frontmatter.title}</h1>
       <h2>{post.frontmatter.description}</h2>
 
-      <Component />
+      <MdxComponent />
     </div>
   )
 }
 
 export default Page
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return { paths: getPostPaths(), fallback: false }
+}
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  if (!params || !params.slug || typeof params.slug !== 'string') {
+    return { props: { post: null } }
+  }
+
+  const mdxSource = getPostSource(params.slug)
+  const post = (await bundleMDX(mdxSource)) as Post
+
+  return { props: { post } }
+}
