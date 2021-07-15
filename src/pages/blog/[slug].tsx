@@ -1,34 +1,29 @@
-import React, { FC, useMemo } from 'react'
+import React, { FC } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { bundleMDX } from 'mdx-bundler'
-import { getMDXComponent } from 'mdx-bundler/client'
 
-import { Post, getPostPaths, getPostSource } from '@modules/Blog/logic/posts'
+import { Hero } from '@common/components/Hero'
+
+import { Post, PostType } from '@modules/Blog/Post'
+import { formatDate } from '@src/modules/Blog/logic/parse-date'
+import { getPostPaths, loadPost } from '@modules/Blog/logic/posts'
 
 type Props = {
-  post: Post | null
+  post: PostType | null
 }
 
 const Page: FC<Props> = ({ post }) => {
-  const MdxComponent = useMemo(() => {
-    if (!post) {
-      return () => null
-    }
-
-    return getMDXComponent(post.code)
-  }, [post])
-
   if (!post) {
     return <div>Not found</div>
   }
 
   return (
-    <div>
-      <h1>{post.frontmatter.title}</h1>
-      <h2>{post.frontmatter.description}</h2>
-
-      <MdxComponent />
-    </div>
+    <>
+      <Hero
+        title={post.frontmatter.title}
+        subTitle={`Luca Pasquale · ${formatDate(post.frontmatter.publishedAt)}`}
+      />
+      <Post post={post} />
+    </>
   )
 }
 
@@ -43,8 +38,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return { props: { post: null } }
   }
 
-  const mdxSource = getPostSource(params.slug)
-  const post = (await bundleMDX(mdxSource)) as Post
-
+  const post = await loadPost(params.slug)
   return { props: { post } }
 }

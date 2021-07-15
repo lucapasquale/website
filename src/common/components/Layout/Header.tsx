@@ -6,13 +6,13 @@ export const Header: FC = () => (
     <div className="container max-w-4xl mx-auto px-4">
       <nav className="flex justify-between items-center">
         <Link passHref href="/">
-          <a>
+          <a className="text-gray-300">
             <h1 className="tracking-wider">LUCA PASQUALE</h1>
           </a>
         </Link>
 
         <Link passHref href="/projects">
-          <a>
+          <a className="text-gray-300">
             <h2>PROJECTS</h2>
           </a>
         </Link>
