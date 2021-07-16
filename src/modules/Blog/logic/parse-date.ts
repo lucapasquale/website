@@ -1,7 +1,7 @@
 export function formatDate(input: string) {
   const date = parseDate(input)
 
-  return Intl.DateTimeFormat().format(date)
+  return Intl.DateTimeFormat(undefined, { dateStyle: 'long' }).format(date)
 }
 
 function parseDate(input: string) {

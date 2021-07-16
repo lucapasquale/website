@@ -14,9 +14,9 @@ export const Hero: FC<Props> = ({ title, subTitle }) => {
         <meta name="description" content={`${title} - ${subTitle}`} />
       </Head>
 
-      <header>
+      <header className="mb-12">
         <h1 className="text-4xl font-bold pb-2">{title}</h1>
-        <h2 className="text-gray-500">{subTitle}</h2>
+        <h2 className="text-gray-400">{subTitle}</h2>
       </header>
     </>
   )

@@ -11,11 +11,19 @@ export const Header: FC = () => (
           </a>
         </Link>
 
-        <Link passHref href="/projects">
-          <a className="text-gray-300">
-            <h2>PROJECTS</h2>
-          </a>
-        </Link>
+        <div className="flex space-x-4">
+          <Link passHref href="/blog">
+            <a className="text-gray-300">
+              <h2>BLOG</h2>
+            </a>
+          </Link>
+
+          <Link passHref href="/projects">
+            <a className="text-gray-300">
+              <h2>PROJECTS</h2>
+            </a>
+          </Link>
+        </div>
       </nav>
     </div>
   </header>

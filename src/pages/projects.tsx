@@ -12,7 +12,7 @@ const Page: FC = () => {
     <>
       <Hero title="Projects" subTitle="Some things I've created over the years" />
 
-      <div className="mt-6 flex flex-col items-center justify-between">
+      <div className="flex flex-col items-center justify-between">
         {projects.map((project, idx) => (
           <Project key={idx} project={project} />
         ))}

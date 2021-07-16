@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 import { Hero } from '@common/components/Hero'
 
 import { PostType } from '@modules/Blog/Post'
+import { PostPreview } from '@modules/Blog/PostPreview'
 import { loadLatestPosts } from '@modules/Blog/logic/posts'
 
 type Props = {
@@ -15,11 +16,9 @@ const Page: FC<Props> = ({ posts }) => {
     <>
       <Hero title="Blog" subTitle="My latest posts" />
 
-      <div className="mt-6 flex flex-col items-center justify-between">
-        {posts.map((posts, idx) => (
-          <div key={idx}>
-            <pre>{JSON.stringify(posts.frontmatter, null, 2)}</pre>
-          </div>
+      <div className="space-y-12">
+        {posts.map((post, idx) => (
+          <PostPreview key={idx} post={post} />
         ))}
       </div>
     </>

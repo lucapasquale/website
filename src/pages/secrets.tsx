@@ -10,7 +10,7 @@ const Page: FC = () => (
   <>
     <Hero title="Secrets" subTitle="How did you get here?" />
 
-    <article className="flex flex-col items-center p-8">
+    <article className="flex flex-col items-center px-8">
       <a target="_blank" rel="noopener noreferrer" href={PLAYLIST_LINK}>
         My dumb playlist
       </a>

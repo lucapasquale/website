@@ -6,9 +6,11 @@ import { components } from './Components'
 export type PostType = {
   code: string
   frontmatter: {
+    slug: string
     title: string
     description: string
     publishedAt: string
+    tags: string[]
   }
 }
 
