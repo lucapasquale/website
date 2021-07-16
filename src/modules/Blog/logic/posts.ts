@@ -4,7 +4,7 @@ import { bundleMDX } from 'mdx-bundler'
 
 import { PostType } from '../Post'
 
-const POSTS_PATH = path.join(process.cwd(), 'src/modules/Blog/posts')
+const POSTS_PATH = path.join(process.cwd(), 'src/assets/posts')
 
 export function getPostsSlugs() {
   const files = fs.readdirSync(POSTS_PATH)
