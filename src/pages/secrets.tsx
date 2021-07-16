@@ -6,11 +6,11 @@ import { Hero } from '@common/components/Hero'
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
-const Secrets: FC = () => (
+const Page: FC = () => (
   <>
     <Hero title="Secrets" subTitle="How did you get here?" />
 
-    <article className="flex flex-col items-center p-8">
+    <article className="flex flex-col items-center px-8">
       <a target="_blank" rel="noopener noreferrer" href={PLAYLIST_LINK}>
         My dumb playlist
       </a>
@@ -22,4 +22,4 @@ const Secrets: FC = () => (
   </>
 )
 
-export default Secrets
+export default Page

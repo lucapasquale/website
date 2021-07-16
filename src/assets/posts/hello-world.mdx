@@ -1,0 +1,40 @@
+---
+title: Hello world
+description: An example blog post to demonstrate how MDX works and it's components
+publishedAt: '2021-07-15'
+tags: ['Example', 'MDX']
+---
+
+This is an example post from my blog
+
+Here are some features of it:
+
+*Italic*
+
+**Bold**
+
+# H1
+## H2
+### H3
+#### H4
+
+[Internal links](/blog)
+
+[External links](https://google.com)
+
+I can have `code` inside the text
+
+```tsx
+// And some sample code
+const [count, setCount] = useState(0)
+
+const onClick = () => {
+  setCount(count + 1)
+}
+
+return (
+  <button onClick={onClick}>
+    Click me!
+  </button>
+)
+```

@@ -12,12 +12,12 @@ export const Footer: FC = () => (
       <div className="my-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <h2>Built with Next.js and Tailwind</h2>
 
-        <nav className="flex text-gray-300 transition-colors space-x-6">
+        <nav className="flex space-x-6">
           <a
             target="_blank"
             rel="noopener noreferrer"
             href={config.LINKS.GITHUB}
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-gray-300"
           >
             <FaGithub /> Github
           </a>
@@ -26,7 +26,7 @@ export const Footer: FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             href={config.LINKS.LINKEDIN}
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-gray-300"
           >
             <FaLinkedin /> Linkedin
           </a>
@@ -35,7 +35,7 @@ export const Footer: FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             href={config.LINKS.INSTAGRAM}
-            className="flex items-center gap-1"
+            className="flex items-center gap-1 text-gray-300"
           >
             <FaInstagram /> Instagram
           </a>
