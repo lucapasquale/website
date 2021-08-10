@@ -19,7 +19,7 @@ export const Code: FC = (props: any) => {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={className + ' overflow-x-auto text-sm px-2 sm:px-4 py-2 rounded-md'}
+          className={className + ' overflow-x-auto text-sm mb-5 px-2 sm:px-4 py-2 rounded-md'}
           style={style}
         >
           {tokens.map((line, i) => (
