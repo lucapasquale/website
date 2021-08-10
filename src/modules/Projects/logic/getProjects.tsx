@@ -38,7 +38,7 @@ const ALL_PROJECTS: Project[] = [
         priority
         placeholder="blur"
         alt="botchini project image"
-        src={require('../../../../public/images/projects/botchini.webp')}
+        src={require('public/images/projects/botchini.webp')}
       />
     ),
     description: `Discord bot to notify when a Twitch streamer starts streaming`,
@@ -53,7 +53,7 @@ const ALL_PROJECTS: Project[] = [
         priority
         placeholder="blur"
         alt="Up We Go project image"
-        src={require('../../../../public/images/projects/up-we-go.webp')}
+        src={require('public/images/projects/up-we-go.webp')}
       />
     ),
     description: `Climb to the top in this arcade game, try different characters
@@ -68,7 +68,7 @@ const ALL_PROJECTS: Project[] = [
       <Image
         placeholder="blur"
         alt="Linking bio project image"
-        src={require('../../../../public/images/projects/linking-bio.webp')}
+        src={require('public/images/projects/linking-bio.webp')}
       />
     ),
     description: `Share more than a single link in your social media.
@@ -92,7 +92,7 @@ const ALL_PROJECTS: Project[] = [
       <Image
         placeholder="blur"
         alt="Website project image"
-        src={require('../../../../public/images/projects/website.png')}
+        src={require('public/images/projects/website.png')}
       />
     ),
     description: `You know, the one that has this text and is right in front of you.`,
@@ -107,7 +107,7 @@ const ALL_PROJECTS: Project[] = [
       <Image
         placeholder="blur"
         alt="Fit It project image"
-        src={require('../../../../public/images/projects/fit-it.webp')}
+        src={require('public/images/projects/fit-it.webp')}
       />
     ),
     description: `Solve hundreds of different puzzles in this great mobile game.

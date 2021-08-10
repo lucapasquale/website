@@ -18,9 +18,12 @@ export const Code: FC = (props: any) => {
       language={language as Language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className + ' text-sm px-2 sm:px-4 py-2 rounded-md'} style={style}>
+        <pre
+          className={className + ' overflow-scroll text-sm px-2 sm:px-4 py-2 rounded-md'}
+          style={style}
+        >
           {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })} className="flex flex-wrap">
+            <div key={i} {...getLineProps({ line, key: i })} className="">
               {line.map((token, key) => (
                 <span key={key} {...getTokenProps({ token, key })} />
               ))}

@@ -15,13 +15,19 @@ export const components = {
   a: ({ href = '', ...props }) => {
     if (href.startsWith('http')) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="font-bold" {...props} />
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline"
+          {...props}
+        />
       )
     }
 
     return (
       <Link href={href} passHref>
-        <a className="font-bold" {...props} />
+        <a className="font-bold underline" {...props} />
       </Link>
     )
   },

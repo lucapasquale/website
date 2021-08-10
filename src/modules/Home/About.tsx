@@ -16,7 +16,7 @@ export const About: FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.sinaitechnologies.com/"
-            className="font-bold"
+            className="font-bold underline"
           >
             Sinai Technologies
           </a>{' '}
@@ -30,7 +30,7 @@ export const About: FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo"
-            className="font-bold"
+            className="font-bold underline"
           >
             Up We Go
           </a>
