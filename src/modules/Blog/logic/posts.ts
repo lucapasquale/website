@@ -4,6 +4,24 @@ import { bundleMDX } from 'mdx-bundler'
 
 import { PostType } from '../Post'
 
+// https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+if (process.platform === 'win32') {
+  process.env.ESBUILD_BINARY_PATH = path.join(
+    process.cwd(),
+    'node_modules',
+    'esbuild',
+    'esbuild.exe'
+  )
+} else {
+  process.env.ESBUILD_BINARY_PATH = path.join(
+    process.cwd(),
+    'node_modules',
+    'esbuild',
+    'bin',
+    'esbuild'
+  )
+}
+
 const POSTS_PATH = path.join(process.cwd(), 'src/assets/posts')
 
 export function getPostsSlugs() {

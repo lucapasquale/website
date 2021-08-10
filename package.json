@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "esbuild": "^0.12.19",
     "mdx-bundler": "^5.2.1",
     "next": "^11.0.1",
     "prism-react-renderer": "^1.2.1",
