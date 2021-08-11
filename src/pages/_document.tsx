@@ -23,7 +23,7 @@ class MyDocument extends Document {
             async
             defer
             data-domain="lucapasquale.dev"
-            src="http://plausible.lucapasquale.dev/js/plausible.js"
+            src="https://plausible.lucapasquale.dev/js/plausible.js"
           ></script>
         </Head>
 
