@@ -11,7 +11,6 @@
     "esbuild": "^0.12.19",
     "mdx-bundler": "^5.2.1",
     "next": "^11.1.0",
-    "next-plausible": "^2.1.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
