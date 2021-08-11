@@ -23,6 +23,7 @@ class MyDocument extends Document {
             async
             defer
             data-domain="lucapasquale.dev"
+            data-api="https://plausible.lucapasquale.dev/api/event"
             src="https://plausible.lucapasquale.dev/js/plausible.js"
           ></script>
         </Head>
