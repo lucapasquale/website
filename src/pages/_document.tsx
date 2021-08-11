@@ -17,6 +17,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
+
+          {/* Analytics */}
+          <script async defer data-domain="lucapasquale.dev" src="/js/script.js"></script>
         </Head>
 
         <body className="text-gray-300 bg-gray-900">
