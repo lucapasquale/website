@@ -19,7 +19,12 @@ class MyDocument extends Document {
           />
 
           {/* Analytics */}
-          <script async defer data-domain="lucapasquale.dev" src="/js/script.js"></script>
+          <script
+            async
+            defer
+            data-domain="lucapasquale.dev"
+            src="http://plausible.lucapasquale.dev/js/plausible.js"
+          ></script>
         </Head>
 
         <body className="text-gray-300 bg-gray-900">
