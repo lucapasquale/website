@@ -11,6 +11,12 @@ export type PostType = {
     description: string
     publishedAt: string
     tags: string[]
+    image?: {
+      src: string
+      alt: string
+      width: number
+      height: number
+    }
   }
 }
 

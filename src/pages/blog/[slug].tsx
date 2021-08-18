@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Image from 'next/image'
 
 import { Hero } from '@common/components/Hero'
 
@@ -22,6 +23,19 @@ const Page: FC<Props> = ({ post }) => {
         title={post.frontmatter.title}
         subTitle={`Luca Pasquale · ${formatDate(post.frontmatter.publishedAt)}`}
       />
+
+      {post.frontmatter.image && (
+        <div className="mt-10 mb-6 overflow-hidden rounded-2xl">
+          <Image
+            priority
+            alt={post.frontmatter.image.alt}
+            src={post.frontmatter.image.src}
+            width={post.frontmatter.image.width}
+            height={post.frontmatter.image.height}
+          />
+        </div>
+      )}
+
       <Post post={post} />
     </>
   )
