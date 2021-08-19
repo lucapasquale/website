@@ -27,7 +27,7 @@ export const Hero: FC<Props> = ({ title, subTitle, image }) => {
         openGraph={{
           type: 'website',
           site_name: 'Luca Pasquale',
-          title: `${title} - ${subTitle}`,
+          title: title,
           description: subTitle,
           images: image
             ? [
