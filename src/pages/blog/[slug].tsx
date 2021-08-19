@@ -22,6 +22,7 @@ const Page: FC<Props> = ({ post }) => {
       <Hero
         title={post.frontmatter.title}
         subTitle={`Luca Pasquale · ${formatDate(post.frontmatter.publishedAt)}`}
+        image={post.frontmatter.image}
       />
 
       {post.frontmatter.image && (
