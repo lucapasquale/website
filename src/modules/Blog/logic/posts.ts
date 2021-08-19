@@ -22,7 +22,7 @@ if (process.platform === 'win32') {
   )
 }
 
-const POSTS_PATH = path.join(process.cwd(), 'src/assets/posts')
+const POSTS_PATH = path.join(process.cwd(), 'public/posts')
 
 export function getPostsSlugs() {
   const files = fs.readdirSync(POSTS_PATH)
