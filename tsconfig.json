@@ -27,10 +27,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@src/*": ["src/*"],
-      "@common/*": ["src/common/*"],
-      "@modules/*": ["src/modules/*"],
-    }
+      "@src/*": [
+        "src/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      "@modules/*": [
+        "src/modules/*"
+      ]
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules"
