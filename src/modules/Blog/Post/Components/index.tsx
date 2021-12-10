@@ -6,7 +6,7 @@ import { Code } from './Code'
 import { Heading } from './Headings'
 
 export const components = {
-  code: Code,
+  code: (props: any) => <Code {...props} />,
 
   h1: (props: any) => <Heading showAnchor level="h1" {...props} />,
   h2: (props: any) => <Heading showAnchor level="h2" {...props} />,

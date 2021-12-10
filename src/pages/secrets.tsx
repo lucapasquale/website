@@ -15,7 +15,7 @@ const Page: FC = () => (
         My dumb playlist
       </a>
 
-      <div className="invisible mt-8 sm:visible">
+      <div className="hidden mt-8 sm:flex sm:justify-center sm:w-screen">
         <ReactPlayer controls url={PLAYLIST_LINK} />
       </div>
     </article>
