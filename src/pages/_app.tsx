@@ -1,7 +1,7 @@
 import '../styles.css'
 import React, { FC } from 'react'
-import Head from 'next/head'
 import { AppProps } from 'next/app'
+import Head from 'next/head'
 
 import { Layout } from '@common/components/Layout'
 

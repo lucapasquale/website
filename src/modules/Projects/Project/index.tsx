@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 
+import { Project as ProjectType } from '../logic/getProjects'
+
 import { Header } from './Header'
 import { TechnologyTag } from './TechnologyTag'
-import { Project as ProjectType } from '../logic/getProjects'
 
 type Props = {
   project: ProjectType

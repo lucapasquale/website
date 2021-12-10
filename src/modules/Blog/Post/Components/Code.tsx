@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import dracula from 'prism-react-renderer/themes/dracula'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+import dracula from 'prism-react-renderer/themes/dracula'
 
 export const Code: FC = (props: any) => {
   const language = props.className?.replace('language-', '')

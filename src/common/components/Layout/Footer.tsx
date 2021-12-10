@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import Link from 'next/link'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import Link from 'next/link'
 
 import { config } from '@src/config'
 
