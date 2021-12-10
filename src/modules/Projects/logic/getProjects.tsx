@@ -38,7 +38,7 @@ const ALL_PROJECTS: Project[] = [
         priority
         placeholder="blur"
         alt="botchini project image"
-        src={require('public/images/projects/botchini.webp')}
+        src={require('public/images/projects/botchini.png')}
       />
     ),
     description: `Discord bot to notify when a Twitch streamer starts streaming`,
