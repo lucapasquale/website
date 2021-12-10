@@ -6,7 +6,7 @@ env:
 
 jobs:
   lint:
-    name: Check formatting
+    name: Lint
     runs-on: ubuntu-18.04
 
     steps:
