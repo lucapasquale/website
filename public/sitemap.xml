@@ -2,19 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
       <loc>https://lucapasquale.dev/</loc>
-      <lastmod>2021-07-13</lastmod>
+      <lastmod>2021-12-10</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 
   <url>
       <loc>https://lucapasquale.dev/projects</loc>
-      <lastmod>2021-07-13</lastmod>
+      <lastmod>2021-12-10</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 
   <url>
       <loc>https://lucapasquale.dev/secrets</loc>
-      <lastmod>2021-07-13</lastmod>
+      <lastmod>2021-12-10</lastmod>
+      <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+      <loc>https://lucapasquale.dev/blog</loc>
+      <lastmod>2021-12-10</lastmod>
+      <changefreq>weekly</changefreq>
+  </url>
+  <url>
+      <loc>https://lucapasquale.dev/blog/hello-world</loc>
+      <lastmod>2021-12-10</lastmod>
       <changefreq>monthly</changefreq>
   </url>
 </urlset>

@@ -11,6 +11,12 @@ type Props = {
   posts: PostType[]
 }
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts = await loadLatestPosts()
+
+  return { props: { posts } }
+}
+
 const Page: FC<Props> = ({ posts }) => {
   return (
     <>
@@ -26,9 +32,3 @@ const Page: FC<Props> = ({ posts }) => {
 }
 
 export default Page
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const posts = await loadLatestPosts()
-
-  return { props: { posts } }
-}

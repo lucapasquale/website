@@ -12,6 +12,22 @@ type Props = {
   post: PostType | null
 }
 
+export const getStaticPaths: GetStaticPaths = () => {
+  const slugs = getPostsSlugs()
+  const paths = slugs.map((slug) => '/blog/' + slug)
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  if (!params || !params.slug || typeof params.slug !== 'string') {
+    return { props: { post: null } }
+  }
+
+  const post = await loadPost(params.slug)
+  return { props: { post } }
+}
+
 const Page: FC<Props> = ({ post }) => {
   if (!post) {
     return <div>Not found</div>
@@ -43,19 +59,3 @@ const Page: FC<Props> = ({ post }) => {
 }
 
 export default Page
-
-export const getStaticPaths: GetStaticPaths = () => {
-  const slugs = getPostsSlugs()
-  const paths = slugs.map((slug) => '/blog/' + slug)
-
-  return { paths, fallback: false }
-}
-
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  if (!params || !params.slug || typeof params.slug !== 'string') {
-    return { props: { post: null } }
-  }
-
-  const post = await loadPost(params.slug)
-  return { props: { post } }
-}

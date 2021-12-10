@@ -31,8 +31,9 @@ export function getPostsSlugs() {
 }
 
 export async function loadPost(slug: string) {
-  const mdxSource = fs.readFileSync(path.join(POSTS_PATH, slug + '.mdx'), 'utf-8')
-  const { code, frontmatter } = await bundleMDX(mdxSource)
+  const { code, frontmatter } = await bundleMDX({
+    file: path.join(POSTS_PATH, slug + '.mdx'),
+  })
 
   return {
     code,
