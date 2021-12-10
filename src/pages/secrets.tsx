@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import dynamic from 'next/dynamic'
-const ReactPlayer = dynamic(() => import('react-player'))
 
 import { Hero } from '@common/components/Hero'
+
+const ReactPlayer = dynamic(() => import('react-player'))
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 

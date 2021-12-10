@@ -1,3 +1,30 @@
 {
-  "extends": ["next", "next/core-web-vitals", "prettier"]
+  "extends": ["next", "next/core-web-vitals", "prettier"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.ts", "**/*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Styles imports / side-effects / react deps / deps
+              ["^.+\\.s?css$", "^\\u0000", "^react", "^\\w"],
+              // Internal packages
+              ["^(@|@src|@common|modules)(/.*|$)"],
+              // Parent imports. Put `..` last.
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Other relative imports. Put same-folder imports and `.` last.
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 import fs from 'fs'
-import path from 'path'
 import { bundleMDX } from 'mdx-bundler'
+import path from 'path'
 
 import { PostType } from '../Post'
 

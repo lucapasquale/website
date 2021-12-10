@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React, { FC } from 'react'
+import Image from 'next/image'
 
 export const About: FC = () => (
   <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">

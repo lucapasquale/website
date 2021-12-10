@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 
 import { Hero } from '@common/components/Hero'
 
-import { Project } from '@modules/Projects/Project'
 import { getProjects } from '@modules/Projects/logic/getProjects'
+import { Project } from '@modules/Projects/Project'
 
 const Page: FC = () => {
   const projects = getProjects()
