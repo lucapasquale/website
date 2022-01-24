@@ -17,14 +17,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-
-          {/* Analytics */}
-          <script
-            async
-            src="https://ackee.lucapasquale.dev/tracker.js"
-            data-ackee-server="https://ackee.lucapasquale.dev"
-            data-ackee-domain-id="c2301b2b-a15c-4681-a8b1-b4a9b0c79814"
-          ></script>
         </Head>
 
         <body className="text-gray-300 bg-gray-900">
