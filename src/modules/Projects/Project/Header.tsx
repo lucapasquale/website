@@ -12,7 +12,7 @@ export const Header: FC<Props> = ({ project }) => (
     <a
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-baseline gap-2 text-gray-300"
+      className="flex items-baseline gap-2 text-gray-300 mb-1 sm:mb-0"
       href={project.url}
     >
       <h3 className="text-2xl">{project.title}</h3>
