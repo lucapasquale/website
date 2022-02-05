@@ -12,6 +12,10 @@ type Props = {
   post: PostType | null
 }
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 export const getStaticPaths: GetStaticPaths = () => {
   const slugs = getPostsSlugs()
   const paths = slugs.map((slug) => '/blog/' + slug)

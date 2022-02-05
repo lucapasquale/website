@@ -5,6 +5,10 @@ import { Hero } from '@common/components/Hero'
 import { getProjects } from '@modules/Projects/logic/getProjects'
 import { Project } from '@modules/Projects/Project'
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 const Page: FC = () => {
   const projects = getProjects()
 
