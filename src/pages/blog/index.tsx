@@ -11,6 +11,10 @@ type Props = {
   posts: PostType[]
 }
 
+export const config = {
+  unstable_runtimeJS: false,
+}
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await loadLatestPosts()
 
