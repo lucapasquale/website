@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
 
-import { config } from '@src/config'
+import { config } from '~src/config'
 
 export const Footer: FC = () => (
   <footer className="pb-24">

@@ -2,11 +2,10 @@ import React, { FC } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 
-import { Hero } from '@common/components/Hero'
-
-import { formatDate } from '@modules/Blog/logic/parse-date'
-import { getPostsSlugs, loadPost } from '@modules/Blog/logic/posts'
-import { Post, PostType } from '@modules/Blog/Post'
+import { Hero } from '~common/components/Hero'
+import { formatDate } from '~modules/Blog/logic/parse-date'
+import { getPostsSlugs, loadPost } from '~modules/Blog/logic/posts'
+import { Post, PostType } from '~modules/Blog/Post'
 
 type Props = {
   post: PostType | null

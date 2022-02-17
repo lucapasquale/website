@@ -1,11 +1,10 @@
 import React, { FC } from 'react'
 import { GetStaticProps } from 'next'
 
-import { Hero } from '@common/components/Hero'
-
-import { loadLatestPosts } from '@modules/Blog/logic/posts'
-import { PostType } from '@modules/Blog/Post'
-import { PostPreview } from '@modules/Blog/PostPreview'
+import { Hero } from '~common/components/Hero'
+import { loadLatestPosts } from '~modules/Blog/logic/posts'
+import { PostType } from '~modules/Blog/Post'
+import { PostPreview } from '~modules/Blog/PostPreview'
 
 type Props = {
   posts: PostType[]
