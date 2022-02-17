@@ -12,10 +12,7 @@ type Props = {
 export const Project: FC<Props> = ({ project }) => {
   return (
     <section className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
-      <div
-        className="min-w-[275px] max-w-[275px] border border-gray-500 font-s"
-        style={{ fontSize: 0 }}
-      >
+      <div className="min-w-[275px] max-w-[275px] border border-gray-500 text-[0px]">
         {project.image}
       </div>
 

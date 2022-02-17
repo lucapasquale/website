@@ -15,8 +15,8 @@
             "groups": [
               // Styles imports / side-effects / react deps / deps
               ["^.+\\.s?css$", "^\\u0000", "^react", "^\\w", "^@\\w"],
-              // Internal packages
-              ["^(~src|~common|~modules)(/.*|$)"],
+              // Internal paths
+              ["^(~.*)(/.*|$)"],
               // Parent imports. Put `..` last.
               ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
               // Other relative imports. Put same-folder imports and `.` last.
