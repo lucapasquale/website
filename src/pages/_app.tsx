@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
 
-import { Layout } from '@common/components/Layout'
+import { Layout } from '~common/components/Layout'
 
 const App: FC<AppProps> = ({ pageProps, Component }) => {
   return (

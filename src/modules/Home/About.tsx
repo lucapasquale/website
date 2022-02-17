@@ -46,7 +46,7 @@ export const About: FC = () => (
         height={200}
         alt="avatar"
         className="rounded-full"
-        src={require('../../../public/images/avatar.webp')}
+        src="/images/avatar.webp"
       />
     </section>
   </article>

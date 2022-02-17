@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { NextSeo } from 'next-seo'
 
-import { config as myConfig } from '../config'
+import { About } from '~modules/Home/About'
 
-import { About } from '@modules/Home/About'
+import { config as myConfig } from '../config'
 
 export const config = {
   unstable_runtimeJS: false,

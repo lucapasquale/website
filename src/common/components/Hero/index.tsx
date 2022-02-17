@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 
-import { config } from '@src/config'
+import { config } from '~src/config'
 
 type Props = {
   title: string
@@ -16,14 +16,14 @@ type Props = {
 }
 
 export const Hero: FC<Props> = ({ title, subTitle, image }) => {
-  const { pathname } = useRouter()
+  const router = useRouter()
 
   return (
     <>
       <NextSeo
         title={title}
         description={`${title} - ${subTitle}`}
-        canonical={config.URL + pathname}
+        canonical={config.URL + router?.pathname}
         openGraph={{
           type: 'website',
           site_name: 'Luca Pasquale',

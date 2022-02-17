@@ -27,13 +27,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "paths": {
-      "@src/*": [
+      "~src/*": [
         "src/*"
       ],
-      "@common/*": [
+      "~common/*": [
         "src/common/*"
       ],
-      "@modules/*": [
+      "~modules/*": [
         "src/modules/*"
       ]
     },

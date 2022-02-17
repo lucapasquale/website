@@ -2,10 +2,10 @@
   "name": "website",
   "license": "MIT",
   "scripts": {
-    "lint": "next lint",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "esbuild": "^0.14.22",
