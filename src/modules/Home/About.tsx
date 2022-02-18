@@ -39,11 +39,11 @@ export const About: FC = () => (
       </div>
     </section>
 
-    <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4">
+    <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-[200px] h-[200px]">
       <Image
         priority
-        width={200}
-        height={200}
+        width={511}
+        height={512}
         alt="avatar"
         className="rounded-full"
         src="/images/avatar.webp"

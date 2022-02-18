@@ -36,9 +36,10 @@ const ALL_PROJECTS: Project[] = [
     image: (
       <Image
         priority
-        placeholder="blur"
+        width={642}
+        height={632}
         alt="botchini project image"
-        src={require('public/images/projects/botchini.png')}
+        src="/images/projects/botchini.webp"
       />
     ),
     description: `Discord bot to notify when a Twitch streamer starts streaming`,
@@ -51,9 +52,10 @@ const ALL_PROJECTS: Project[] = [
     image: (
       <Image
         priority
-        placeholder="blur"
+        width={411}
+        height={731}
         alt="Up We Go project image"
-        src={require('public/images/projects/up-we-go.webp')}
+        src="/images/projects/up-we-go.webp"
       />
     ),
     description: `Climb to the top in this arcade game, try different characters
@@ -66,9 +68,10 @@ const ALL_PROJECTS: Project[] = [
     url: 'https://www.linkingbio.com',
     image: (
       <Image
-        placeholder="blur"
+        width={1079}
+        height={1919}
         alt="Linking bio project image"
-        src={require('public/images/projects/linking-bio.webp')}
+        src="/images/projects/linking-bio.webp"
       />
     ),
     description: `Share more than a single link in your social media.
@@ -90,9 +93,10 @@ const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/lucapasquale/website',
     image: (
       <Image
-        placeholder="blur"
+        width={750}
+        height={1334}
         alt="Website project image"
-        src={require('public/images/projects/website.png')}
+        src="/images/projects/website.webp"
       />
     ),
     description: `You know, the one that has this text and is right in front of you.`,
@@ -105,9 +109,10 @@ const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/lucapasquale/FitIt',
     image: (
       <Image
-        placeholder="blur"
+        width={476}
+        height={720}
         alt="Fit It project image"
-        src={require('public/images/projects/fit-it.webp')}
+        src="/images/projects/fit-it.webp"
       />
     ),
     description: `Solve hundreds of different puzzles in this great mobile game.
