@@ -52,7 +52,7 @@ exports[`Home snapshot 1`] = `
       </div>
     </section>
     <section
-      class="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4"
+      class="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-[200px] h-[200px]"
     >
       <img
         alt="test-img"
