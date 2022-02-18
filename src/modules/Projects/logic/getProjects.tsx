@@ -68,6 +68,7 @@ const ALL_PROJECTS: Project[] = [
     url: 'https://www.linkingbio.com',
     image: (
       <Image
+        priority
         width={1079}
         height={1919}
         alt="Linking bio project image"
@@ -93,6 +94,7 @@ const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/lucapasquale/website',
     image: (
       <Image
+        priority
         width={750}
         height={1334}
         alt="Website project image"
@@ -109,6 +111,7 @@ const ALL_PROJECTS: Project[] = [
     githubUrl: 'https://github.com/lucapasquale/FitIt',
     image: (
       <Image
+        priority
         width={476}
         height={720}
         alt="Fit It project image"
