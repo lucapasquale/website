@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-import dynamic from 'next/dynamic'
-const ReactPlayer = dynamic(() => import('react-player'))
+import ReactPlayer from 'react-player'
 
 import { Hero } from '~common/components/Hero'
 
@@ -20,7 +19,7 @@ const Page: FC = () => (
       </a>
 
       <div className="hidden mt-8 sm:flex sm:justify-center sm:w-screen">
-        <ReactPlayer data-testid="youtube-iframe" controls url={PLAYLIST_LINK} />
+        <ReactPlayer controls url={PLAYLIST_LINK} />
       </div>
     </article>
   </>
