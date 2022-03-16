@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-import dynamic from 'next/dynamic'
-const ReactPlayer = dynamic(() => import('react-player'))
+import ReactPlayer from 'react-player'
 
 import { Hero } from '~common/components/Hero'
 
