@@ -5,10 +5,6 @@ import { Hero } from '~common/components/Hero'
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
-export const config = {
-  unstable_runtimeJS: false,
-}
-
 const Page: FC = () => (
   <>
     <Hero title="Secrets" subTitle="How did you get here?" />
