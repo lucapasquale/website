@@ -2,7 +2,8 @@ name: PR Checks
 on: pull_request
 
 env:
-  NODE_VER: 14
+  NODE_VER: 16
+  PNPM_VERSION: 7.1.0
 
 jobs:
   lint:
@@ -10,25 +11,31 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: ${{ env.PNPM_VERSION }}
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VER }}
-        cache: 'yarn'
+        cache: 'pnpm'
 
-    - run: yarn install
-    - run: yarn lint
+    - run: pnpm install
+    - run: pnpm lint
 
   test:
     name: Test
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: ${{ env.PNPM_VERSION }}
+    - uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VER }}
-        cache: 'yarn'
+        cache: 'pnpm'
 
-    - run: yarn install
-    - run: yarn test
+    - run: pnpm install
+    - run: pnpm test

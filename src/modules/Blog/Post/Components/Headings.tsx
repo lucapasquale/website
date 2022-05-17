@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { PropsWithChildren } from 'react'
 
 const levels = {
   h1: {
@@ -28,7 +28,7 @@ type Props = {
   showAnchor?: boolean
 }
 
-export const Heading: FC<Props> = ({ level, showAnchor = false, children }) => {
+export const Heading = ({ level, showAnchor = false, children }: PropsWithChildren<Props>) => {
   const levelClasses = levels[level]
   const HeadingComponent = level
 
