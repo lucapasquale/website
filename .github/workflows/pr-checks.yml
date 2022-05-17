@@ -2,7 +2,7 @@ name: PR Checks
 on: pull_request
 
 env:
-  NODE_VER: 14
+  NODE_VER: 16
 
 jobs:
   lint:
@@ -14,10 +14,10 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: ${{ env.NODE_VER }}
-        cache: 'yarn'
+        cache: 'pnpm'
 
-    - run: yarn install
-    - run: yarn lint
+    - run: pnpm install
+    - run: pnpm lint
 
   test:
     name: Test
@@ -28,7 +28,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: ${{ env.NODE_VER }}
-        cache: 'yarn'
+        cache: 'pnpm'
 
-    - run: yarn install
-    - run: yarn test
+    - run: pnpm install
+    - run: pnpm test
