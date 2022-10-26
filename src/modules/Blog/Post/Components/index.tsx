@@ -27,10 +27,6 @@ export const components = {
       )
     }
 
-    return (
-      <Link href={href} passHref>
-        <a className="font-bold underline" {...props} />
-      </Link>
-    )
+    return <Link href={href} passHref className="font-bold underline" {...props}></Link>
   },
 }
