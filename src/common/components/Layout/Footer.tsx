@@ -43,8 +43,8 @@ export const Footer: FC = () => (
       </div>
     </div>
 
-    <Link href="/secrets" className="fixed right-0 bottom-0">
-      Secrets
+    <Link href="/secrets">
+      <a className="fixed right-0 bottom-0">Secrets</a>
     </Link>
   </footer>
 )
