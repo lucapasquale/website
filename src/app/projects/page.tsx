@@ -1,14 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { Hero } from '~common/components/Hero'
 import { getProjects } from '~modules/Projects/logic/getProjects'
 import { Project } from '~modules/Projects/Project'
 
-export const config = {
-  unstable_runtimeJS: false,
-}
-
-const Page: FC = () => {
+export default function Page() {
   const projects = getProjects()
 
   return (
@@ -23,5 +19,3 @@ const Page: FC = () => {
     </>
   )
 }
-
-export default Page

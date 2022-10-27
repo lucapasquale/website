@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { Technology } from '../logic/getProjects'
 
@@ -22,7 +22,7 @@ type Props = {
   technology: Technology
 }
 
-export const TechnologyTag: FC<Props> = ({ technology }) => {
+export function TechnologyTag({ technology }: Props) {
   const techClasses = TECHNOLOGY_CLASSES[technology] ?? ''
 
   return (

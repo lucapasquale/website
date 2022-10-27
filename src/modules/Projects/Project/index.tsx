@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-import { Project as ProjectType } from '../logic/getProjects'
+import type { Project as ProjectType } from '../logic/getProjects'
 
 import { Header } from './Header'
 import { TechnologyTag } from './TechnologyTag'
@@ -9,7 +9,7 @@ type Props = {
   project: ProjectType
 }
 
-export const Project: FC<Props> = ({ project }) => {
+export function Project({ project }: Props) {
   return (
     <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
       <div className="min-w-[275px] max-w-[275px] border border-gray-500 text-[0px]">
