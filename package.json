@@ -2,7 +2,7 @@
   "name": "website",
   "license": "MIT",
   "engines": {
-    "node": "^18.12.0"
+    "node": "^16.16.0"
   },
   "scripts": {
     "dev": "next",
