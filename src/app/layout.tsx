@@ -1,8 +1,8 @@
 import '../styles.css'
 import { Inter } from '@next/font/google'
 
-import { Footer } from '~common/components/Layout/Footer'
-import { Header } from '~common/components/Layout/Header'
+import { AnalyticsWrapper } from '~common/components/Analytics'
+import { Layout } from '~common/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,11 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className="text-gray-300 bg-gray-900">
-        <Header />
+        <Layout>{children}</Layout>
 
-        <main className="container max-w-4xl mx-auto px-4 my-16">{children}</main>
-
-        <Footer />
+        <AnalyticsWrapper />
       </body>
     </html>
   )
