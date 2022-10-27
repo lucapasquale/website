@@ -1,5 +1,11 @@
 import Image from 'next/image'
 
+import botchiniImage from '../../../../public/images/projects/botchini.webp'
+import fitItImage from '../../../../public/images/projects/fit-it.webp'
+import linkingBioImage from '../../../../public/images/projects/linking-bio.webp'
+import upWeGoImage from '../../../../public/images/projects/up-we-go.webp'
+import websiteImage from '../../../../public/images/projects/website.webp'
+
 export enum Technology {
   // Languages
   CSharp = 'c#',
@@ -31,17 +37,9 @@ export type Project = {
 const ALL_PROJECTS: Project[] = [
   {
     title: 'Botchini',
-    url: 'https://github.com/lucapasquale/botchini/',
+    url: 'https://botchini.lucapasquale.dev',
     githubUrl: 'https://github.com/lucapasquale/botchini/',
-    image: (
-      <Image
-        priority
-        width={642}
-        height={632}
-        alt="botchini project image"
-        src="/images/projects/botchini.webp"
-      />
-    ),
+    image: <Image priority placeholder="blur" alt="botchini project image" src={botchiniImage} />,
     description: `Discord bot to notify when a Twitch streamer starts streaming`,
     technologies: [Technology.Elixir, Technology.PostgresQL],
   },
@@ -49,15 +47,7 @@ const ALL_PROJECTS: Project[] = [
   {
     title: 'Up We Go',
     url: 'https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo',
-    image: (
-      <Image
-        priority
-        width={411}
-        height={731}
-        alt="Up We Go project image"
-        src="/images/projects/up-we-go.webp"
-      />
-    ),
+    image: <Image priority placeholder="blur" alt="Up We Go project image" src={upWeGoImage} />,
     description: `Climb to the top in this arcade game, try different characters
       and compete with your friends for the highest score!`,
     technologies: [Technology.Unity, Technology.CSharp],
@@ -66,15 +56,7 @@ const ALL_PROJECTS: Project[] = [
   {
     title: 'Linking Bio',
     url: 'https://www.linkingbio.com',
-    image: (
-      <Image
-        priority
-        width={1079}
-        height={1919}
-        alt="Linking bio project image"
-        src="/images/projects/linking-bio.webp"
-      />
-    ),
+    image: <Image placeholder="blur" alt="Linking bio project image" src={linkingBioImage} />,
     description: `Share more than a single link in your social media.
       Create your own page, where you can customize and have as many links as you would like.`,
     technologies: [
@@ -92,15 +74,7 @@ const ALL_PROJECTS: Project[] = [
     title: 'Portfolio',
     url: 'https://lucapasquale.dev',
     githubUrl: 'https://github.com/lucapasquale/website',
-    image: (
-      <Image
-        priority
-        width={750}
-        height={1334}
-        alt="Website project image"
-        src="/images/projects/website.webp"
-      />
-    ),
+    image: <Image placeholder="blur" alt="Website project image" src={websiteImage} />,
     description: `You know, the one that has this text and is right in front of you.`,
     technologies: [Technology.Typescript, Technology.React, Technology.NextJS, Technology.Tailwind],
   },
@@ -109,15 +83,7 @@ const ALL_PROJECTS: Project[] = [
     title: 'Fit It',
     url: 'https://github.com/lucapasquale/FitIt',
     githubUrl: 'https://github.com/lucapasquale/FitIt',
-    image: (
-      <Image
-        priority
-        width={476}
-        height={720}
-        alt="Fit It project image"
-        src="/images/projects/fit-it.webp"
-      />
-    ),
+    image: <Image placeholder="blur" alt="Fit It project image" src={fitItImage} />,
     description: `Solve hundreds of different puzzles in this great mobile game.
       Game was published on Android Play Store, where it had over a thousand downloads.`,
     technologies: [Technology.Unity, Technology.CSharp],
