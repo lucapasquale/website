@@ -2,7 +2,11 @@ import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
 
-import { config } from '~src/config'
+const LINKS = {
+  GITHUB: 'https://www.github.com/lucapasquale',
+  INSTAGRAM: 'https://www.instagram.com/luca_dipasquale/',
+  LINKEDIN: 'https://www.linkedin.com/in/luca-pasquale/',
+}
 
 export function Footer() {
   return (
@@ -14,32 +18,17 @@ export function Footer() {
           <h2>Built with Next.js and Tailwind</h2>
 
           <nav className="flex space-x-6">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={config.LINKS.GITHUB}
-              className="flex items-center gap-1 text-gray-300"
-            >
+            <ExternalLink href={LINKS.GITHUB}>
               <FaGithub /> Github
-            </a>
+            </ExternalLink>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={config.LINKS.LINKEDIN}
-              className="flex items-center gap-1 text-gray-300"
-            >
+            <ExternalLink href={LINKS.LINKEDIN}>
               <FaLinkedin /> Linkedin
-            </a>
+            </ExternalLink>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={config.LINKS.INSTAGRAM}
-              className="flex items-center gap-1 text-gray-300"
-            >
+            <ExternalLink href={LINKS.INSTAGRAM}>
               <FaInstagram /> Instagram
-            </a>
+            </ExternalLink>
           </nav>
         </div>
       </div>
@@ -48,5 +37,18 @@ export function Footer() {
         Secrets
       </Link>
     </footer>
+  )
+}
+
+function ExternalLink({ href, children }: React.PropsWithChildren<{ href: string }>) {
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 text-gray-300"
+      href={href}
+    >
+      {children}
+    </a>
   )
 }
