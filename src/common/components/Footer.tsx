@@ -19,15 +19,15 @@ export function Footer() {
 
           <nav className="flex space-x-6">
             <ExternalLink href={LINKS.GITHUB}>
-              <FaGithub /> Github
+              <FaGithub aria-hidden /> Github
             </ExternalLink>
 
             <ExternalLink href={LINKS.LINKEDIN}>
-              <FaLinkedin /> Linkedin
+              <FaLinkedin aria-hidden /> Linkedin
             </ExternalLink>
 
             <ExternalLink href={LINKS.INSTAGRAM}>
-              <FaInstagram /> Instagram
+              <FaInstagram aria-hidden /> Instagram
             </ExternalLink>
           </nav>
         </div>
