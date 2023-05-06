@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import { Footer, Header } from '@website/ui'
 
 import { Link } from '~common/components/Link'
@@ -38,7 +38,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>) {
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300"
               href="https://www.github.com/lucapasquale"
             >
-              <FaGithub aria-hidden /> Github
+              <GitHubLogoIcon aria-hidden /> Github
             </Link>
 
             <Link
@@ -47,7 +47,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>) {
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300"
               href="https://www.linkedin.com/in/luca-pasquale"
             >
-              <FaLinkedin aria-hidden /> Linkedin
+              <LinkedInLogoIcon aria-hidden /> Linkedin
             </Link>
 
             <Link
@@ -56,7 +56,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>) {
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300"
               href="https://www.instagram.com/luca_dipasquale"
             >
-              <FaInstagram aria-hidden /> Instagram
+              <InstagramLogoIcon aria-hidden /> Instagram
             </Link>
           </>
         }

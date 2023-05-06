@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import { ExternalLinkIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import { TechnologyTag, TechnologyTagProps } from '@website/ui'
 
 import { Link } from '~common/components/Link'
@@ -47,12 +47,12 @@ function Header({ project }: Props) {
       <Link
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-baseline gap-2 text-gray-700 dark:text-gray-300 mb-2 sm:mb-0"
+        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 mb-2 sm:mb-0"
         href={project.url}
       >
         <h3 className="text-2xl">{project.title}</h3>
 
-        <FaExternalLinkAlt />
+        <ExternalLinkIcon className="w-6 h-6" />
       </Link>
 
       {project.githubUrl && (
@@ -62,7 +62,7 @@ function Header({ project }: Props) {
           className="flex items-center gap-1 text-gray-700 dark:text-gray-300"
           href={project.githubUrl}
         >
-          <FaGithub />
+          <GitHubLogoIcon />
 
           <h4 className="text-md">GitHub</h4>
         </Link>
