@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Technology, TechnologyTag } from '../common/components/TechnologyTag'
+import { Link } from '~common/components/Link'
+import { TechnologyTag } from '~common/components/TechnologyTag'
 
 export default function Page() {
   return (
@@ -15,29 +16,29 @@ export default function Page() {
           <p className="my-3">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a FullStack Engineer at{' '}
-            <a
+            <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.sinaitechnologies.com/"
               className="font-bold underline"
             >
               Sinai Technologies
-            </a>{' '}
+            </Link>{' '}
             &mdash; where I help decarbonize the planet with <TechnologyTag technology="graphql" />{' '}
             and <TechnologyTag technology="typescript" />.
           </p>
 
           <p className="my-3">
-            Besides that, I&apos;ve also really enjoy writting Elixir code, and developing some
-            mobile games! You can check my latest one:{' '}
-            <a
+            Besides that, I&apos;ve also really enjoy writting <TechnologyTag technology="elixir" />{' '}
+            code, and developing some mobile games! You can check my latest one:{' '}
+            <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://play.google.com/store/apps/details?id=com.Bendev.UpWeGo"
               className="font-bold underline"
             >
               Up We Go
-            </a>
+            </Link>
             .
           </p>
         </div>

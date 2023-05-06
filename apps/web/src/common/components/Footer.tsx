@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
-import Link from 'next/link'
+
+import { Link } from './Link'
 
 const LINKS = {
   GITHUB: 'https://www.github.com/lucapasquale',
@@ -42,13 +43,13 @@ export function Footer() {
 
 function ExternalLink({ href, children }: React.PropsWithChildren<{ href: string }>) {
   return (
-    <a
+    <Link
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 text-gray-300"
       href={href}
     >
       {children}
-    </a>
+    </Link>
   )
 }
