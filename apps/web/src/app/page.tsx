@@ -9,7 +9,9 @@ export default function Page() {
     <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
       <section className="container">
         <header>
-          <h1 className="text-2xl sm:text-4xl font-bold text-gray-200 ">Hey, I&apos;m Luca!</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-800 dark:text-gray-200">
+            Hey, I&apos;m Luca!
+          </h1>
         </header>
 
         <div className="mt-4 text-base sm:text-lg">

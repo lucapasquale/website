@@ -7,7 +7,7 @@ export type HeaderProps = {
 
 export function Header({ title, actions }: React.PropsWithChildren<HeaderProps>) {
   return (
-    <header className="items-center sticky top-0 z-10 py-6 bg-gray-900 border-b border-gray-700">
+    <header className="items-center sticky top-0 z-10 py-6 bg-gray-300 border-b border-gray-500 dark:border-gray-700  dark:bg-gray-900">
       <div className="container max-w-4xl mx-auto px-4">
         <nav className="flex justify-between items-center">
           {title}

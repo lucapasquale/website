@@ -8,7 +8,10 @@ export function Link({ ...props }: Props) {
   return (
     <NextLink
       {...props}
-      className={twMerge('text-blue-300 transition-colors hover:text-blue-500', props.className)}
+      className={twMerge(
+        'transition-colors text-blue-700 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-500',
+        props.className
+      )}
     />
   )
 }

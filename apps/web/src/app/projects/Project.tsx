@@ -47,7 +47,7 @@ function Header({ project }: Props) {
       <Link
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-baseline gap-2 text-gray-300 mb-2 sm:mb-0"
+        className="flex items-baseline gap-2 text-gray-700 dark:text-gray-300 mb-2 sm:mb-0"
         href={project.url}
       >
         <h3 className="text-2xl">{project.title}</h3>
@@ -59,7 +59,7 @@ function Header({ project }: Props) {
         <Link
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-gray-300"
+          className="flex items-center gap-1 text-gray-700 dark:text-gray-300"
           href={project.githubUrl}
         >
           <FaGithub />
