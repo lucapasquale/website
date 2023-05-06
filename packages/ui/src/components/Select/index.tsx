@@ -31,16 +31,7 @@ export function Select({
           position="popper"
           className=" p-1 shadow-lg bg-white dark:bg-gray-900 animate-in fade-in-80"
         >
-          <RadixSelect.ScrollUpButton>
-            <ChevronUpIcon />
-          </RadixSelect.ScrollUpButton>
-
           <RadixSelect.Viewport>{children}</RadixSelect.Viewport>
-
-          <RadixSelect.ScrollDownButton>
-            <ChevronDownIcon />
-          </RadixSelect.ScrollDownButton>
-          <RadixSelect.Arrow />
         </RadixSelect.Content>
       </RadixSelect.Portal>
     </RadixSelect.Root>
