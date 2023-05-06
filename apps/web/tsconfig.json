@@ -4,13 +4,13 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "~src/*": [
-        "src/*"
+        "./src/*"
       ],
       "~common/*": [
-        "src/common/*"
+        "./src/common/*"
       ],
       "~modules/*": [
-        "src/modules/*"
+        "./src/modules/*"
       ]
     },
   },
