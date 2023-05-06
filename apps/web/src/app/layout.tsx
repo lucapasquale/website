@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html suppressHydrationWarning lang="en" className={inter.className}>
-      <body className="text-gray-900 bg-gray-300 dark:text-gray-300 dark:bg-gray-900">
+      <body className="text-gray-900 bg-white dark:text-gray-300 dark:bg-gray-900">
         <Providers>
           <Layout>{children}</Layout>
 
