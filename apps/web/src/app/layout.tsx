@@ -1,9 +1,9 @@
 import '@website/ui/styles.css'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { Inter } from 'next/font/google'
-import { Header } from '@website/ui'
+import { Analytics } from '@vercel/analytics/react'
+import { Footer, Header } from '@website/ui'
 
-import { AnalyticsWrapper } from '~common/components/Analytics'
-import { Footer } from '~common/components/Footer'
 import { Link } from '~common/components/Link'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -39,9 +39,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main className="container max-w-4xl mx-auto px-4 my-16">{children}</main>
 
-        <Footer />
+        <Footer
+          title="Built with Next.js and Tailwind"
+          links={
+            <>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-300"
+                href="https://www.github.com/lucapasquale"
+              >
+                <FaGithub aria-hidden /> Github
+              </Link>
 
-        <AnalyticsWrapper />
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-300"
+                href="https://www.linkedin.com/in/luca-pasquale"
+              >
+                <FaLinkedin aria-hidden /> Linkedin
+              </Link>
+
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-300"
+                href="https://www.instagram.com/luca_dipasquale"
+              >
+                <FaInstagram aria-hidden /> Instagram
+              </Link>
+            </>
+          }
+        />
+
+        <Link href="/secrets" className="fixed right-0 bottom-0">
+          Secrets
+        </Link>
+
+        <Analytics />
       </body>
     </html>
   )

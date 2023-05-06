@@ -1,11 +1,11 @@
 import React from 'react'
 
-type Props = {
+export type HeroProps = {
   title: string
   subTitle: string
 }
 
-export function Hero({ title, subTitle }: Props) {
+export function Hero({ title, subTitle }: HeroProps) {
   return (
     <header className="mb-12">
       <h1 className="text-4xl font-bold pb-2">{title}</h1>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export type Technology =
+type Technology =
   | 'csharp'
   | 'elixir'
   | 'typescript'
@@ -29,11 +29,11 @@ const TECHNOLOGY_CLASSES: Record<Technology, string> = {
   postgresql: 'text-gray-200 bg-[#0064a5]',
 }
 
-type Props = {
+export type TechnologyTagProps = {
   technology: Technology
 }
 
-export function TechnologyTag({ technology }: Props) {
+export function TechnologyTag({ technology }: TechnologyTagProps) {
   const techClasses = TECHNOLOGY_CLASSES[technology] ?? ''
 
   return (

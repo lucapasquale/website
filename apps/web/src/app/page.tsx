@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { TechnologyTag } from '@website/ui'
 
 import { Link } from '~common/components/Link'
-import { TechnologyTag } from '~common/components/TechnologyTag'
 
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
         <div className="mt-4 text-base sm:text-lg">
           <p className="my-3">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
-            as a FullStack Engineer at{' '}
+            as a full stack engineer at{' '}
             <Link
               target="_blank"
               rel="noopener noreferrer"

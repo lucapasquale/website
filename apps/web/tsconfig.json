@@ -5,12 +5,9 @@
     "paths": {
       "~common/*": [
         "./src/common/*"
-      ],
-      "~modules/*": [
-        "./src/modules/*"
       ]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/projects/projectList.tsz"],
   "exclude": ["node_modules"]
 }

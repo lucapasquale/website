@@ -1,8 +1,9 @@
 import React from 'react'
+import { Hero } from '@website/ui'
 
-import { Hero } from '~common/components/Hero'
 import { Link } from '~common/components/Link'
-import { Player } from '~modules/Secrets/Player'
+
+import { YouTubePlayer } from './YouTubePlayer'
 
 const PLAYLIST_LINK = 'https://www.youtube.com/playlist?list=PL2gDVp_0vZOQjqMex201dYpUiu1mcGX96'
 
@@ -16,7 +17,7 @@ export default function Page() {
           My dumb playlist
         </Link>
 
-        <Player playlistURL={PLAYLIST_LINK} />
+        <YouTubePlayer playlistURL={PLAYLIST_LINK} />
       </article>
     </>
   )
