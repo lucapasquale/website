@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { Technology, TechnologyTag } from '../common/components/TechnologyTag'
+
 export default function Page() {
   return (
     <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
@@ -21,12 +23,13 @@ export default function Page() {
             >
               Sinai Technologies
             </a>{' '}
-            &mdash; where I help decarbonize the planet with GraphQL and Typescript.
+            &mdash; where I help decarbonize the planet with <TechnologyTag technology="graphql" />{' '}
+            and <TechnologyTag technology="typescript" />.
           </p>
 
           <p className="my-3">
-            Besides that, I&apos;ve also been learning Elixir, and developing some mobile games! You
-            can check my latest one:{' '}
+            Besides that, I&apos;ve also really enjoy writting Elixir code, and developing some
+            mobile games! You can check my latest one:{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -47,7 +50,7 @@ export default function Page() {
           height={512}
           alt="avatar"
           className="rounded-full"
-          src="/images/avatar.webp"
+          src="/images/avatar.png"
         />
       </section>
     </article>

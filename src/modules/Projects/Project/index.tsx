@@ -1,9 +1,10 @@
 import React from 'react'
 
+import { TechnologyTag } from '~common/components/TechnologyTag'
+
 import type { Project as ProjectType } from '../logic/getProjects'
 
 import { Header } from './Header'
-import { TechnologyTag } from './TechnologyTag'
 
 type Props = {
   project: ProjectType
@@ -21,7 +22,9 @@ export function Project({ project }: Props) {
 
         <ul className="flex flex-row flex-wrap gap-2 mb-4">
           {project.technologies.map((technology, index) => (
-            <TechnologyTag key={index} technology={technology} />
+            <li key={index}>
+              <TechnologyTag technology={technology} />
+            </li>
           ))}
         </ul>
 
