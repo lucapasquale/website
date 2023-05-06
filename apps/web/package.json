@@ -23,7 +23,6 @@
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.14",
     "eslint-config-custom": "workspace:*",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "tsconfig": "workspace:*",

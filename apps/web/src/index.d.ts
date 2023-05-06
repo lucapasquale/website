@@ -1,2 +1,2 @@
 // Allows importing images directly
-declare module '*.webp';
+declare module '*.webp'

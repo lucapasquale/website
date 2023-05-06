@@ -68,9 +68,6 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
-      eslint-plugin-simple-import-sort:
-        specifier: ^10.0.0
-        version: 10.0.0(eslint@8.40.0)
       postcss:
         specifier: ^8.4.23
         version: 8.4.23
@@ -98,6 +95,9 @@ importers:
       eslint-plugin-react:
         specifier: 7.32.2
         version: 7.32.2(eslint@8.40.0)
+      eslint-plugin-simple-import-sort:
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@8.40.0)
 
   packages/tsconfig: {}
 
@@ -1116,7 +1116,7 @@ packages:
       eslint: '>=5.0.0'
     dependencies:
       eslint: 8.40.0
-    dev: true
+    dev: false
 
   /eslint-plugin-turbo@1.9.3(eslint@8.40.0):
     resolution: {integrity: sha512-ZsRtksdzk3v+z5/I/K4E50E4lfZ7oYmLX395gkrUMBz4/spJlYbr+GC8hP9oVNLj9s5Pvnm9rLv/zoj5PVYaVw==}
