@@ -12,7 +12,7 @@ export function Header({ title, actions }: React.PropsWithChildren<HeaderProps>)
         <nav className="flex justify-between items-center">
           {title}
 
-          {actions && <div className="flex space-x-4">{actions}</div>}
+          {actions && <div className="flex items-center space-x-4">{actions}</div>}
         </nav>
       </div>
     </header>

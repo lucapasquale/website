@@ -14,5 +14,9 @@
     "@website/tailwind": "workspace:*",
     "@website/tsconfig": "workspace:*",
     "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^1.2.1"
   }
 }

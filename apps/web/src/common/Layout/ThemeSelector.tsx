@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useTheme } from 'next-themes'
+import { Select, SelectOption } from '@website/ui'
 
 export function ThemeSelector() {
   const [mounted, setMounted] = React.useState(false)
@@ -16,10 +17,10 @@ export function ThemeSelector() {
   }
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value="system">System</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-    </select>
+    <Select value={theme} onChange={setTheme}>
+      <SelectOption value="system">System</SelectOption>
+      <SelectOption value="dark">Dark</SelectOption>
+      <SelectOption value="light">Light</SelectOption>
+    </Select>
   )
 }
