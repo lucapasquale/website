@@ -14,20 +14,20 @@ export default function Page() {
           </h1>
         </header>
 
-        <div className="mt-4 text-base sm:text-lg leading-8">
+        <div className="mt-4 text-base sm:text-lg ">
           <p className="my-3">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{' '}
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.sinaitechnologies.com/"
+              href="https://www.sinai.com"
               className="font-bold underline"
             >
-              Sinai Technologies
+              Sinai
             </Link>{' '}
-            &mdash; where I help decarbonize the planet with <TechnologyTag technology="graphql" />{' '}
-            and <TechnologyTag technology="typescript" />.
+            &mdash; where I help decarbonize the planet with{' '}
+            <TechnologyTag technology="typescript" /> and <TechnologyTag technology="graphql" />.
           </p>
 
           <p className="my-3">
@@ -49,7 +49,7 @@ export default function Page() {
       <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-[200px] h-[200px]">
         <Image
           priority
-          width={511}
+          width={512}
           height={512}
           alt="avatar"
           className="rounded-full"
