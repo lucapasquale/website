@@ -2,23 +2,25 @@ name: PR Checks
 on: pull_request
 
 env:
-  NODE_VER: 16
-  PNPM_VERSION: 7.1.0
+  NODE_VER: 18
+  PNPM_VERSION: 8.1.1
 
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+
     - uses: pnpm/action-setup@v2
       with:
         version: ${{ env.PNPM_VERSION }}
+
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VER }}
         cache: 'pnpm'
 
-    - run: pnpm install
+    - run: pnpm install --frozen-lockfile
     - run: pnpm lint
