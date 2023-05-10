@@ -9,13 +9,13 @@ export default function Page() {
     <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
       <section className="container">
         <header>
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-gray-800 dark:text-gray-200">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Hey, I&apos;m Luca!
           </h1>
         </header>
 
         <div className="mt-4 text-base sm:text-lg ">
-          <p className="my-3">
+          <p className="leading-7 [&:not(:first-child)]:mt-6 ">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{' '}
             <Link
@@ -30,7 +30,7 @@ export default function Page() {
             <TechnologyTag technology="typescript" /> and <TechnologyTag technology="graphql" />.
           </p>
 
-          <p className="my-3">
+          <p className="leading-7 [&:not(:first-child)]:mt-6">
             Besides that, I&apos;ve also really enjoy writting <TechnologyTag technology="elixir" />{' '}
             code, and developing some mobile games! You can check my latest one:{' '}
             <Link

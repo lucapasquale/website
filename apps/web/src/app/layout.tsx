@@ -2,7 +2,6 @@ import '@website/ui/styles.css'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
-import { Link } from '~common/components/Link'
 import { Layout } from '~common/Layout'
 import { Providers } from '~common/providers'
 
@@ -23,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html suppressHydrationWarning lang="en" className={inter.className}>
-      <body className="text-gray-900 bg-white dark:text-gray-300 dark:bg-gray-900">
+      <body className="bg-background text-primary">
         <Providers>
           <Layout>{children}</Layout>
 

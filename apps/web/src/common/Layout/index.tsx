@@ -1,30 +1,15 @@
 import React from 'react'
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
-import { Footer, Header } from '@website/ui'
+import { Footer } from '@website/ui'
 
 import { Link } from '~common/components/Link'
 
-import { ThemeSelector } from './ThemeSelector'
+import { Header } from './Header'
 
 export function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <>
-      <Header
-        title={
-          <Link passHref href="/" className="text-gray-900 dark:text-gray-300">
-            <h1 className="tracking-wider">LUCA PASQUALE</h1>
-          </Link>
-        }
-        actions={
-          <>
-            <ThemeSelector />
-
-            <Link passHref href="/projects" className="text-gray-900 dark:text-gray-300">
-              <h2>PROJECTS</h2>
-            </Link>
-          </>
-        }
-      />
+      <Header />
 
       <main className="container max-w-4xl mx-auto px-4 my-16">{children}</main>
 

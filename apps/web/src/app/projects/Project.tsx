@@ -20,9 +20,7 @@ type Props = {
 export function Project({ project }: Props) {
   return (
     <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
-      <div className="min-w-[275px] max-w-[275px] border border-gray-500 text-[0px]">
-        {project.image}
-      </div>
+      <div className="w-[275px] border">{project.image}</div>
 
       <div className="mt-4 ml-0 sm:ml-8 max-w-md">
         <Header project={project} />
