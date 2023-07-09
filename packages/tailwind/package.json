@@ -4,6 +4,6 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "tailwindcss-animate": "^1.0.5"
+    "tailwindcss-animate": "^1.0.6"
   }
 }
