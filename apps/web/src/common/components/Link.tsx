@@ -1,5 +1,5 @@
 import React from 'react'
-import NextLink from 'next/link'
+import NextLink, { LinkProps } from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 type Props = React.ComponentProps<typeof NextLink>
