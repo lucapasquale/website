@@ -1,3 +1,5 @@
+import '@website/tailwind/styles.css'
+
 export * from './components/Button'
 export * from './components/DropdownMenu'
 export * from './components/Footer'
