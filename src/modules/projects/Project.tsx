@@ -1,4 +1,5 @@
 import React from "react";
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import { Link } from "../../components/Link";
 import { Technology, TechnologyTag } from "../../components/TechnologyTag";
@@ -40,14 +41,14 @@ export function ProjectCard({ project }: Props) {
 
 function Header({ project }: Props) {
   return (
-    <div className="mb-4">
+    <div className="w-fit mb-4">
       <Link
         className="flex items-center gap-2 text-gray-700 dark:text-gray-300 mb-2 sm:mb-0"
         to={project.url}
       >
         <h3 className="text-2xl">{project.title}</h3>
 
-        {/* <ExternalLinkIcon className="w-6 h-6" /> */}
+        <ExternalLinkIcon className="w-6 h-6" />
       </Link>
 
       {project.githubUrl && (
@@ -55,7 +56,7 @@ function Header({ project }: Props) {
           className="flex items-center gap-1 text-gray-700 dark:text-gray-300"
           to={project.githubUrl}
         >
-          {/* <GitHubLogoIcon /> */}
+          <GitHubLogoIcon />
 
           <h4 className="text-md">GitHub</h4>
         </Link>

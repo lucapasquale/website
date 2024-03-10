@@ -1,4 +1,5 @@
 import React from "react";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 import { Link } from "../Link";
 
@@ -20,21 +21,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300 transition-colors"
               to="https://www.github.com/lucapasquale"
             >
-              Github
+              <GitHubLogoIcon aria-hidden /> Github
             </Link>
 
             <Link
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300 transition-colors"
               to="https://www.linkedin.com/in/luca-pasquale"
             >
-              Linkedin
+              <LinkedInLogoIcon aria-hidden /> Linkedin
             </Link>
 
             <Link
               className="flex items-center gap-1 text-gray-900 dark:text-gray-300 transition-colors"
               to="https://www.instagram.com/luca_dipasquale"
             >
-              Instagram
+              <InstagramLogoIcon aria-hidden /> Instagram
             </Link>
           </>
         }
