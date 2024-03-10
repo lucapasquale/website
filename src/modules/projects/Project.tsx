@@ -20,7 +20,9 @@ type Props = {
 export function ProjectCard({ project }: Props) {
   return (
     <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
-      <div className="w-[275px] border">{project.image}</div>
+      <div className="w-[275px] border-0 border-b border-solid border-gray-500">
+        {project.image}
+      </div>
 
       <div className="mt-4 ml-0 sm:ml-8 max-w-md">
         <Header project={project} />
