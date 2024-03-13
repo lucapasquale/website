@@ -12,19 +12,19 @@ export type Technology =
   | "postgresql";
 
 const TECHNOLOGY_CLASSES: Record<Technology, string> = {
-  elixir: "text-gray-200 bg-[#6e4a7e]",
-  csharp: "text-[#fbfcff] bg-[#178600]",
-  typescript: "text-[#edeff7] bg-[#2b7489]",
+  elixir: "text-gray-100 bg-[#6e4a7e]",
+  csharp: "text-gray-100 bg-[#178600]",
+  typescript: "text-gray-100 bg-[#2b7489]",
 
-  unity: "text-gray-200 bg-[#222c37]",
-  apollo: "text-[#eff1f5] bg-[#7156d9]",
-  nestjs: "text-[#fdfeff] bg-[#e0234e]",
-  nextjs: "text-gray-200 bg-[#111]",
-  tailwind: "text-gray-800 bg-[#06b6d4]",
-  react: "text-gray-800 bg-[#61dafb]",
+  unity: "text-gray-100 bg-[#222c37]",
+  apollo: "text-gray-100 bg-[#7156d9]",
+  nestjs: "text-gray-100 bg-[#e0234e]",
+  nextjs: "text-gray-100 bg-[#111]",
+  tailwind: "text-gray-900 bg-[#06b6d4]",
+  react: "text-gray-900 bg-[#61dafb]",
 
-  graphql: "text-[#edeff7] bg-[#e10098]",
-  postgresql: "text-gray-200 bg-[#0064a5]",
+  graphql: "text-gray-100 bg-[#e10098]",
+  postgresql: "text-gray-100 bg-[#0064a5]",
 };
 
 type Props = {

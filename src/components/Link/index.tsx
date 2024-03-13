@@ -14,10 +14,7 @@ export function Link({ children, className, ...props }: Props) {
         target="_blank"
         rel="noopener noreferrer"
         href={props.to}
-        className={twMerge(
-          "transition-colors text-blue-700 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-500",
-          className,
-        )}
+        className={twMerge("transition-colors text-blue-500 hover:text-blue-400", className)}
       >
         {children}
       </a>
@@ -27,10 +24,7 @@ export function Link({ children, className, ...props }: Props) {
   return (
     <TanstackLink
       {...props}
-      className={twMerge(
-        "transition-colors text-blue-700 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-500",
-        className,
-      )}
+      className={twMerge("transition-colors text-blue-500 hover:text-blue-400", className)}
     >
       {children}
     </TanstackLink>
