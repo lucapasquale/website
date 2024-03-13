@@ -44,8 +44,13 @@ function Home() {
         </div>
       </section>
 
-      <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 h-[200px]">
-        <img alt="avatar" className="rounded-full" src="/images/avatar.png" />
+      <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 h-[240px] w-[240px] aspect-square">
+        <img
+          rel="preload"
+          alt="avatar"
+          className="rounded-full h-[240px] w-[240px]"
+          src="/images/avatar.webp"
+        />
       </section>
     </article>
   );
