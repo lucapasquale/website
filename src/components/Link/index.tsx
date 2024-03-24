@@ -2,12 +2,12 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import { Link as TanstackLink } from "@tanstack/react-router";
 
-type Props = React.ComponentProps<typeof TanstackLink> & { children: React.ReactNode };
+type LinkProps = Pick<React.ComponentProps<typeof TanstackLink>, "to" | "className">;
+
+type Props = LinkProps & { children: React.ReactNode };
 
 export function Link({ children, className, ...props }: Props) {
-  const ieExternal = props.to?.startsWith("http");
-
-  if (ieExternal) {
+  if (props.to?.startsWith("http")) {
     return (
       <a
         {...props}

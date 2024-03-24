@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export type Technology =
   | "csharp"
   | "elixir"
@@ -35,7 +37,12 @@ export function TechnologyTag({ technology }: Props) {
   const techClasses = TECHNOLOGY_CLASSES[technology] ?? "";
 
   return (
-    <span className={`inline-block py-0.5 px-2 rounded text-sm uppercase font-bold ${techClasses}`}>
+    <span
+      className={twMerge(
+        "inline-block py-0.5 px-2 rounded text-sm uppercase font-bold",
+        techClasses,
+      )}
+    >
       {technology}
     </span>
   );

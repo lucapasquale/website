@@ -1,6 +1,8 @@
-import type { Project } from "./Project";
+import { Hero } from "~components/Hero";
 
-export const ALL_PROJECTS: Project[] = [
+import { type Project, ProjectCard } from "./Project";
+
+const ALL_PROJECTS: Project[] = [
   {
     title: "Botchini",
     url: "https://botchini.lucapasquale.dev",
@@ -45,3 +47,17 @@ export const ALL_PROJECTS: Project[] = [
     technologies: ["unity", "csharp"],
   },
 ];
+
+export function Page() {
+  return (
+    <>
+      <Hero title="Projects" subTitle="Some things I've created over the years" />
+
+      <div className="flex flex-col items-center justify-between">
+        {ALL_PROJECTS.map((project, idx) => (
+          <ProjectCard key={idx} project={project} />
+        ))}
+      </div>
+    </>
+  );
+}
