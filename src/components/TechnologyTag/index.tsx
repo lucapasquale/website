@@ -39,7 +39,7 @@ export function TechnologyTag({ technology }: Props) {
   return (
     <span
       className={twMerge(
-        "inline-block py-0.5 px-2 rounded text-sm uppercase font-bold",
+        "inline-block py-0.5 px-1 rounded text-sm uppercase font-bold",
         techClasses,
       )}
     >
