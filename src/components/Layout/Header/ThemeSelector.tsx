@@ -37,6 +37,7 @@ export function ThemeSelector() {
       size="icon"
       variant="ghost"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      aria-description="Toggle theme"
     >
       {theme === "dark" ? (
         <MoonIcon className="h-4 w-4 mt-1" />

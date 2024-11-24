@@ -6,6 +6,7 @@ export type Technology =
   | "typescript"
   | "react"
   | "nextjs"
+  | "vite"
   | "apollo"
   | "nestjs"
   | "tailwind"
@@ -22,6 +23,7 @@ const TECHNOLOGY_CLASSES: Record<Technology, string> = {
   apollo: "text-gray-100 bg-[#7156d9]",
   nestjs: "text-gray-100 bg-[#e0234e]",
   nextjs: "text-gray-100 bg-[#111]",
+  vite: "text-gray-100 bg-[#a879e6]",
   tailwind: "text-gray-900 bg-[#06b6d4]",
   react: "text-gray-900 bg-[#61dafb]",
 

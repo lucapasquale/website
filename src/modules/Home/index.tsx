@@ -34,7 +34,14 @@ export function Page() {
       </section>
 
       <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 aspect-square">
-        <img rel="preload" alt="avatar" className="rounded-full " src="/images/avatar.webp" />
+        <img
+          rel="preload"
+          alt="avatar"
+          className="rounded-full "
+          src="/images/avatar.webp"
+          width={200}
+          height={200}
+        />
       </section>
     </article>
   );

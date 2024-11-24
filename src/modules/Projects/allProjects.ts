@@ -11,8 +11,16 @@ export type Project = {
 
 export const ALL_PROJECTS: Project[] = [
   {
+    title: "Watchlist",
+    url: "https://watchlist.luca.codes",
+    githubUrl: "https://github.com/lucapasquale/watchlist/",
+    imagePath: "/images/projects/watchlist.webp",
+    description: "Create and share your favorite videos from YouTube, Twitch and Twitter",
+    technologies: ["typescript", "react", "vite", "tailwind", "nestjs"],
+  },
+  {
     title: "Botchini",
-    url: "https://botchini.lucapasquale.dev",
+    url: "https://botchini.luca.codes",
     githubUrl: "https://github.com/lucapasquale/botchini/",
     imagePath: "/images/projects/botchini.webp",
     description:
@@ -29,11 +37,11 @@ export const ALL_PROJECTS: Project[] = [
   },
   {
     title: "Portfolio",
-    url: "https://www.lucapasquale.dev",
+    url: "https://www.luca.codes",
     githubUrl: "https://github.com/lucapasquale/website",
     imagePath: "/images/projects/website.webp",
     description: "You know, the one that has this text and is right in front of you.",
-    technologies: ["typescript", "react", "nextjs", "tailwind"],
+    technologies: ["typescript", "react", "vite", "tailwind"],
   },
   {
     title: "Linking Bio",
