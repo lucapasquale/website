@@ -15,17 +15,16 @@ export function Page() {
           <p className="leading-7 [&:not(:first-child)]:mt-6 ">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{" "}
-            <Link to="https://www.sinai.com" className="font-bold underline">
-              Sinai
+            <Link to="https://keeper.app" className="font-bold underline">
+              Keeper
             </Link>{" "}
-            &mdash; where I help decarbonize the planet with{" "}
-            <TechnologyTag technology="typescript" /> and <TechnologyTag technology="graphql" />.
+            &mdash; where I help bookepers with <TechnologyTag technology="typescript" />.
           </p>
 
           <p className="leading-7 [&:not(:first-child)]:mt-6">
             Besides that, I&apos;ve also really enjoy writting <TechnologyTag technology="elixir" />{" "}
             code, and developing games! You can check my last project:{" "}
-            <Link to="https://botchini.lucapasquale.dev" className="font-bold underline">
+            <Link to="https://github.com/lucapasquale/botchini" className="font-bold underline">
               Botchini
             </Link>
             .

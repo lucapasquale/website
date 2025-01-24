@@ -14,7 +14,12 @@ export function ProjectCard({ project, preload = false }: Props) {
   return (
     <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
       <div className="w-[275px]">
-        <img rel={preload ? "preload" : undefined} src={project.imagePath} alt={project.title} />
+        <img
+          rel={preload ? "preload" : undefined}
+          src={project.imagePath}
+          alt={project.title}
+          className="rounded-md"
+        />
       </div>
 
       <div className="mt-4 ml-0 sm:ml-8 max-w-md">
