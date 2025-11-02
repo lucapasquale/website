@@ -15,8 +15,8 @@ export function Page() {
           <p className="leading-7 [&:not(:first-child)]:mt-6 ">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{" "}
-            <Link to="https://keeper.app" className="font-bold underline">
-              Keeper
+            <Link to="https://doublehq.com/" className="font-bold underline">
+              Double
             </Link>{" "}
             &mdash; where I help bookepers with <TechnologyTag technology="typescript" />.
           </p>
