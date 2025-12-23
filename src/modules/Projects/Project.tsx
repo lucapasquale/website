@@ -1,9 +1,7 @@
+import { type Project } from "./allProjects";
 import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-
 import { Link } from "~components/Link";
 import { TechnologyTag } from "~components/TechnologyTag";
-
-import { type Project } from "./allProjects";
 
 type Props = {
   project: Project;

@@ -1,8 +1,7 @@
-import { Hero } from "~components/Hero";
-import { Separator } from "~components/Separator";
-
 import { ALL_PROJECTS } from "./allProjects";
 import { ProjectCard } from "./Project";
+import { Hero } from "~components/Hero";
+import { Separator } from "~components/Separator";
 
 export function Page() {
   return (

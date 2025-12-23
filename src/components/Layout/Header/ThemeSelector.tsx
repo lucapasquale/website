@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-
+import React, { useState } from "react";
 import { Button } from "~components/Button";
 
 const LOCAL_STORAGE_KEY = "__theme";

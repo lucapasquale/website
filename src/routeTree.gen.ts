@@ -8,10 +8,9 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { createFileRoute } from "@tanstack/react-router";
-
 import { Route as rootRouteImport } from "./routes/__root";
 import { Route as IndexRouteImport } from "./routes/index";
+import { createFileRoute } from "@tanstack/react-router";
 
 const SecretsLazyRouteImport = createFileRoute("/secrets")();
 const ProjectsLazyRouteImport = createFileRoute("/projects")();

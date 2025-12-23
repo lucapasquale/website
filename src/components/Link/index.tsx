@@ -1,6 +1,6 @@
+import { Link as TanstackLink } from "@tanstack/react-router";
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { Link as TanstackLink } from "@tanstack/react-router";
 
 type LinkProps = Pick<React.ComponentProps<typeof TanstackLink>, "to" | "className">;
 

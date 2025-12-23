@@ -1,5 +1,4 @@
 import ReactPlayer from "react-player";
-
 import { Hero } from "~components/Hero";
 import { Link } from "~components/Link";
 

@@ -1,5 +1,4 @@
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-
 import { Link } from "~components/Link";
 import { Separator } from "~components/Separator";
 

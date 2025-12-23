@@ -1,9 +1,7 @@
-import React from "react";
-
 import { Link } from "../Link";
-
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import React from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
