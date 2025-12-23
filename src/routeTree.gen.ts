@@ -8,82 +8,83 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as IndexRouteImport } from "./routes/index";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router'
 
-const SecretsLazyRouteImport = createFileRoute("/secrets")();
-const ProjectsLazyRouteImport = createFileRoute("/projects")();
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+
+const SecretsLazyRouteImport = createFileRoute('/secrets')()
+const ProjectsLazyRouteImport = createFileRoute('/projects')()
 
 const SecretsLazyRoute = SecretsLazyRouteImport.update({
-  id: "/secrets",
-  path: "/secrets",
+  id: '/secrets',
+  path: '/secrets',
   getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import("./routes/secrets.lazy").then((d) => d.Route));
+} as any).lazy(() => import('./routes/secrets.lazy').then((d) => d.Route))
 const ProjectsLazyRoute = ProjectsLazyRouteImport.update({
-  id: "/projects",
-  path: "/projects",
+  id: '/projects',
+  path: '/projects',
   getParentRoute: () => rootRouteImport,
-} as any).lazy(() => import("./routes/projects.lazy").then((d) => d.Route));
+} as any).lazy(() => import('./routes/projects.lazy').then((d) => d.Route))
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/projects": typeof ProjectsLazyRoute;
-  "/secrets": typeof SecretsLazyRoute;
+  '/': typeof IndexRoute
+  '/projects': typeof ProjectsLazyRoute
+  '/secrets': typeof SecretsLazyRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/projects": typeof ProjectsLazyRoute;
-  "/secrets": typeof SecretsLazyRoute;
+  '/': typeof IndexRoute
+  '/projects': typeof ProjectsLazyRoute
+  '/secrets': typeof SecretsLazyRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  "/": typeof IndexRoute;
-  "/projects": typeof ProjectsLazyRoute;
-  "/secrets": typeof SecretsLazyRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/projects': typeof ProjectsLazyRoute
+  '/secrets': typeof SecretsLazyRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: "/" | "/projects" | "/secrets";
-  fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/projects" | "/secrets";
-  id: "__root__" | "/" | "/projects" | "/secrets";
-  fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/projects' | '/secrets'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/projects' | '/secrets'
+  id: '__root__' | '/' | '/projects' | '/secrets'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  ProjectsLazyRoute: typeof ProjectsLazyRoute;
-  SecretsLazyRoute: typeof SecretsLazyRoute;
+  IndexRoute: typeof IndexRoute
+  ProjectsLazyRoute: typeof ProjectsLazyRoute
+  SecretsLazyRoute: typeof SecretsLazyRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/secrets": {
-      id: "/secrets";
-      path: "/secrets";
-      fullPath: "/secrets";
-      preLoaderRoute: typeof SecretsLazyRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/projects": {
-      id: "/projects";
-      path: "/projects";
-      fullPath: "/projects";
-      preLoaderRoute: typeof ProjectsLazyRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+    '/secrets': {
+      id: '/secrets'
+      path: '/secrets'
+      fullPath: '/secrets'
+      preLoaderRoute: typeof SecretsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -91,7 +92,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsLazyRoute: ProjectsLazyRoute,
   SecretsLazyRoute: SecretsLazyRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()

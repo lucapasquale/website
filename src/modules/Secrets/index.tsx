@@ -12,8 +12,8 @@ export function Page() {
       <article className="flex flex-col items-center px-8">
         <Link to={PLAYLIST_LINK}>My dumb playlist</Link>
 
-        <div className="hidden mt-8 sm:flex sm:justify-center sm:w-screen">
-          <ReactPlayer controls url={PLAYLIST_LINK} />
+        <div className="hidden w-160 h-90 mt-8 sm:flex sm:justify-center sm:w-screen">
+          <ReactPlayer controls width={640} height={360} src={PLAYLIST_LINK} />
         </div>
       </article>
     </>

@@ -3,4 +3,5 @@
   "experimentalSortImports": {
     "enabled": true,
   },
+  "ignorePatterns": ["src/routeTree.gen.ts"]
 }
