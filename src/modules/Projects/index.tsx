@@ -11,7 +11,7 @@ export function Page() {
 
       <div className="flex flex-col items-center justify-between">
         {ALL_PROJECTS.map((project, idx) => (
-          <section>
+          <section key={idx}>
             <ProjectCard key={idx} project={project} preload={idx <= 2} />
 
             {idx < ALL_PROJECTS.length - 1 && <Separator className="block sm:hidden" />}

@@ -12,7 +12,7 @@ export function Page() {
         </header>
 
         <div className="mt-4 text-base sm:text-lg ">
-          <p className="leading-7 [&:not(:first-child)]:mt-6 ">
+          <p className="leading-7 not-first:mt-6 ">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{" "}
             <Link to="https://doublehq.com/" className="font-bold underline">
@@ -21,7 +21,7 @@ export function Page() {
             &mdash; where I help bookepers with <TechnologyTag technology="typescript" />.
           </p>
 
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
+          <p className="leading-7 not-first:mt-6">
             Besides that, I&apos;ve also really enjoy writting <TechnologyTag technology="elixir" />{" "}
             code, and developing games! You can check my last project:{" "}
             <Link to="https://github.com/lucapasquale/botchini" className="font-bold underline">
@@ -32,7 +32,7 @@ export function Page() {
         </div>
       </section>
 
-      <section className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 aspect-square">
+      <section className="shrink-0 mt-4 sm:mt-0 sm:ml-4 aspect-square">
         <img
           rel="preload"
           alt="avatar"

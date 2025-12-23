@@ -1,5 +1,4 @@
 import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-
 import { Link } from "~components/Link";
 import { TechnologyTag } from "~components/TechnologyTag";
 
@@ -13,7 +12,7 @@ type Props = {
 export function ProjectCard({ project, preload = false }: Props) {
   return (
     <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
-      <div className="w-[275px]">
+      <div className="w-68.75">
         <img
           rel={preload ? "preload" : undefined}
           src={project.imagePath}
