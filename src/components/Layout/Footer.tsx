@@ -5,13 +5,13 @@ import { Separator } from "~components/Separator";
 export function Footer() {
   return (
     <footer className="pb-24">
-      <div className="container max-w-4xl mx-auto px-4">
+      <div className="container mx-auto max-w-4xl px-4">
         <Separator />
 
-        <div className="my-8 flex flex-col sm:flex-row justify-between items-center gap-y-4 sm:gap-y-0">
+        <div className="my-8 flex flex-col items-center justify-between gap-y-4 sm:flex-row sm:gap-y-0">
           <h2>Built with Vite and Tailwind</h2>
 
-          <nav className="flex items-center gap-x-3 min-h-full">
+          <nav className="flex min-h-full items-center gap-x-3">
             <Link
               to="https://www.github.com/lucapasquale"
               className="flex items-center gap-x-2 text-foreground"

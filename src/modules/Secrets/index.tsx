@@ -12,7 +12,7 @@ export function Page() {
       <article className="flex flex-col items-center px-8">
         <Link to={PLAYLIST_LINK}>My dumb playlist</Link>
 
-        <div className="hidden w-160 h-90 mt-8 sm:flex sm:justify-center sm:w-screen">
+        <div className="mt-8 hidden h-90 w-160 sm:flex sm:w-screen sm:justify-center">
           <ReactPlayer controls width={640} height={360} src={PLAYLIST_LINK} />
         </div>
       </article>

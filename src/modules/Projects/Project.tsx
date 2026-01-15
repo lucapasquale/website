@@ -11,7 +11,7 @@ type Props = {
 
 export function ProjectCard({ project, preload = false }: Props) {
   return (
-    <article className="mt-8 mb-10 flex w-full flex-col sm:flex-row items-center sm:items-stretch">
+    <article className="mt-8 mb-10 flex w-full flex-col items-center sm:flex-row sm:items-stretch">
       <div className="w-68.75">
         <img
           rel={preload ? "preload" : undefined}
@@ -21,10 +21,10 @@ export function ProjectCard({ project, preload = false }: Props) {
         />
       </div>
 
-      <div className="mt-4 ml-0 sm:ml-8 max-w-md">
+      <div className="mt-4 ml-0 max-w-md sm:ml-8">
         <Header project={project} />
 
-        <ul className="flex flex-row flex-wrap gap-2 mb-4">
+        <ul className="mb-4 flex flex-row flex-wrap gap-2">
           {project.technologies.map((technology, index) => (
             <li key={index}>
               <TechnologyTag technology={technology} />
@@ -40,11 +40,11 @@ export function ProjectCard({ project, preload = false }: Props) {
 
 function Header({ project }: Props) {
   return (
-    <div className="w-fit mb-4">
-      <Link className="flex items-center gap-2 text-foreground mb-2 sm:mb-0" to={project.url}>
+    <div className="mb-4 w-fit">
+      <Link className="mb-2 flex items-center gap-2 text-foreground sm:mb-0" to={project.url}>
         <h3 className="text-2xl">{project.title}</h3>
 
-        <ExternalLinkIcon className="w-6 h-6" />
+        <ExternalLinkIcon className="h-6 w-6" />
       </Link>
 
       {project.githubUrl && (

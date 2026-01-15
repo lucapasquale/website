@@ -3,7 +3,7 @@ import { TechnologyTag } from "~components/TechnologyTag";
 
 export function Page() {
   return (
-    <article className="flex flex-col sm:flex-row items-center justify-between space-x-5">
+    <article className="flex flex-col items-center justify-between space-x-5 sm:flex-row">
       <section className="container">
         <header>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -11,8 +11,8 @@ export function Page() {
           </h1>
         </header>
 
-        <div className="mt-4 text-base sm:text-lg ">
-          <p className="leading-7 not-first:mt-6 ">
+        <div className="mt-4 text-base sm:text-lg">
+          <p className="leading-7 not-first:mt-6">
             I&apos;m a software engineer from Brazil, who loves gaming and creating things. I work
             as a full stack engineer at{" "}
             <Link to="https://doublehq.com/" className="font-bold underline">
@@ -32,11 +32,11 @@ export function Page() {
         </div>
       </section>
 
-      <section className="shrink-0 mt-4 sm:mt-0 sm:ml-4 aspect-square">
+      <section className="mt-4 aspect-square shrink-0 sm:mt-0 sm:ml-4">
         <img
           rel="preload"
           alt="avatar"
-          className="rounded-full "
+          className="rounded-full"
           src="/images/avatar.webp"
           width={200}
           height={200}
