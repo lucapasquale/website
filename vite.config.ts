@@ -36,6 +36,14 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  build: {
+    rolldownOptions: {
+      onwarn(warning, warn) {
+        if (warning.code === "COMMONJS_VARIABLE_IN_ESM") return;
+        warn(warning);
+      },
+    },
+  },
   plugins: lazyPlugins(() => [
     tanstackRouter({
       target: "react",
