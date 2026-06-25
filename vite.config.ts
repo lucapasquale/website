@@ -1,6 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-oxc";
 import { defineConfig, lazyPlugins } from "vite-plus";
 
 // https://vitejs.dev/config/
