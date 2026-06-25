@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "../Link";
-
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 

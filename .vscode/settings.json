@@ -1,11 +1,10 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "[typescript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-   "[typescriptreact]": {
+  "[typescriptreact]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   "[json]": {
@@ -13,5 +12,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
+  }
 }
